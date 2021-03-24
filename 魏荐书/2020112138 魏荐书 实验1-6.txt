@@ -1,0 +1,44 @@
+#include <bits/stdc++.h>
+using namespace std;
+class Student
+{
+private:
+    char name[18];
+    int num,mathScore,englishScore;
+    static int engTotalScore,mathTotalScore,count;
+public:
+    Student(char* ,int ,int ,int);
+    void showbase(){
+        cout<<"该学生的信息为："<<name <<"学号为："<<num <<"数学成绩为："<<mathScore <<"英语成绩为："<<englishScore <<"  "<<endl;
+    }
+    void  static  showstatic(){
+        cout <<"学生人数为："<<  count << "数学总成绩为："<<mathTotalScore << "英语总成绩为："<<engTotalScore <<endl;
+    }
+};
+int  Student::count=0;
+int  Student::mathTotalScore=0;
+int  Student::engTotalScore=0;
+Student::Student(char* n ,int nu,int math,int eng)
+{   
+    strcpy(name,n);
+    num=nu;
+    mathScore=math;
+    englishScore=eng;
+    engTotalScore=englishScore+engTotalScore;
+    mathTotalScore=mathTotalScore+mathScore;
+    count++;
+}
+int main (){
+    char* a ="weijainshu\0";
+    char *b= "wangshuai\0";
+    char *c="wuyifan\0";
+    Student p1(a,2020112138,100,100);
+    Student p2(b,2020112126,99,45);
+    Student p3(c,2020221123,23,23);
+    p1.showbase();
+    p2.showbase();
+    p3.showbase();
+    Student::showstatic();
+    return 0;
+}
+
