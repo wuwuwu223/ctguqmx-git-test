@@ -18,5 +18,5 @@
 ##### 拓展
 1.将一个单页面html上传到个人仓库，然后点击服务-gitee pages - 更新 即可通过网页访问自己的界面了  
 网页格式
-https://n404name.gitee.io/ctguqmx-git-test/ + 你的文件夹 + 你文件夹内的文件夹 + 你的网页即可
+https://n404name.gitee.io/ctguqmx-git-test/ + 你的文件夹 + 你文件夹内的文件夹 + 你的网页即可  
 https://n404name.gitee.io/ctguqmx-git-test/李灵智/home-page-butterflies-master/index.html
