@@ -2,38 +2,16 @@
 
 #### 介绍
 第一周周任务
-1.创建自己的仓库，尝试访问
-2.上传文件至远程公共仓库
+1.注册gitee账号
+2.加入该仓库成为管理员
+3.clone将仓库克隆在本地
+4.添加个人文件+个人文件内新建名字.txt
+5.commit到本地
+6.push到远程
 
-#### 软件架构
-软件架构说明
+下一次使用就
+把clone变成pull拉去最新的仓库即可
+循环即可
 
+使用指南：只要保证自己本地拉去最新的内容，并且只修改自己文件内容内容即可
 
-#### 安装教程
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 使用说明
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
-
-
-#### 特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
