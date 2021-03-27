@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?><update>
+<description>自动更新程序</description>
+<!--启动主程序-->
+<Application>jsjsj_xl</Application>
+<!--AppName删除后系统将不会自动更新-->
+<AppName>system3.0.exe</AppName>
+
+</update>
