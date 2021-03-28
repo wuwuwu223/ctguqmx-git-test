@@ -1,0 +1,304 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+em,i {
+    font-style: normal;
+}
+li {
+    list-style: none;
+}
+img {
+    border: 0;
+    /*元素垂直对齐方式*/
+    vertical-align: middle;
+}
+/*设置鼠标浮在上面之后的样式（和unreal engine里面一样）*/
+.headLine a:hover {
+    color: #2c2cde;
+}
+.headLine a {
+     color: #000000;
+     font-weight: bold;
+     font-size: 13px;
+     padding: -10px;
+ }
+.headLine {
+    position: absolute;
+    height: 30px;
+    line-height: 30px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: auto;
+    min-width: 800px;
+    /*overflow: hidden;*/
+    white-space: nowrap;
+}
+.headLine ul{
+    position: relative;
+    z-index: 300;
+    background-color: white;
+}
+.headLine nav ul #anti_virus a {
+    color: red;
+}
+.headLine nav ul #anti_virus{
+    margin-top: 0px;
+    position: relative;
+    left: 3px;
+}
+#point001 {color: red;}
+.headLine nav ul{
+    z-index: 50;
+    color: #fff;
+    position: absolute;
+    right: 80px;
+    top: 0;
+    margin: 0px 0 0px 0;
+    padding: 0 0px 0 0;
+}
+.headLine nav ul li{
+    display:inline-block;
+    margin-top: 6px;
+    margin-right: 15px;
+}
+
+.headLogo {
+    margin: 0 auto;max-width: 300px;
+    top: 350px;
+    text-align: center;
+    width: 100%;
+}
+.headLogo img{
+    margin-top: 50px;
+    height: 90%;
+    width: 90%;
+}
+.submit_area{
+    max-width: 600px;
+    margin: 15px auto;
+}
+.submit_area input {
+    font-size: 17px;
+    outline-color: #3385ff;
+    border: 1px solid #b6b6b6;
+    float: left;
+    width:520px;
+    height:36px;
+    margin-left: -15px;
+    padding-left: 10px;
+    position: relative;
+
+}
+.submit_area input:focus{
+    outline-width: 0px;
+    border: 1px solid #3385ff;
+}
+.searchByPicIcon {
+    z-index: 30;
+    position: relative;
+    /*float: left;*/
+    margin-left: -35px;
+    margin-top: 4px;
+    border-radius: 0px;
+    border-color: #78777b;
+    display: inline-block;
+    word-break: normal;
+    white-space: normal;
+}
+#submit_button{
+    width: 100px;
+    height: 38px;
+    color: white;
+    border-radius: 0px;
+    background-color: #3385ff ;
+    border: none;
+    letter-spacing: 2px;
+    font-size: 15px;
+}
+.BaiduNews{
+    text-align: center;
+}
+.BaiduNews iframe{
+    transition: all 0.5s;
+    height: 550px;
+    width: 900px;
+    hspace: -100;
+    vspace: -150;
+    opacity: 0.05;
+    filter:alpha(opacity:5);
+    /*width: 1000px;*/
+    border: 1px solid #b7b7b7;
+    position: relative;
+    top: 0px;
+}
+/*.QRcode{*/
+/*    margin-top: 8%;*/
+/*    text-align: center;*/
+/*    position: absolute;*/
+/*    !*bottom: 132px;*!*/
+/*    width: 100%;*/
+/*}*/
+/*#QR1 {*/
+/*    letter-spacing: 3px;*/
+/*}*/
+/*#QR2 {*/
+/*    margin-top: 6px;*/
+/*    font-size: 15px;*/
+/*    color: #a6a6a6;*/
+/*}*/
+.submit_button button
+{cursor: pointer;}
+.bottom_information{
+    left: 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 100;
+}
+.bottom_information nav{
+    height: 40px;
+    line-height: 44px;
+    background-color: #fafafa;
+}
+.bottom_information nav .part1 li{
+    margin-left: 20px;
+}
+.part1 li a{
+    color: #999;
+    text-decoration: none;
+    text-decoration-line: none;
+    text-decoration-style: initial;
+    text-decoration-color: initial;
+    font-size: 12px;
+    padding: -2px;
+}
+#li1{color: #aeaeae;font-size: 11px;padding-left: 1px;margin-left: 135%}
+#li2{color: #aeaeae;font-size: 11px;padding-left: 1px;}
+#li3{color: #aeaeae;font-size: 11px;padding-left: 1px;}
+#li4{color: #aeaeae;font-size: 11px;padding-left: 1px;}
+/*.bottom_information nav .part2 li{*/
+/*    display:inline-block;*/
+/*    color: #aeaeae;*/
+/*    font-size: 12px;*/
+/*    margin-right: 20px;*/
+/*}*/
+.rightSideContainer{
+    display: inline-block;
+    width: 85px;
+    height: 100%;
+    text-align: center;
+    /*background: #f9f9f9;*/
+    /*display: inline-block;*/
+    z-index: 200;
+    position: absolute;
+    right: 0;
+    top: 8px;
+    /*display:none;*/
+}
+.rightSideContainer-onwheel{
+    transition: all 0.4s;
+    opacity: 0;
+    display: block;
+    width: 85px;
+    text-align: center;
+    background: #f9f9f9;
+    position: absolute;
+    opacity: 0;
+}
+#more:hover + .rightSideContainer-onwheel{
+    display: block;
+    width: 85px;
+    text-align: center;
+    background: #f9f9f9;
+    /*display: inline-block;*/
+    /*z-index: 100;*/
+    position: absolute;
+    /*right: 0;*/
+    /*top: 8px;*/
+    /*float: left;*/
+    opacity: 1;
+}
+#more{
+    cursor: pointer;
+    transition: all 0.2s;
+    /*overflow: hidden;*/
+    background-color: #3388ff; color: white; font-size: 13px
+}
+#more:hover{
+    background-color: #f9f9f9; color: #000000;
+}
+.rso a{text-decoration: none;color: #707070;font-weight: normal;}
+.rso a:hover{color: #707070;text-decoration: underline;}
+#rightSiderBarUl{background: #f9f9f9;}
+.rso #rightSiderBarUl li{
+    /*background: #f9f9f9;*/
+    font-size: 10px;
+    margin-top: 20px;
+    display: block;
+    word-break: normal;
+    white-space: normal;
+    /*line-height: 10px;*/
+}
+#rso_more_link{text-decoration: underline;}
+.rso_more{margin-top: 20px;}
+/*.rso span{*/
+/*    position: absolute;*/
+/*    display: inline-block;*/
+
+/*    width: 10%;*/
+/*    height: 1px;*/
+/*    background: #acacac;*/
+/*}*/
+.rso .line1{margin: 0 auto;width: 65%;height: 1px;background: #d9d9d9;}
+.rso .line2{margin: 0 auto;width: 65%;height: 1px;background: #d9d9d9;}
+.rso .line3{margin: 0 auto;width: 65%;height: 1px;background: #d9d9d9;}
+.rso .line4{margin: 0 auto;width: 65%;height: 1px;background: #d9d9d9;}
+.rso .line5{margin: 0 auto;width: 65%;height: 1px;background: #d9d9d9;}
+.rso .line6{margin: 0 auto;width: 65%;height: 1px;background: #d9d9d9;}
+.weather{
+    position: absolute;
+    background: white;
+    top: 6px;
+    left: 1px;
+    z-index: 40;
+}
+#hefei{
+    padding-left: 10px;
+}
+/*.weather_simpal{*/
+/*    position: absolute;*/
+/*    left:11px;*/
+/*}*/
+#huanfu{padding-left: 100px;}
+.weather img{
+    position: relative;
+    top: -2px;
+}
+.weather_pic{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+.weather_pic a{position: absolute;left: 44px;}
+.weather_pic:hover #weather_detial{
+    /*display: block;*/
+    left: 0;
+    opacity: 1;
+}
+.weather a{
+    font-weight: normal;
+}
+#weather_detial{
+    transition: all 0.4s;
+    position: absolute;
+    top: 0px;
+    left: -600px;
+    opacity: 0;
+    z-index: 40;
+    margin-top: 30px;
+    /*display: none;*/
+}
+
+
