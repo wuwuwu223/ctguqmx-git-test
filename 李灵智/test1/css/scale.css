@@ -1,0 +1,31 @@
+div{
+    display:block;            /*内联对象需加*/
+    word-break:keep-all;      /* 不换行 */
+    white-space:nowrap;       /* 不换行 */
+}
+ul{
+    display:block;
+    word-break:keep-all;
+    white-space:nowrap;
+    /*overflow:hidden;*/
+    /*text-overflow:ellipsis;*/
+}
+.bottom_information li{
+    display: inline-block;
+    white-space:nowrap;
+}
+.headLine li{
+    display: inline-block;
+    white-space:nowrap;
+}
+.part1{
+    width:30%;
+    position:absolute;
+    left:0px;
+    z-index: 110;
+}
+/*.part2{*/
+/*    width:30%;*/
+/*    position:absolute;*/
+/*    right:0px;*/
+/*}*/
