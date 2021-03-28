@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>百度一下，你就知道</title>
+    <link rel="shortcut icon" href="./pic/baidu_logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/scale.css" type="text/css" />
+    <link rel="stylesheet" href="./css/mycss.css" type="text/css" />
+<!--    让每次页面加载完毕时，光标定位在输入框-->
+    <script type="text/javascript">
+        window.onload = function(){
+            window.document.getElementById("searchOnBaidu").focus();
+        }
+    </script>
+    <script type="text/javascript" src="js/side_bar.js"></script>
+    <script type="text/javascript" src="./js/click_event.js"></script>
+    <script type="text/javascript" src="./js/show_news.js"></script>
+</head>
+<body>
+    <div class="headArea">
+        <header class="headLine">
+            <div class="weather">
+                    <b id="hefei"><a href="https://www.baidu.com/s?tn=baidutop10&rsv_idx=2&wd=%E5%90%88%E8%82%A5%E5%A4%A9%E6%B0%94%E9%A2%84%E6%8A%A5">合肥:</a> </b>
+                    <b id="huanfu"><a href="#">换肤</a></b> <b>&nbsp;&nbsp;</b> <b><a href="#">消息</a></b>
+                    <div class="weather_pic" >
+                        <a href="https://www.baidu.com/s?tn=baidutop10&rsv_idx=2&wd=%E5%90%88%E8%82%A5%E5%A4%A9%E6%B0%94%E9%A2%84%E6%8A%A5">
+                            <img src="./pic/weather.png" width="100px" height="30px">
+                        </a>
+                        <img width="587px" height="241px" id="weather_detial" src="./pic/more_weather_information.png"/>
+                    </div>
+
+            </div>
+            <nav>
+                <ul>
+                    <li id="anti_virus"><a href="https://voice.baidu.com/act/newpneumonia/newpneumonia/?from=osari_pc_1">抗击肺炎</a><sup id="point001">●</sup></li>
+                    <li id="news"><a href="http://news.baidu.com/">新闻</a></li>
+                    <li id="hao123"><a href="https://www.hao123.com/">hao123</a></li>
+                    <li id="map"><a href="http://map.baidu.com/">地图</a></li>
+                    <li id="video"><a href="http://v.baidu.com/?fr=bd">视频</a></li>
+                    <li id="tieba"><a href="http://tieba.baidu.com/">贴吧</a></li>
+                    <li id="study"><a href="http://xueshu.baidu.com/">学术</a></li>
+                    <li id="login"><a href="#">登陆</a></li>
+                    <li id="set"><a href="#">设置</a></li>
+<!--                    <li id="more">&nbsp;更多产品&nbsp;</li>-->
+                </ul>
+            </nav>
+            <div class="rightSideContainer">
+                <div id="more"><b>更多产品</b></div>
+                <div class="rightSideContainer-onwheel" style="height: 880px;">
+                    <div class="rso">
+                        <ul id="rightSiderBarUl">
+                            <li> <a href="http://e.baidu.com?refer=889"><img src="./pic/siderbar_logo1.jpg"/></br>百度营销</a> <div class="line1"></div> </li>
+                            <li> <a href="http://music.taihe.com"><img src="./pic/siderbar_logo2.jpg"/></br>音乐</a> <div class="line2"></div> </li>
+                            <li> <a href="http://image.baidu.com"><img src="./pic/siderbar_logo3.jpg"/></br>图片</a> <div class="line3"></div> </li>
+                            <li> <a href="http://zhidao.baidu.com"><img src="./pic/siderbar_logo4.jpg"/></br>知道</a><div class="line4"></div> </li>
+                            <li> <a href="http://wenku.baidu.com"><img src="./pic/siderbar_logo5.jpg"/></br>文库</a> <div class="line5"></div> </li>
+                            <li> <a href="http://top.baidu.com"><img src="./pic/siderbar_logo6.jpg"/></br>风云榜</a> <div class="line6"></div> </li>
+                        </ul>
+                        <div class="rso_more">
+                            <a id="rso_more_link" href="//www.baidu.com/more/">全部产品&gt;&gt;</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bdbriscroll-ctrl-scroll" data-click="{fm:&quot;beha&quot;}" style="height: 820px; display: none;">
+                    <div class="bdbriscroll-axis" style="height: 820px;"></div>
+                    <div class="bdbriscroll-slider OP_LOG_BTN" style="display: none; top: 0px;">
+                        <div class="bdbriscroll-s-top"></div>
+                        <div class="bdbriscroll-s-bottom"></div>
+                        <div class="bdbriscroll-s-block"></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="headLogo">
+            <img src="./pic/baidu_main_logo.png" />
+        </div>
+    </div>
+    <div class="main">
+        <form action="https://www.baidu.com/s" method="get" id="submit">
+            <div class="submit_area">
+                <input id="searchOnBaidu" name="wd" type="text"/>
+            </div>
+            <div class="searchByPicIcon">
+                <a href="http://image.baidu.com/">
+                    <img src="./pic/search_by_pic_icon.jpg"/>
+                </a>
+             </div>
+            <button id="submit_button" type="submit"><b>百度一下</b></button>
+            <br/>
+        </form>
+    </div>
+<!--    测试内容！！！-->
+    <div class="BaiduNews" >
+        <iframe id="baidu_news_web" src="news_web.html"
+                name="sina" scrolling="no">
+        </iframe>
+    </div>
+
+
+
+<!--    <div class="QRcode">-->
+<!--        <img src="./pic/baidu_QRcode.png"/>-->
+<!--        <p id="QR1">下载百度APP</p>-->
+<!--        <p id="QR2">有事搜一搜&nbsp;&nbsp;没事看一看</p>-->
+<!--    </div>-->
+    <div class="bottom_information">
+        <nav>
+            <ul class="part1">
+                <li id="set_as_first_page"><a href="https://www.baidu.com/cache/sethelp/index.html">设为首页</a></li>
+                <li id="about_baidu_zh"><a href="https://home.baidu.com/">关于百度</a></li>
+                <li id="about_baidu_en"><a href="http://ir.baidu.com/">About&nbsp;Baidu</a></li>
+                <li id="introduce_baidu"><a href="http://e.baidu.com/?refer=888">百度推广</a></li>
+                <li id="reader_me"><a href="https://www.baidu.com/duty">使用百度前必读</a></li>
+                <li id="send_back_idea"><a href="https://help.baidu.com/newadd?prod_id=1&category=4">意见反馈</a></li>
+                <li id="help_center"><a href="https://help.baidu.com/">帮助中心</a></li>
+
+                <li id="li1" >©2020 Baidu</li>
+                <li id="li2">(京)-经营性-2017-0020</li>
+                <li id="li3">京公网安备11000002000001号</li>
+                <li id="li4">京ICP证030173号</li>
+            </ul>
+
+        </nav>
+    </div>
+
+
+
+</body>
+</html>
