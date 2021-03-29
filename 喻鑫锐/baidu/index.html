@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "icon" href="./img/baidu-fill.png">
+
+    <link rel="stylesheet" href="./css/remixicon/remixicon.css">
+    <link rel = "stylesheet" href="./Bootstrap/css/bootstrap.min.css">
+    <link rel = "stylesheet" href="./css/index.css">
+    <title>百度一下，你就知道</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            min-width: 1000px;
+        }
+        ul,li{
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <header id="head">
+        <nav class="nav navbar-default navbar-fixed-top" role="navigation">
+            <!-- <div class="container"> -->
+                <div class="collapse navbar-collapse" id="navbar-top"style="background-color: #fff;">
+                    <ul class="nav navbar-nav head-left-text">
+                        <li><a href="#">新闻</a></li>
+                        <li><a href="#">hao123</a></li>
+                        <li><a href="#">地图</a></li>
+                        <li><a href="#">直播</a></li>
+                        <li><a href="#">视频</a></li>
+                        <li><a href="#">贴吧</a></li>
+                        <li><a href="#">学术</a></li>
+                        <li><a href="#">更多</a></li>
+                    </ul>
+                    <ul class="head-right-text">
+                            <div class="navbar-text settings-box" href="#">
+                                <span class="setting-text">设置</span>
+                                <div class="setting-box-mini">
+                                    <div>搜索设置</div>
+                                    <div>高级搜索</div>
+                                    <div>关闭预测</div>
+                                    <div>隐私设置</div>
+                                    <div>关闭热榜</div>
+                                </div>  
+                            </div>                                      
+                        <!-- <a class="navbar-text" href="#"> -->
+                            <button type="button" class="navbar-text login-button" data-toggle="modal" data-target="#myModal">登录</button>
+                            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                <div class="modal-dialog" role="document">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                      <h4 class="modal-title" id="myModalLabel">
+                                          <img src="./img/baidu.png" alt="百度一下" class="modal-img" width="150px">
+                                          <span style="position: relative;top: 20px">百度一下</span>
+                                      </h4>
+                                    </div>
+                                    <div class="modal-body" style="text-align: center;">
+                                        <img src="./img/qrcode.png" alt="">
+                                        <div style="font-size: 20px;">请使用
+                                            <a target="_blank" href="https://mo.baidu.com/wuxian/?from=1019447z" style="font-size: 18px">百度App</a>
+                                            扫码登陆
+                                        </div>
+                                        <div style="color: #999;">
+                                            <span style="margin-right: 20px;font-size: 16px;">
+                                                <i class="ri-building-line"></i>
+                                                安全
+                                            </span>
+                                            <span style="margin-right: 20px;font-size: 16px;">
+                                                <i class="ri-mail-send-line"></i>
+                                                高效
+                                            </span>
+                                            <span style="margin-right: 20px;font-size: 16px;">
+                                                <i class="ri-calendar-check-line"></i>
+                                                便携
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer" style="background-color: #f0f6ff; text-align: center;">
+                                        <span style="color: #2e82ff; font-size: 20px; text-align: center;">
+                                            <a href="" style="color: #2e82ff; text-decoration: none;" id="login-user">用户名登陆</a>
+                                            |
+                                            <span class="ri-qq-line" style="position: relative;top:3px;"></span>
+                                            <span class="ri-weibo-fill" style="position: relative;top:3px;"></span>
+                                            <span class="ri-wechat-fill" style="position: relative;top:3px;"></span>
+                                            <a href="https://passport.baidu.com/v2/?reg&tt=1616976562096&overseas=undefined&gid=E67A970-D7F6-4100-AF2B-6657B3126096&tpl=mn&u=https%3A%2F%2Fwww.baidu.com%2F" target="_blank" style="color: #2e82ff; text-decoration: none;" id="login-now">立即登录</a>
+                                        </span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                    </ul>
+                </div>
+            <!-- </div> -->
+        </nav>
+    </header>
+    <main id="main">
+        <div class="container">
+            <div class="main-box" style="position: relative;">
+                <img src="./img/baidu.png" alt="百度一下，你就知道">
+                <form action="https://www.baidu.com/s">
+                    <div class="main-input">
+                        <input type="text"class="text-input" name="wd">
+                        <button type="submit" class="main-btn">百度一下</button>
+                    </div>
+                </form>
+                <span style="position: absolute;left: 150px; padding-top: 30px;" class="hotsearch-title"><a>百度热榜</a></span>
+                <span class="change-title">
+                    <a onclick="change_news()">
+                        <i class="ri-exchange-line"></i>
+                        换一换
+                    </a>
+                </span>
+                <div class="new-list">
+                    <ul style="text-align: left; float: left;margin-right: 50px;">
+                        <li>
+                            <a href="">
+                                <span class="num" style="color: #fe2d46;">1</span>
+                                <span class="text">中使馆提醒在美中国公民加强防范</span>
+                                <span class="hot">热</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="num" style="color: #f60;">2</span>
+                                <span class="text">香港青年怒怼HM应关心衣服质量</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="num" style="color: #faa90e;">3</span>
+                                <span class="text">苏伊士运河搁浅货轮已移动17米</span>
+                            </a>
+
+                        </li>
+                    </ul>
+                    <ul style="text-align: left; float: right;">
+                        <li>
+                            <a href="">
+                                <span class="num">4</span>
+                                <span class="text">特大套路贷案39万余人受害</span>
+                                <span class="red">爆</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="num">5</span>
+                                <span class="text">半年11人解除入境隔离后呈阳性</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="num">6</span>
+                                <span class="text">美国爆发亚裔反歧视大游行</span>
+                            </a>
+
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    <div id="QR-code">
+        <div class="QR-code-box">
+            <img src="./img/qrcode2.png" alt="" class="pic-1">
+            <img src="./img/qrcode-hover.png" alt="" class="pic-2" >
+            <div class="QR-scan-box">
+                <div class="scan-left">
+                    <div class="line-1">
+                        <i class="ri-qr-scan-2-line"></i>
+                        百度APP扫码登录
+                    </div>
+                    <div class="line-2">
+                        有事搜一搜 没事看一看
+                    </div>
+                </div>
+                <div class="scan-right">
+                    <img src="./img/qrcode-scan.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+        <div class="container">
+            <div class="foot-box">
+                <span><a href="">设为首页</a></span>
+                <span><a href="">关于百度</a></span>
+                <span><a href="">About baidu</a></span>
+                <span><a href="">百度营销</a></span>
+                <span><a href="">使用百度前必读</a></span>
+                <span><a href="">意见反馈</a></span>
+                <span><a href="">帮助中心</a></span>
+                <span><a href="">京公网安备11000002000001号</a></span>
+                <span><a href="">京ICP证030173号</a></span>
+                <span>©2021 Baidu</span>    
+                <span>(京)-经营性-2017-0020</span>
+            </div>
+        </div>
+    </footer>
+</body>
+<script type="text/javascript" src="./js/jquery.min.js"></script>
+<script type="text/javascript" src="Bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="./js/change.js"></script>
+</html>

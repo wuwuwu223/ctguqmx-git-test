@@ -1,0 +1,281 @@
+body{
+    background-color: #fff;
+}
+#navbar-top .head-left-text li>a{
+    color: black;
+    /* padding-left: 5px; */
+    padding: 20px 10px 20px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    /* font-weight: bold; */
+    font-size: 13px;
+}
+#navbar-top .head-left-text li>a:hover{
+    color: #4e6ef2;
+}
+#navbar-top .head-right-text{
+    /* display: inline-block; */
+    /* margin-left: 5px; */
+    display: block!important;
+    position: fixed;
+    right: 0;
+}
+#navbar-top .head-right-text a{
+    text-decoration: none;
+}
+#navbar-top .head-right-text a:hover{
+    color: #4e6ef2;
+}
+#navbar-top .head-right-text .login-button{
+    outline: none;
+    border: none;
+    padding: 3px 0;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: inline-block;
+    width: 50px;
+    border-radius: 6px;
+    background-color: #4e6ef2;
+    color: #fff;
+}
+#navbar-top .head-right-text .login-button:hover{
+    background-color:#315EFB;
+    cursor: pointer;
+}
+.head-right-text .settings-box{
+    margin: 20px auto;
+    width: 80px;
+    text-align: center;
+    font-size: 14px;
+    display: block;
+}
+.head-right-text .settings-box .setting-text:hover{
+    cursor: pointer;
+    color: #4e6ef2;
+}
+.head-right-text .settings-box:hover .setting-box-mini{
+    display: block;
+}
+.head-right-text .setting-box-mini{
+    display: none;
+    transition-duration: 0.2s;
+    box-shadow: 0 0 15px 0 rgba(0,0,0,0.4);
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 10px;
+    padding: 15px 5px 12px 5px;
+    background-color: #FFFFFF;
+    margin: 10px auto;
+    font-size: 13px;
+}
+.head-right-text .setting-box-mini div{
+    margin-bottom: 3px;
+}
+.head-right-text .setting-box-mini div:hover{
+    cursor: pointer;
+    color: #4e6ef2;
+}
+
+#main .main-box{
+    text-align: center;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 800px;
+}
+#main .main-box img{
+    margin: 0;
+    display: inline-block;
+    width: 300px;
+    /* position: relative; */
+}
+#main .main-input{
+    font-size: 14px;
+}
+#main .main-box .main-input .cemera{
+    display: block;
+    width: 40px;
+    position: relative;
+    left: 40px;
+    color: black;
+}
+#main .main-box .main-input .text-input{
+    /* position: absolute; */
+    border-radius: 10px 0 0 10px;
+    font-size: 20px;
+    overflow: hidden;
+    border: 2px solid #c4c7ce;
+    outline: none;
+    height: 44px;
+    width: 440px;
+    background-image: url(../img/camera-line.png);
+    background-repeat: no-repeat;
+    background-position: 98% ;
+}
+#main .main-box .main-input .text-input:focus{
+    border-color: #4e6ef2;
+}
+.modal-backdrop{
+    position: unset!important;
+}
+#login-user:hover{
+    color: #2e82ff!important;
+}
+#login-now:hover{
+    color: #2e82ff;
+
+}
+#main .main-box .main-input .main-btn{
+    height: 44px;
+    display: inline-block;
+    position: relative;
+    bottom: 2px;
+    right: 5px;
+    border: none;
+    color: #fff;
+    line-height: 45px;
+    font-size: 16px;
+    width: 108px;
+    border-radius: 0 10px 10px 0;
+    background-color: #4e6ef2;
+}
+#main .main-box .main-input .main-btn:hover{
+    background-color: #4662d9;
+}
+#main .main-box .hotsearch-title{
+    font-size: 16px;
+}
+#main .main-box .hotsearch-title a{
+    color: black;
+    text-decoration: none;
+}
+#main .main-box .change-title{
+    padding-top: 30px;
+    position: absolute;
+    right: 150px;
+    font-size: 16px;
+
+}
+#main .main-box .change-title a{
+    color: #a9a9a9;
+    text-decoration: none;
+}
+#main .main-box .change-title a:hover{
+    color: #4e6ef2;
+}
+#main .main-box .new-list{
+    margin-top: 70px;
+    position: absolute;
+    left: 140px;
+}
+#main .main-box .new-list ul li a:hover{
+    color: #4662d9  ;
+}
+#main .main-box .new-list ul li a{
+    text-decoration: none;
+    color: black;
+}
+#main .main-box .new-list ul li{
+    padding-bottom: 10px;
+}
+#main .main-box .new-list .num{
+    /* color: #fe2d46; */
+    font-size: 15px;
+}
+#main .main-box .new-list .text{
+    font-size: 15px;
+}
+#main .main-box .new-list .hot{
+    border-radius: 5px;
+    background-color: #ff9812;
+    color: #fff;
+    padding: 2px;
+}
+#main .main-box .new-list .red{
+    border-radius: 5px;
+    background-color: #ff0000;
+    color: #fff;
+    padding: 2px;
+}
+#QR-code{
+    position: absolute;
+    right:20px;
+    bottom: 40px;
+}
+#QR-code .QR-code-box{
+    position: relative;
+    border-radius: 50%;
+    background-color: #fbfbfb;
+    text-align: center;
+}
+#QR-code .QR-code-box .pic-1{
+    display: block;
+}
+#QR-code .QR-code-box .pic-2{
+    display: none;
+}
+#QR-code .QR-code-box:hover{
+    box-shadow: 0 0 15px 0 rgba(0,0,0,0.4);
+}
+#QR-code .QR-code-box:hover .pic-1{
+    display: none;
+}
+#QR-code .QR-code-box:hover .pic-2{
+    display: block;
+}
+#QR-code .QR-code-box:hover .QR-scan-box{
+    display: block;
+}
+#QR-code .QR-code-box img{
+    width: 40px;
+    padding: 5px;
+}
+#QR-code .QR-scan-box{
+    /* opacity: 0; */
+    display: none;
+    transition-duration: 0.2s;
+    width: 400px;
+    position: absolute;
+    bottom: 0;
+    right: 80px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px 0 rgb(0 0 0 / 10%);
+    background-color: #fbfbfb;
+}
+#QR-code .QR-scan-box .scan-left{
+    padding: 40px 10px;
+    font-size: 20px;
+    float: left;
+}
+#QR-code .QR-scan-box .scan-right{  
+    padding: 20px 10px;
+    float: right;
+}
+#QR-code .QR-scan-box .scan-right img{
+    width: 100px;
+}
+#footer{
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+}
+#footer .foot-box{
+    min-width: 1210px;
+}
+#footer .foot-box span{
+    margin-right: 5px;
+    font-size: 13px;
+    color: #bbb;
+}
+#footer .foot-box a{
+    font-size: 13px;
+    color: #bbb;
+    text-decoration: none;
+}
+#footer .foot-box a:hover{
+    color: black;
+}
