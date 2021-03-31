@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel = "icon" href="./img/baidu-fill.png">
-
     <link rel="stylesheet" href="./css/remixicon/remixicon.css">
     <link rel = "stylesheet" href="./Bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./layui-v2.5.7/layui-v2.5.7/layui/css/layui.css">
     <link rel = "stylesheet" href="./css/index.css">
     <title>百度一下，你就知道</title>
     <style>
@@ -36,7 +36,79 @@
                         <li><a href="#">视频</a></li>
                         <li><a href="#">贴吧</a></li>
                         <li><a href="#">学术</a></li>
-                        <li><a href="#">更多</a></li>
+                        <li class="more-li"><a href="#">更多</a>
+                            <div id="more-box">
+                                <ul class="more-list">
+                                    <a href="https://pan.baidu.com/" target="_blank">
+                                        <li class="more-list-item">
+                                            <div class="more-list-img">
+                                                <img src="./img/baiduyun.png" alt="" width="44px">
+                                            </div>
+                                            <div class="more-list-text">网盘</div>
+                                        </li>
+                                    </a>
+                                    <a href="https://zhidao.baidu.com/" target="_blank">
+                                        <li class="more-list-item">
+                                            <div class="more-list-img">
+                                                <img src="./img/zhidao@2x-e9b427ecc4.png" alt="" width="44px">
+                                            </div>
+                                            <div class="more-list-text">知道</div>
+                                        </li>
+                                    </a>
+                                    <a href="https://baike.baidu.com/" target="_blank">
+                                        <li class="more-list-item">
+                                            <div class="more-list-img">
+                                                <img src="./img/baike@2x-1fe3db7fa6.png" alt="" width="44px">
+                                            </div>
+                                            <div class="more-list-text">百科</div>
+                                        </li>
+                                    </a>
+                                    <a href="https://image.baidu.com/" target="_blank">
+                                        <li class="more-list-item">
+                                            <div class="more-list-img">
+                                                <img src="./img/tupian@2x-482fc011fc.png" alt="" width="44px">
+                                            </div>
+                                            <div class="more-list-text">图片</div>
+                                        </li>
+                                    </a>
+                                    <a href="https://baobao.baidu.com/" target="_blank">
+                                        <li class="more-list-item">
+                                            <div class="more-list-img">
+                                                <img src="./img/baobaozhidao@2x-af409f9dbe.png" alt="" width="44px">
+                                            </div>
+                                            <div class="more-list-text">宝宝知道</div>
+                                        </li>
+                                    </a>
+                                    <a href="https://wenku.baidu.com/" target="_blank">
+                                        <li class="more-list-item">
+                                            <div class="more-list-img">
+                                                <img src="./img/wenku@2x-f3aba893c1.png" alt="" width="44px">
+                                            </div>
+                                            <div class="more-list-text">文库</div>
+                                        </li>
+                                    </a>
+                                    <a href="https://jingyan.baidu.com/" target="_blank">
+                                        <li class="more-list-item">
+                                            <div class="more-list-img">
+                                                <img src="./img/jingyan@2x-e53eac48cb.png" alt="" width="44px">
+                                            </div>
+                                            <div class="more-list-text">经验</div>
+                                        </li>
+                                    </a>
+                                    <a href="https://music.taihe.com/" target="_blank">
+                                        <li class="more-list-item">
+                                            <div class="more-list-img">
+                                                <img src="./img/yinyue@2x-c18adacacb.png" alt="" width="44px">
+                                            </div>
+                                            <div class="more-list-text">音乐</div>
+                                        </li>
+                                    </a>
+                                </ul>
+                                <span >
+                                    查看更多百度产品 &#62;
+                                </span>
+                            </div>
+                        </li>
                     </ul>
                     <ul class="head-right-text">
                             <div class="navbar-text settings-box" href="#">
@@ -102,17 +174,39 @@
     </header>
     <main id="main">
         <div class="container">
-            <div class="main-box" style="position: relative;">
+            <div class="main-box" >
                 <img src="./img/baidu.png" alt="百度一下，你就知道">
                 <form action="https://www.baidu.com/s">
                     <div class="main-input">
-                        <input type="text"class="text-input" name="wd">
+                        <span style="position: relative;">
+                            <span class="ri-camera-line cemera" title="按图片搜索..." data-toggle="modal" data-target="#myimg"></span>
+                            <input type="text"class="text-input" name="wd">
+                            <div class="modal fade" id="myimg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+                                <div class="modal-dialog" role="document">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                      <h4 class="modal-title" id="myModalLabel2">按图片检索</h4>
+                                    </div>
+                                    <div id="drop_area" class="modal-body">
+                                        <button type="button" class="layui-btn" id="test1">
+                                          <i class="layui-icon">&#xe67c;</i>上传图片
+                                        </button>
+                                    </div>
+                                    <div class="modal-footer" style="text-align: center">
+                                        <div id="modal-footer-text">点击按钮上传图片</div>
+                                        <div id="modal-footer-text2"></div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                        </span>
                         <button type="submit" class="main-btn">百度一下</button>
                     </div>
                 </form>
                 <span style="position: absolute;left: 150px; padding-top: 30px;" class="hotsearch-title"><a>百度热榜</a></span>
                 <span class="change-title">
-                    <a onclick="change_news()">
+                    <a id="change-title-a"onclick="change_news()">
                         <i class="ri-exchange-line"></i>
                         换一换
                     </a>
@@ -207,5 +301,34 @@
 </body>
 <script type="text/javascript" src="./js/jquery.min.js"></script>
 <script type="text/javascript" src="Bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="layui-v2.5.7/layui-v2.5.7/layui/layui.js"></script>
 <script type="text/javascript" src="./js/change.js"></script>
+<script type="text/javascript" src="./js/test.js"></script>
+<script>
+    layui.use('upload', function(){
+        var upload = layui.upload;
+        //执行实例
+        var uploadInst = upload.render({
+            elem: '#test1' //绑定元素
+            ,url: 'http://47.102.198.114:9090/upload/one' //上传接口
+            ,field: 'upload'
+            ,accept: 'file'
+            ,method: 'post'
+            ,acceptMime: 'image/*'
+            ,done: function(res){
+                //上传完毕回调
+                var foot_text = document.getElementById("modal-footer-text");
+                var modal_img = document.getElementById("moday-body-img");
+                console.log(res.path);
+                foot_text.innerText = "上传的路径为: " + res.path;
+                document.getElementById("modal-footer-text2").innerText = "(复制到浏览器查看)";
+                alert("success");
+            }
+            ,error: function(){
+                alert("error");
+                //请求异常回调
+            }
+        });
+    });
+</script>
 </html>

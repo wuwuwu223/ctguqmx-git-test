@@ -1,6 +1,15 @@
 body{
     background-color: #fff;
 }
+
+/*#drop_area{
+    margin: 10px 20px;
+    border: 1px dashed silver;
+    color: #9195A3;
+}*/
+#drop_area:hover{
+    cursor: pointer;
+}
 #navbar-top .head-left-text li>a{
     color: black;
     /* padding-left: 5px; */
@@ -10,6 +19,56 @@ body{
     font-size: 13px;
 }
 #navbar-top .head-left-text li>a:hover{
+    color: #4e6ef2;
+}
+#navbar-top .head-left-text .more-li{
+    position: relative;
+}
+#navbar-top .head-left-text .more-li:hover #more-box{
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.4);
+    display: block;
+}
+#navbar-top #more-box{
+    text-align: center;
+    transition-duration: 0.2s;
+    border-radius: 10px;
+    display: none;
+    width: 320px;
+    /* height: 150px; */
+    position: absolute;
+    right: 1px;
+    top: 50px;
+}
+#navbar-top #more-box span{
+    display: block;
+    color: #9195A3;
+    margin: 10px auto;
+    font-size: 14px;
+}#navbar-top #more-box span:hover{
+    color: #4662d9;
+}
+#navbar-top #more-box a{
+    text-decoration: none;
+    color: black;
+}
+#navbar-top #more-box ul li{
+    list-style: none;
+    width: 76px;
+    height: 70px;
+    display: inline-block;
+}
+#navbar-top #more-box .more-list{
+    margin: 15px auto;
+}
+#navbar-top #more-box .more-list .more-list-item{
+    /* padding: 10px 10px; */
+    text-align: center;
+}
+#navbar-top #more-box .more-list .more-list-item .more-list-text{
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#navbar-top #more-box .more-list .more-list-item:hover .more-list-text{
     color: #4e6ef2;
 }
 #navbar-top .head-right-text{
@@ -96,13 +155,25 @@ body{
 }
 #main .main-box .main-input .cemera{
     display: block;
-    width: 40px;
-    position: relative;
-    left: 40px;
-    color: black;
+    font-size: 30px;
+    position: absolute;
+    right: 20px;
+    /* top: 0; */
+    /*bottom: -5px;*/
+    padding-top: 6px;
+    padding-bottom: 2px;
+    color: #bbb;
+
+    z-index: 1;
+}
+#main .main-box .main-input .cemera:hover{
+    cursor: pointer;
+    color: #4e6ef2;
 }
 #main .main-box .main-input .text-input{
     /* position: absolute; */
+    /* position: relative; */
+    z-index: 0;
     border-radius: 10px 0 0 10px;
     font-size: 20px;
     overflow: hidden;
@@ -110,9 +181,10 @@ body{
     outline: none;
     height: 44px;
     width: 440px;
-    background-image: url(../img/camera-line.png);
+    
+    /*background-image: url(../img/camera-line.png);
     background-repeat: no-repeat;
-    background-position: 98% ;
+    background-position: 98% ;*/
 }
 #main .main-box .main-input .text-input:focus{
     border-color: #4e6ef2;
@@ -131,7 +203,7 @@ body{
     height: 44px;
     display: inline-block;
     position: relative;
-    bottom: 2px;
+    bottom: 1px;
     right: 5px;
     border: none;
     color: #fff;
@@ -156,13 +228,13 @@ body{
     position: absolute;
     right: 150px;
     font-size: 16px;
-
 }
 #main .main-box .change-title a{
     color: #a9a9a9;
     text-decoration: none;
 }
 #main .main-box .change-title a:hover{
+    cursor: pointer;
     color: #4e6ef2;
 }
 #main .main-box .new-list{
