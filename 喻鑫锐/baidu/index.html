@@ -194,7 +194,8 @@
                                         </button>
                                     </div>
                                     <div class="modal-footer" style="text-align: center">
-                                        <span id="modal-footer-text">点击按钮上传图片</span>
+                                        <div id="modal-footer-text">点击按钮上传图片</div>
+                                        <div id="modal-footer-text2"></div>
                                     </div>
                                   </div>
                                 </div>
@@ -317,8 +318,10 @@
             ,done: function(res){
                 //上传完毕回调
                 var foot_text = document.getElementById("modal-footer-text");
+                var modal_img = document.getElementById("moday-body-img");
                 console.log(res.path);
-                foot_text.innerText = "上传的路径为: " + res.path + " (复制到浏览器访问)";
+                foot_text.innerText = "上传的路径为: " + res.path;
+                document.getElementById("modal-footer-text2").innerText = "(复制到浏览器查看)";
                 alert("success");
             }
             ,error: function(){
