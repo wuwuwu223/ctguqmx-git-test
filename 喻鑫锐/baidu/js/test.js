@@ -29,7 +29,7 @@ box.addEventListener("drop",function(e){
     var video_type=["video/mp4","video/ogg"];  
       
     //创建一个url连接,供src属性引用  
-    var fileurl = window.URL.createObjectURL(fileList[0]);                
+    var fileurl = window.URL.createObjectURL(fileList[0]);
     if(fileList[0].type.indexOf('image') === 0){  //如果是图片  
         var str="<img width='200px' height='200px' src='"+fileurl+"'>";  
         document.getElementById('drop_area').innerHTML=str;                   
@@ -42,4 +42,32 @@ box.addEventListener("drop",function(e){
         document.getElementById('drop_area').innerHTML=str;      
     }         
     resultfile = fileList[0];             
-},false); 
+},false);
+
+
+$("#btn-loading").click(function (){
+    console.log("success");
+    var img = $("#FileUpload")[0].files[0];
+    console.log(img);
+    var formData = new FormData();
+    formData.append('upload',img);
+    console.log(formData.upload);
+
+    // formFile.append("action", "UploadVMKImagePath");
+    //formFile.append("upload", fileObj); //加入文件对象
+
+    $.ajax({
+        url: "http://47.102.198.114:9090/upload/one",
+        data: formData,
+        type: "POST",
+        //dataType: "json",
+        processData: false,//用于对data参数进行序列化处理 这里必须false
+        contentType: false, //必须
+        success: function (result) {
+            alert("上传完成!");
+        },
+        error: function (xhr){
+            console.log(xhr.status);
+        }
+    });
+});
