@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>百度一下,你就知道</title>
+</head>
+<style>
+    #father{
+        position: absolute;
+        width: 95%;
+        height: 95%;
+    }
+    .box{
+        width: 900px;
+        height: 900px;
+        margin: 0 auto;
+    }
+    .top a{
+        text-decoration: none;
+        color: black;
+        font-size: 13px;
+    }
+    .top a:hover{
+        color: orange;
+        font-size: 14px;
+    }
+    .top{
+        list-style: none;
+        display: inline-block;
+    }
+    .down a{
+        text-decoration: none;
+        color:rgb(182, 179, 179);
+        font-size: 12px;
+    }
+    .down a:hover{
+        color: black;
+    }
+    .down span{
+        text-decoration: none;
+        color:rgb(182, 179, 179);
+        font-size: 12px;
+    }
+    .down{
+        list-style: none;
+        display: inline-block;
+    }
+    #lidown{
+        position: absolute;
+        top: 488px;
+    }
+    img{
+        position: absolute;
+        top: 85px;
+        left: 454px;
+    }
+    #SSK{
+        height:33px;
+        width: 591px;
+        position:absolute;
+        top: 200px;
+        left: 200px;
+    }
+    #BDYX{
+        position: absolute;
+        top: 199px;
+        left: 794px;
+        color: white;
+        width: 100px;
+        height: 40px;
+        border-radius:0px 15px 15px 0 ;
+        line-height: 40px;
+        text-align: center;
+        background: rgb(72, 72, 226);
+    }
+    #SZ{
+        position: absolute;
+        top: 19px;
+        left: 1033px;
+        text-decoration: none;
+        font-size: 13px;
+        color: black;
+        width: 54px;
+        height: 24px;
+    }
+    #DL{
+        position: absolute;
+        top: 17px;
+        left: 1097px;
+        color: white;
+        width: 54px;
+        height: 24px;
+        border-radius: 6px;
+        line-height: 24px;
+        text-align: center;
+        background: rgb(72, 72, 226);
+        text-decoration: none;
+        font-size: 13px;
+    }
+</style>
+<body>
+    <div id="father">
+        <div id="box">
+            <img src="百度.png" alt="百度" title="百度">
+            <ul>
+                <li class="top"><a href="http://news.baidu.com/" target="_blank">新闻&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                <li class="top"><a href="https://www.hao123.com/" target="_blank">hao123&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                <li class="top"><a href="https://map.baidu.com/" target="_blank">地图&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                <li class="top"><a href="https://live.baidu.com/" target="_blank">直播&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                <li class="top"><a href="https://haokan.baidu.com/" target="_blank">视频&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                <li class="top"><a href="http://tieba.baidu.com/" target="_blank">贴吧&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                <li class="top"><a href="https://xueshu.baidu.com/" target="_blank">学术&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                <li class="top"><a href="https://www.baidu.com/more/" target="_blank">更多</a></li>
+            </ul>
+            <div id="lidown">
+            <ul>
+                <li class="down"><a href="https://www.baidu.com/cache/setindex/index.html" target="_blank">设为首页&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                <li class="down"><a href="https://home.baidu.com/" target="_blank">关于百度&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                <li class="down"><a href="http://ir.baidu.com/" target="_blank">About Baidu&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                <li class="down"><a href="https://isite.baidu.com/site/e.baidu.com/d38e8023-2131-4904-adf7-a8d1108f51ef?refer=888" target="_blank">百度营销&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                <li class="down"><a href="https://www.baidu.com/duty" target="_blank">使用百度前必读&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                <li class="down"><a href="https://help.baidu.com/newadd?prod_id=1&category=4" target="_blank">意见反馈&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                <li class="down"><a href="https://help.baidu.com/" target="_blank">帮助中心&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                <li class="down"><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11000002000001" target="_blank">京公网安备11000002000001号&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                <li class="down"><a href="https://beian.miit.gov.cn/" target="_blank">京IPC证030173号&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                <li class="down"><span class="down" id="span1">&copy;2021 Baidu&nbsp;&nbsp;&nbsp;&nbsp;</span></li>
+                <li class="down"><span class="down" id="span2">(京)-经营性-2017-0020</span></li>
+            </ul>
+            </div>
+            <a id="SZ" href="#" target="_self">设置</a>
+            <a id="DL" href="#" target="_self">登录</a>
+            <input id="SSK" type="text" name="搜索框" placeholder="请输入搜索内容">
+            <input id="BDYX" type="button" value="百度一下">
+        </div>
+    </div>
+    
+</body>
+</html>
