@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="poster.css">
+  <title>Ali the fox</title>
+</head>
+<body style="text-align: center">
+<div id = "poster">
+  <div :class="top">
+    <div :class="headers">
+      <div :style="headers_text()">{{url}}</div>
+    </div>
+    <div :class="headers2">
+      <div :style="headers_date()">{{date}}</div>
+    </div>
+  </div>
+  <div :style="i1()">
+    <div :style="mask()"></div>
+    <img :src="img1" style="width:641px;height:301px">
+    <div style="right: 0" :style="mask()"></div>
+  </div>
+  <div :style="title()">
+    <div :style="tt1()">
+      Ali
+    </div>
+    <div :style="tt2()">
+      the fox
+    </div>
+    <div :style="st()">阿狸天下第一好看，不接受任何反驳！！！！</div>
+    <div :style="artNum1()"><i>666</i></div>
+    <div :style="C()">C</div>
+    <div :style="ty()">ty</div>
+    <div :style="person()">中国非著名蒟蒻</div>
+  </div>
+  <div class="introduce"><div style="text-decoration: underline; color: #418c59">What</div>
+  <div class="text">{{text1}}</div>
+  </div>
+  <div class="introduce"><div style="text-decoration: underline; color: #d2994f">When</div>
+    <div class="text">{{text3}}</div>
+  </div>
+  <div class="introduce"><div style="text-decoration: underline; color: #cc7680">How</div>
+    <div class="text">{{text2}}</div>
+  </div>
+  <div class="actors">
+    <div class="actor" v-for="(act_int,act) in arr_act">{{act}}
+      <div class="arr_intro"><i>------{{act_int}}</i></div>
+    </div>
+  </div>
+  <div class="story_title">
+    <div :style="big_story_title()"><i>Ali</i></div>
+    <div :style="small_story_title_1()">the fox</div>
+    <div :style="small_story_title_2()">阿狸</div>
+    <div :style="small_story_title_3()">天下最可爱</div>
+  </div>
+  <div :style="i2()">
+    <img style="width: 458px; height: 275px" :src="img2">
+    <div :style="mask2()">
+<!--令人迷惑的竖线？？？？有啥用-->
+      <div :style="shuxian()">
+<!--实在起不动名字了-->
+        <div :style="jrj()">鸡肉卷</div>
+        <div :style="jrj_intro()"><i style="letter-spacing:3px">阿狸和CTY最爱的食物</i></div>
+      </div>
+    </div>
+  </div>
+  <div :style="text_intro()">
+    <div :style="big_text1()">
+      星
+    </div>
+    <div style="width: 300px; display: inline-block;top:16px;float: left; left: 37px; position: relative;" :style="text4_()">{{text4}}</div>
+    <div style="width: 190px; display: inline-block;top:18px;float: left; left: -50px; position: relative; margin-bottom: 16px" :style="text4_()">{{text5}}</div>
+    <div style="width: 190px; display: inline-block;top:18px;float: left; left: 20px; position: relative;margin-bottom: 16px" :style="text4_()">{{text6}}</div>
+    <div style="width: 190px; display: inline-block;top:139px;float: left; left: -170px; position: relative;margin-bottom: 16px" :style="text4_()">{{text7}}</div>
+    <img :style="t1_im()" :src="img3">
+  </div>
+  <div style="width: 459px; height: 318px; background:rgb(147,181,207);position: relative;float: right; right: 50px; top:-165px">
+    <div :style="mulu()">
+      <div :style="other_intro()">▲&nbsp米卡.................<i style="font-size: 12px">住在阿狸小镇上的邻居，有钱人。</i></div>
+      <div :style="other_intro()">▲&nbsp影子.......................<i style="font-size: 12px">阿狸的影子，心灵伙伴。</i></div>
+      <div :style="other_intro()">▲&nbsp阿狸妈妈.........<i style="font-size: 12px">能做65种鸡肉卷，对阿狸充满温暖的爱。</i></div>
+    </div>
+    <div :style="BigNum_box()">
+      <div :style="art_Num2()">1</div>
+      <div :style="detail()">
+        <div :style="big_de1()">
+          <i>一天时间</i>
+        </div>
+        <div :style="big_de2()">
+          <i>有手就行</i>
+        </div>
+        <div :style="sma_de()">
+          CTY说他是乱写的，可见海报也没有特别难写(*^▽^*)
+        </div>
+      </div>
+    </div>
+    <div :style="word()">
+      <div :style="qyh()">“</div>
+      <div style="display: inline;right: 10px; position: relative" :style="text2_()"><i>阿狸，你知道为什么会天晴吗？那是因为云朵们都去远行了。</i></div>
+      <div style="width: 160px;left: 10px; position: relative" :style="text2_()"><i>那阿狸，你知道为什么会下雨吗？那是有一朵小小云在哭，因为它没能和朋友一起去远行。</i></div>
+<!--      -->
+      <div :style="hyh()">”</div>
+    </div>
+  </div>
+  <div :style="bottom_()">
+    <div :style="footers()">{{url}}</div>
+  </div>
+</div>
+
+<script src="vue.js"></script>
+<script>
+  new Vue({
+    el : '#poster',
+    data: {
+      text7:"阿狸：“大熊，你知道么，我曾经想过自杀，不过没有成功。”\n" +
+          "大熊：“……谁都想过自杀的这个极端的想法…… 不过你还有这个勇气？”\n" +
+          "阿狸：“嗯。”\n" +
+          "大熊：“……你是怎么自杀的？”\n" +
+          "阿狸：“憋气自杀啊，像这样！”\n" +
+          "大熊：“……”",
+      text6:"当有人用阿狸做礼物的时候，当阿狸装置展开幕的时候，当阿狸电影在银幕上 亮起的时候，我在旁边看到人们微笑，看到人们合影，看他们把阿狸记录 在他们的回忆里――每当这些时候，那些曾经麻烦的事，一瞬间就变成一 种满足和幸福。",
+      text5:"阿狸一直安静地站在樱花树下。\n" +
+          "浣熊说阿狸是在被罚站，\n" +
+          "兔子说阿狸是在看树上的蚂蚁，\n" +
+          "麻雀说阿狸是打赌赌输了，\n" +
+          "羊羊讲阿狸是为了准备写诗歌酝酿情绪，\n" +
+          "其实，\n" +
+          "阿狸只是安静地等有樱花落下时\n" +
+          "来判断今天的风向……",
+      text4:"    期天的下午，阿狸和大熊在咖啡馆里。\n" +
+          "    大熊：“阿狸快看！兔子，兔子！”\n" +
+          "    阿狸：“大惊小怪，兔子有啥好看的。”\n" +
+          "    大熊：“阿狸快看！兔子，兔子！”\n" +
+          "    阿狸：“不想看……” 大熊：“阿狸快看兔子，兔子！”\n" +
+          "    阿狸：“好烦啊，在哪里我看看。”\n" +
+          "    阿狸一抬头，就看到一只秃子兔子跑了过去……",
+      story_title:"story_title",
+      arr_act:{
+        "阿狸":"可爱、温暖、孩子气、一直相信童话。",
+        "桃子":"善良的小傲娇，喜欢写信，有一点小小的公主病。",
+        "大熊":"老实、忠诚，单细胞胆小鬼。",
+      },
+      message: "hello,world",
+      url:"ctring.top",
+      headers:"headers",
+      headers2:"headers2",
+      date:"2021.04",
+      top:"top",
+      t1:"t1",
+      t2:"t2",
+      text1:"阿狸，国产原创动漫形象。2006年由Hans创作，从网络与杂志连载开始，发行童话绘本和动画短片。\n" +
+          "\n" +
+          "      至2021年，阿狸的绘本总销量超400万册，动画累计播放量达8亿次。表情累计上传60+个国内外平台，其中微信表情下载量过1亿，使用量过16亿；阿狸皮肤、壁纸累计下载超3亿次。\n" +
+          "\n" +
+          "      近年来，阿狸陆续获得亚洲授权业大奖-年度最佳亚洲授权形象、中国文化艺术政府奖第三届动漫奖最佳动漫形象奖等多项大奖，并曾四次入围LIMA国际授权业大奖。",
+      text2:"梦之城旗下的国漫品牌阿狸是中国原创动漫形象，是流行文化的代表。在美国动漫和日本动漫占据全球大部分动漫市场的背景下，阿狸以其独特的成长模式在中国年轻群体中拥有较高人气。让阿狸与中国传统文化相结合，将赋予这一动漫形象更加深刻的文化内涵，也将带动更多年轻人进一步关注并弘扬中国传统文化。",
+      text3:"《阿狸梦之岛·我的云》\n" +
+          "你可能不知道，所有那些快乐和悲伤的事，你不是独自经历。若有一天，遇见一朵飞不高的小小云，你便能听见阿狸轻轻说着他的故事：不管晴天雨天，我知道，在天上很远很远的地方，有一朵我的云。\n" +
+          "《阿狸梦之岛·玩具墓场》\n" +
+          "你还记得儿时陪伴你的玩具吗？它们现在在哪里呢？当有一天，你们重逢，你会不会想起它曾经给你的温暖，和传递到手心的，爸爸的爱？\n" +
+          "《阿狸梦之岛·月亮》\n" +
+          "梦想并非留给怀抱梦想的人，而是留给永不放弃的人，只要坚持自己，就算没有人看得见，又有什么关系呢？一场关于月亮的奇妙历险全新呈现。",
+      img1:"http://www.idreamcastle.com/Site/Default/Uploads/kindeditor/image/20180914/%E6%A1%8C%E9%9D%A2%E5%A3%81%E7%BA%B8_iCpf18.jpg",
+      img2:"https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3431947002,4270941102&fm=26&gp=0.jpg",
+      img3:"https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=954959987,2642756046&fm=26&gp=0.jpg",
+      index:"z-index",
+    },
+    methods:{
+      footers(){
+        return{
+          position:"relative",
+          display:"inline-block",
+          float:"right",
+          right:"-415px",
+          color:"#d45d5c",
+          fontFamily:"SimHei",
+          textAlign:"right",
+          fontSize:"12px",
+        }
+      },
+      bottom_(){
+        return{
+          width:"980px",
+          height:"41px",
+          position:"relative",
+          bottom:"-197px",
+          borderTop:"1px solid #938e8c",
+        }
+      },
+      text2_(){
+        return{
+          fontSize:"14px",
+          color:"#5a5b5b",
+          fontFamily:"SimHei",
+        }
+      },
+      word(){
+        return{
+          width:"199px",
+          height:"160px",
+          display:"inline",
+          float:"left",
+          fontSize:"14px",
+          color:"#5a5b5b",
+          textAlign:"left",
+        }
+      },
+      hyh(){
+        return{
+          float:"left",
+          position:"relative",
+          fontSize:"72px",
+          color:"#de5d5c",
+          fontFamily:"SimHei",
+          right:"-140px",
+          top:"-24px",
+          display:"inline-block",
+          width:"70px",
+          height:"40px",
+        }
+      },
+      qyh(){
+        return{
+          float:"left",
+          position:"relative",
+          fontSize:"72px",
+          color:"#de5d5c",
+          fontFamily:"SimHei",
+          right:"10px",
+          top:"10px",
+          display:"inline-block",
+          width:"70px",
+          height:"40px",
+        }
+      },
+      sma_de(){
+        return{
+          float:"left",
+          position:"relative",
+          fontFamily:"SimHei",
+          display:"inline-block",
+          fontSize:"12px",
+          color:"#ffffff",
+          textAlign:"left",
+          width:"150px",
+          left:"5px",
+          top:"10px"
+        }
+      },
+      big_de2(){
+        return{
+          float:"left",
+          position:"relative",
+          display:"inline-block",
+          fontSize:"21px",
+          color:"#ffffff",
+          fontFamily:"SimHei",
+          marginBottom:"24px",
+          top:"23px",
+          left:"-84px",
+        }
+      },
+      big_de1(){
+        return{
+          float:"left",
+          position:"relative",
+          display:"inline-block",
+          fontSize:"21px",
+          color:"#ffffff",
+          fontFamily:"SimHei",
+          marginBottom:"24px",
+        }
+      },
+      detail(){
+        return{
+          top:"-115px",
+          float:"right",
+          position:"relative",
+          height:"86px",
+          width:"200px",
+          display:"inline-block",
+          borderLeft:"2px solid #ffffff",
+        }
+      },
+      art_Num2(){
+        return{
+          position:"relative",
+          display:"inline-block",
+          fontSize:"110px",
+          color:"#ffffff",
+          fontFamily:"Microsoft YaHei",
+          float:"left",
+          left:"10px",
+        }
+      },
+      BigNum_box(){
+        return {
+          width:"260px",
+          height:"160px",
+          position:"relative",
+          display:"inline-block",
+          background:"#d45d5c",
+          float:"left"
+        }
+      },
+      other_intro(){
+        return{
+          position:"relative",
+          textAlign:"left",
+          width:"400px",
+          top:"30px",
+          display:"inline-block",
+          marginBottom: "20px",
+          fontSize:"16px",
+          color:"#5a5b5b",
+          fontFamily:"SimSun",
+        }
+      },
+      mulu(){
+        return{
+          width:"459px",
+          height:"159px",
+        }
+      },
+      text4_(){
+        return{
+          fontSize:"12px",
+          color:"#767777",
+          fontFamily:"SimSun"
+        }
+      },
+      t1_im(){
+        return{
+          position:"relative",
+          float:"right",
+          top:"-225px",
+          display:"inline-block",
+          width:"191px",
+          height:"335px",
+          margin:"15px",
+          marginRight:"0",
+        }
+      },
+      big_text1(){
+        return{
+          float:"left",
+          fontSize:"70px",
+          color:"#f5e327",
+          fontWeight: "bold",
+          fontFamily:"Microsoft YaHei",
+          textAlign:"left",
+          position:"relative",
+          left: "22px",
+          display:"inline-block",
+        }
+      },
+      text_intro(){
+        return{
+          textAlign:"left",
+          width:"415px",
+          height:"480px",
+          position:"relative",
+          display:"inline-block",
+          top:"205px",
+          right:"30px",
+        }
+      },
+      jrj_intro(){
+        return{
+          textAlign:"left",
+          fontSize:"12px",
+          color:"#72b16a",
+          fontFamily:"Microsoft YaHei",
+          left:"-40px",
+          position:"relative",
+          display:"inline-block",
+          top:"7px",
+        }
+      },
+      jrj(){
+        return{
+          textAlign:"left",
+          fontSize:"26px",
+          color:"#ffffff",
+          fontFamily:"Microsoft YaHei",
+          left:"-47px",
+          position:"relative",
+          display:"inline-block",
+          top:"4px",
+        }
+      },
+      shuxian(){
+        return{
+          borderLeft:"3px solid #72b16a",
+          position:"relative",
+          display:"inline-block",
+          background:"none",
+          width:"350px",
+          height:"50px",
+          top:"5px",
+        }
+      },
+      img2_(){
+        return{
+          position:"relative",
+          display:"inline",
+          width:"458px",
+          height:"275px",
+        }
+      },
+      small_story_title_3(){
+        return{
+          fontSize:"33px",
+          color:"#11456b",
+          fontWeight: "bold",
+          fontFamily:"SimHei",
+          textAlign:"left",
+          position:"relative",
+          left: "-75px",
+          display:"inline-block",
+          top:"40px",
+        }
+      },
+      small_story_title_2(){
+        return{
+          fontSize:"42px",
+          color:"#11456b",
+          fontWeight: "bold",
+          fontFamily:"SimHei",
+          textAlign:"left",
+          position:"relative",
+          left: "-250px",
+          display:"inline-block",
+          top:"50px",
+          marginBottom:"16px",
+        }
+      },
+      small_story_title_1(){
+        return{
+          fontSize:"42px",
+          color:"#11456b",
+          fontWeight: "bold",
+          fontFamily:"SimHei",
+          textAlign:"left",
+          position:"relative",
+          left: "45px",
+          display:"inline-block",
+        }
+      },
+      big_story_title(){
+        return{
+          fontSize:"72px",
+          color:"#f5e327",
+          fontWeight: "bold",
+          fontFamily:"SimHei",
+          textAlign:"left",
+          position:"relative",
+          left: "22px",
+          display:"inline-block",
+        }
+      },
+      person(){
+        return{
+          fontSize:"12px",
+          color:"#cc8091",
+          fontFamily:"Microsoft YaHei",
+          textAlign:"left",
+          position:"relative",
+          right: "60px",
+          top:"-15px",
+          width:"100px",
+          display:"inline-block",
+        }
+      },
+      ty(){
+        return{
+          fontSize:"21px",
+          color:"#cc8091",
+          fontFamily:"Microsoft YaHei",
+          textAlign:"left",
+          position:"relative",
+          right: "15px",
+          top:"-35px",
+          width:"40px",
+          display:"inline-block"
+        }
+      },
+      C(){
+        return{
+          fontSize:"55px",
+          color:"#cc8091",
+          fontFamily:"Microsoft YaHei",
+          textAlign:"left",
+          position:"relative",
+          right: "15px",
+          top:"-15px",
+          width:"40px",
+          display:"inline-block"
+        }
+      },
+      artNum1(){
+        return{
+          fontSize:"116px",
+          color:"#75b86b",
+          fontFamily:"Microsoft YaHei",
+          textAlign:"left",
+          top:"5px",
+          position:"relative",
+          right: "20px",
+          textDecoration:"underline"
+        }
+      },
+      st(){
+        return{
+          fontSize:"12px",
+          color:"#676767",
+          fontFamily:"KaiTi",
+          textAlign:"left",
+          top:"15px",
+          position:"relative",
+        }
+      },
+      tt1(){
+        return{
+          fontFamily:"Microsoft YaHei",
+          fontSize:"24px",
+          color:"#000000",
+          textAlign:"left",
+          top:"15px",
+          position:"relative",
+          textDecoration:"underline"
+        }
+      },
+      tt2(){
+        return{
+          fontFamily:"Microsoft YaHei",
+          fontSize:"24px",
+          color:"#000000",
+          textAlign:"left",
+          top:"15px",
+          position:"relative",
+          textDecoration:"underline"
+        }
+      },
+      headers_text(){
+        return {color : "#ffffff", top:"35px", position:"relative",font:"12px",fontFamily:"SimHei"}
+      },
+      headers_date(){
+        return {color : "#d45d5c", top:"35px", position:"relative",font:"12px",fontFamily:"SimHei"}
+      },
+      i1(){
+        return {position:"relative",width:"641px",height:"301px",display:"inline",left:"50px",float:"left",top:"20px"}
+      },
+      i2(){
+        return {position:"relative",width:"458px",height:"275px",display:"inline",right:"50px",float:"right",top:"200px"}
+      },
+      mask2(){
+        return{position:"absolute",width: "100%",height: "61px",background:"rgba(0,0,0,0.3)",display: "inline",index:"3",
+          left:"0",bottom:"0"
+        }
+      },
+      mask(){
+        return{position:"absolute",width: "191px",height: "301px",background:"rgba(0,0,0,0.3)",display: "inline",index:"2"}
+      },
+      title(){
+        return{position:"relative",width:"203px",height:"301px",background: "white",float: "right",top:"20px",right:"45px",
+          borderTop:"2px solid purple"
+        }
+      }
+    }
+  })
+</script>
+</body>
+</html>
