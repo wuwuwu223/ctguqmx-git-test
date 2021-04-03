@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test1 魏</title>
+    <style>
+        a {
+            text-decoration: none;
+            font-family: Arial, Helvetica, Sans-Serif;
+            font-weight: 400;
+            opacity: .8;
+            vertical-align: middle;
+            line-height: 39px !important;
+            display: inline-block;
+            color: rgb(19, 18, 18);
+            font-size: 18px;
+        }
+        
+        .ul_sp {
+            font-family: Arial, Helvetica, Sans-Serif;
+            font-weight: 400;
+            opacity: .8;
+            vertical-align: middle;
+            line-height: 39px !important;
+            display: inline-block;
+        }
+        
+        .ul_sp {
+            margin-left: 20px;
+            margin-right: 18px;
+            color: rgb(20, 20, 20);
+            font-size: 18px;
+        }
+        
+        .ul_sp7 {
+            font-family: Arial, Helvetica, Sans-Serif;
+            font-weight: 400;
+            opacity: .8;
+            vertical-align: middle;
+            line-height: 39px !important;
+            display: inline-block;
+            position: absolute;
+            top: 12px;
+            left: 550px;
+            color: rgb(8, 8, 8);
+            font-size: 18px;
+        }
+        
+        .ul_sp0 {
+            margin-left: 70px;
+            margin-right: 18px;
+            color: rgb(15, 15, 15);
+            font-size: 18px;
+        }
+        
+        .top2_left {
+            margin-top: 12px;
+        }
+        
+        .top2_right {
+            background-color: transparent !important;
+            position: relative !important;
+            float: right;
+            height: 43px !important;
+            width: auto;
+            display: block;
+            margin-right: 70px;
+            color: #fff;
+            font-size: 18px;
+            font-family: Arial, Helvetica, Sans-Serif;
+            font-weight: 400;
+            opacity: .8;
+        }
+        
+        .enter {
+            vertical-align: middle;
+            margin: 1px 3px 2px 8px;
+            border-radius: 16px;
+        }
+        
+        .menu0 {
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            font-family: Arial, Helvetica, Sans-Serif;
+            font-weight: 400;
+            opacity: .8;
+        }
+        
+        .menu_ {
+            background-image: url(/rp/E0ry4Jqia3q5ZJJj8PbBVWFBubM.png);
+            background-size: 241px 224px;
+            background: transparent;
+            border-width: 0px;
+            outline: none;
+            color: #000;
+            font-size: 18px;
+            font-family: Arial, Helvetica, Sans-Serif;
+            font-weight: 400;
+            opacity: .8;
+        }
+        
+        .logo_ {
+            margin: 75px 0 0 0;
+        }
+        
+        .logo_1 {
+            margin: 0 0 0 216px;
+        }
+        
+        .logo_2 {
+            width: 80px;
+            height: 40px;
+            background: #fff;
+            border: 1px #ccc solid;
+            border-bottom: none;
+            border-radius: 2px 6px 0px 0px;
+            background-color: #fff;
+            padding: 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0);
+            font-family: 'Microsoft YaHei', Arial, Helvetica, sans-serif;
+            font-size: 16px;
+        }
+        
+        .logo {
+            margin: 0px 0px 0px 70px;
+            color: #fff;
+        }
+        
+        .search {
+            background: #fff;
+            border-bottom: none;
+            border-radius: 0px 6px 6px 6px;
+            background-color: #fff;
+            padding: 0;
+            border: 1px #ccc solid;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
+            width: 600px;
+            height: 46px;
+            background-image: url('imghtml/S11.png');
+            background-position: right;
+            background-repeat: no-repeat;
+        }
+        
+        .office {
+            margin-top: 0px;
+            opacity: 0;
+            width: 350px;
+            height: 230px;
+            position: absolute;
+            top: 40px;
+            left: 430px;
+            z-index: 9999999;
+        }
+        
+        .office:hover {
+            margin-top: 0px;
+            opacity: 1;
+            width: 350px;
+            height: 230px;
+            position: absolute;
+            top: 45px;
+            left: 430px;
+            z-index: 99999999;
+        }
+        
+        .u li {
+            list-style: none;
+        }
+        
+        #png1 {
+            opacity: 50%;
+        }
+        
+        #png1:hover {
+            opacity: 1;
+        }
+        
+        #button_menu {
+            opacity: 0;
+            position: absolute;
+            top: 40px;
+            right: 75px;
+            width: 320px;
+            background: #fff;
+            text-align: left;
+            height: 370px;
+            z-index: 999999999;
+            transition: opacity 1s;
+        }
+        
+        .p {
+            font-size: 13px;
+            height: 17px;
+            color: #444;
+        }
+        
+        .p_ {
+            margin: 23px;
+            font-size: 19px;
+            height: 17px;
+            color: #444;
+        }
+        
+        #menu_top {
+            padding-top: 9px;
+            float: right;
+            border-width: 0px;
+            outline: none;
+            color: violet;
+            font-size: 18px;
+            background-color: white;
+            font-family: Arial, Helvetica, Sans-Serif;
+            font-weight: 400;
+            opacity: .8;
+        }
+        
+        #menu_top1 {
+            padding-top: 9px;
+            float: right;
+            border-width: 0px;
+            outline: none;
+            color: violet;
+            font-size: 18px;
+            background-color: white;
+            font-family: Arial, Helvetica, Sans-Serif;
+            font-weight: 400;
+            opacity: .8;
+        }
+        
+        #top2 {
+            display: block;
+        }
+        
+        .menu_img1 {
+            position: absolute;
+            right: 50px;
+            bottom: 50px;
+        }
+        
+        .menu_img {
+            right: 50px;
+            bottom: 50px;
+            background: transparent;
+            border-width: 0px;
+            outline: none;
+            color: #1c1919;
+            font-size: 18px;
+            font-family: Arial, Helvetica, Sans-Serif;
+            font-weight: 400;
+            opacity: .8;
+        }
+        
+        .searchdiv {
+            display: block;
+            background-color: transparent;
+            border: none;
+            background: #fff;
+            border-bottom: none;
+            border-radius: 0px 0px 0px 0px;
+            background-color: #fff;
+            padding: 0;
+            border: 1px #ccc solid;
+            box-shadow: 0 2px 4px rgb(0 0 0 / 30%);
+            width: 600px;
+            height: 46px;
+            background-position: right;
+            background-repeat: no-repeat;
+            margin-left: 254px;
+            margin-top: 0;
+            margin-bottom: 0;
+            text-overflow: ellipsis;
+            color: #639;
+        }
+        
+        #search_ {
+            opacity: 0;
+            z-index: 999999999;
+            transition: opacity 0.7s;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main" style="background-image: url('imghtml/1.jpg');position: fixed;top: 0;left: 0;width: 100%;height: 100%; ">
+        <div class="top1">
+            <div class="top2_right">
+                <div style="margin-top: 2px;">
+                    <span> 登录 <img class="enter" src="imghtml\enter.jpg "alt="tt"></span>
+                    <button class="menu_" id="menu__" onclick="fun()"> 菜单 </button>
+
+                </div>
+            </div>
+
+            <div id="top2">
+                <div>
+                    <p class="top2_left">
+                        <span class="ul_sp0">图片</span>
+                        <span class="ul_sp">视频</span>
+                        <span class="ul_sp">学术</span>
+                        <span class="ul_sp">词典</span>
+                        <span class="ul_sp">地图</span>
+                        <span class="ul_sp" style="margin: 0;">|</span>
+                        <span class="ul_sp" class="off_meun"> <a class="off_meun" href="www.baidu.com">Office 
+                        </a> <div class="office" >
+                                <ul class="u" >
+                                    <li>
+                                        <img id="png1" src="imghtml\enter.jpg" alt="">
+                                        <img id="png1" src="imghtml\enter.jpg" alt="ok">
+                                        <img id="png1" src="imghtml\enter.jpg" alt="ok">
+                                        <img id="png1" src="imghtml\enter.jpg" alt="ok">
+                                        <img id="png1" src="imghtml\enter.jpg" alt="ok">
+                                        <img id="png1" src="imghtml\enter.jpg" alt="ok">
+                                        <img id="png1" src="imghtml\enter.jpg" alt="ok">
+                                        <img id="png1" src="imghtml\enter.jpg" alt="ok">
+                                        <img id="png1" src="imghtml\enter.jpg" alt="ok">
+                                        <img id="png1" src="imghtml\enter.jpg" alt="ok">
+                                        <img id="png1" src="imghtml\enter.jpg" alt="ok">
+                                        <img id="png1" src="imghtml\enter.jpg" alt="ok">
+                                        <img id="png1" src="imghtml\enter.jpg" alt="ok">
+                                        <img id="png1" src="imghtml\enter.jpg" alt="ok">
+                                        <img id="png1" src="imghtml\enter.jpg" alt="ok">
+                                        <img id="png1" src="imghtml\enter.jpg" alt="ok">
+                                        <img id="png1" src="imghtml\enter.jpg" alt="ok">
+                                        <img id="png1" src="imghtml\enter.jpg" alt="ok">
+                                        <img id="png1" src="imghtml\enter.jpg" alt="ok">
+                                        <img id="png1" src="imghtml\enter.jpg" alt="ok">
+                                        <img id="png1" src="imghtml\enter.jpg" alt="ok">
+                                        <img id="png1" src="imghtml\enter.jpg" alt="ok">
+                                        <img id="png1" src="imghtml\enter.jpg" alt="ok">
+                                        <img id="png1" src="imghtml\enter.jpg" alt="ok">
+                                        <img id="png1" src="imghtml\enter.jpg" alt="ok">
+                                        <img id="png1" src="imghtml\enter.jpg" alt="ok">
+                                        <img id="png1" src="imghtml\enter.jpg" alt="ok">
+                                        <img id="png1" src="imghtml\enter.jpg" alt="ok">
+                                        <img id="png1" src="imghtml\enter.jpg" alt="ok">
+                                        <img id="png1" src="imghtml\enter.jpg" alt="ok">
+                                        <img id="png1" src="imghtml\enter.jpg" alt="ok">
+                                        <img id="png1" src="imghtml\enter.jpg" alt="ok">
+                                        <img id="png1" src="imghtml\enter.jpg" alt="ok">
+                                        <img id="png1" src="imghtml\enter.jpg" alt="ok">
+                                        <img id="png1" src="imghtml\enter.jpg" alt="ok">
+                                        <img id="png1" src="imghtml\enter.jpg" alt="ok">
+                                        <img id="png1" src="imghtml\enter.jpg" alt="ok">
+                                        <img id="png1" src="imghtml\enter.jpg" alt="ok">
+                                        <img id="png1" src="imghtml\enter.jpg" alt="ok">
+                                    </li>
+                                </ul>
+                </div>
+            
+         </span>
+                        <span class="ul_sp7">Outlook.com</span>
+                    </p>
+                </div>
+            </div>
+            <div class="logo_">
+                <div class="logo_1">
+
+                </div>
+            </div>
+            <div class="logo" onclick="fun5()">
+                <span><img src="imghtml\Microsoft.png" alt=""></span>
+                <span>Microsoft Bing</span>
+                <span>
+                    <input type="text" class="search" id="se" >
+                </span>
+            </div>
+            <div id="search_">
+                <p class="searchdiv">试试点菜单或者下面的换图片</p>
+                <p class="searchdiv"> 狗仔偷拍张毅强和女友出入电影院</p>
+                <p class="searchdiv"> 张毅强被曝与王帅不和</p>
+                <p class="searchdiv"> 王帅疑似被打</p>
+                <p class="searchdiv"> 某魏姓男子疑似因头发与理发师争执</p>
+
+            </div>
+            <div class="button_menu_">
+                <span id="button_menu">
+                <div class="p">
+                    <p class="p_"><img  src="imghtml\enter.jpg" alt="">
+                        设置</p>
+                    <p class="p_"><img  src="imghtml\enter.jpg" alt="">
+                        安全搜索</p>
+                    <p class="p_"><img  src="imghtml\enter.jpg" alt="">
+                        搜索历史记录</p>
+                    <p class="p_"><img  src="imghtml\enter.jpg" alt="">
+                        隐私</p> 
+                     <p class="p_"><img  src="imghtml\enter.jpg" alt="">
+                        反馈</p>
+                    <p class="p_"><img   src="imghtml\enter.jpg" alt="">
+                        自定义主页</p>
+                    <p class="p_"><img   src="imghtml\enter.jpg" alt="">
+                        <button id="menu_top" onclick="fun2()"> 看王帅 </button>
+                        显示主页界面</p>
+                    <p class="p_"><img   src="imghtml\enter.jpg" alt="">
+                        <button id="menu_top1" onclick="fun1()"> 求你别关 </button>
+                        显示菜单栏</p>
+                </div>
+                </span>
+            </div>
+        </div>
+        <div class=" menu_img1">
+            <button class="menu_img" id="menu__img1" onclick="fun3()"> 前一张 </button>
+            <button class="menu_img" id="menu__img2" onclick="fun4()"> 后一张 </button>
+            <button class="menu_img"> <a id="menu__img0" href="https://cn.bing.com/search?q=%E7%A5%9E%E7%BB%8F%E7%97%85%E7%97%85%E4%BA%BA%E5%9B%BE%E7%89%87&qs=n&form=QBLH&sp=-1&pq=%E7%A5%9E%E7%BB%8F%E7%97%85%E7%97%85%E4%BA%BAtu%27pian&sc=0-12&sk=&cvid=548FB04AD04E49C5A0A7B43FB1829181" id="menu__img0" >帅照详情</a>  </button>
+        </div>
+
+    </div>
+    </div>
+    <script>
+        var x = document.getElementById("menu_top");
+        var x1 = document.getElementById("menu_top1");
+        var flag = true;
+        var flag1 = true;
+        var flag2 = true;
+        var b = 1;
+        var searchdiv_ = true;
+
+        function fun() {
+            if (flag == false) {
+                document.getElementById("button_menu").style.opacity = 0;
+                flag = true;
+            } else {
+                document.getElementById("button_menu").style.opacity = 1;
+                flag = false;
+            }
+        }
+
+        function fun1() {
+            if (flag1 == true) {
+                x1.innerText = "看个鬼";
+                document.getElementById("top2").style.opacity = 0;
+                flag1 = false;
+            } else {
+                x1.innerText = "看王帅";
+                document.getElementById("top2").style.opacity = 1;
+                flag1 = true;
+            }
+        }
+
+        function fun2() {
+            if (flag2 == true) {
+                x.innerText = "求你别关";
+                document.getElementById("main").style.backgroundImage = "url('')";
+                flag2 = false;
+            } else {
+                x.innerText = "打开,搞块点";
+                document.getElementById("main").style.backgroundImage = "url('imghtml/" + b + ".jpg')";
+                flag2 = true;
+            }
+
+        }
+
+        function fun3() {
+            if (b < 4) {
+                b = b + 1;
+                document.getElementById("main").style.backgroundImage = "url('imghtml/" + b + ".jpg')";
+            }
+            if (b == 1) {
+                document.getElementById("menu__img0").href = "https://cn.bing.com/search?q=%E7%A5%9E%E7%BB%8F%E7%97%85%E7%97%85%E4%BA%BA%E5%9B%BE%E7%89%87&qs=n&form=QBLH&sp=-1&pq=%E7%A5%9E%E7%BB%8F%E7%97%85%E7%97%85%E4%BA%BAtu%27pian&sc=0-12&sk=&cvid=548FB04AD04E49C5A0A7B43FB1829181";
+
+            }
+            if (b == 2) {
+                document.getElementById("menu__img0").href = "https://cn.bing.com/search?q=%E5%B8%85%E5%93%A5%E5%9B%BE%E7%89%87&qs=n&form=QBRE&sp=-1&pq=%E5%B8%85%E5%93%A5%E5%9B%BE%E7%89%87&sc=8-4&sk=&cvid=7A47E164011A4DA5895934433CF42B99";
+            }
+            if (b == 3) {
+                document.getElementById("menu__img0").href = "https://cn.bing.com/search?q=%E9%83%91%E7%88%BD%E5%9B%BE%E7%89%87&qs=n&form=QBRE&sp=-1&pq=%E9%83%91%E7%88%BD%E5%9B%BE%E7%89%87&sc=6-4&sk=&cvid=F87EBD47C44D4856A5826F2D38221E2B";
+            }
+            if (b == 4) {
+                document.getElementById("menu__img0").href = "https://cn.bing.com/search?q=%E5%8D%8E%E6%99%A8%E5%AE%87%E5%9B%BE%E7%89%87&qs=n&form=QBRE&sp=-1&pq=%E5%8D%8E%E6%99%A8%E5%AE%87tu%27pi&sc=0-8&sk=&cvid=0C65E3CE474F4BB5BDBE87DA30031389";
+            }
+
+        }
+
+
+        function fun4() {
+            if (b > 1) {
+                b = b - 1;
+                document.getElementById("main").style.backgroundImage = "url('imghtml/" + b + ".jpg')";
+            }
+
+            if (b == 1) {
+                document.getElementById("menu__img0").href = "https://cn.bing.com/search?q=%E7%A5%9E%E7%BB%8F%E7%97%85%E7%97%85%E4%BA%BA%E5%9B%BE%E7%89%87&qs=n&form=QBLH&sp=-1&pq=%E7%A5%9E%E7%BB%8F%E7%97%85%E7%97%85%E4%BA%BAtu%27pian&sc=0-12&sk=&cvid=548FB04AD04E49C5A0A7B43FB1829181";
+            }
+            if (b == 2) {
+                document.getElementById("menu__img0").href = "https://cn.bing.com/search?q=%E5%B8%85%E5%93%A5%E5%9B%BE%E7%89%87&qs=n&form=QBRE&sp=-1&pq=%E5%B8%85%E5%93%A5%E5%9B%BE%E7%89%87&sc=8-4&sk=&cvid=7A47E164011A4DA5895934433CF42B99";
+            }
+            if (b == 3) {
+                document.getElementById("menu__img0").href = "https://cn.bing.com/search?q=%E9%83%91%E7%88%BD%E5%9B%BE%E7%89%87&qs=n&form=QBRE&sp=-1&pq=%E9%83%91%E7%88%BD%E5%9B%BE%E7%89%87&sc=6-4&sk=&cvid=F87EBD47C44D4856A5826F2D38221E2B";
+            }
+            if (b == 4) {
+                document.getElementById("menu__img0").href = "https://cn.bing.com/search?q=%E5%8D%8E%E6%99%A8%E5%AE%87%E5%9B%BE%E7%89%87&qs=n&form=QBRE&sp=-1&pq=%E5%8D%8E%E6%99%A8%E5%AE%87tu%27pi&sc=0-8&sk=&cvid=0C65E3CE474F4BB5BDBE87DA30031389";
+            }
+
+        }
+
+        function fun5() {
+            if (searchdiv_ == true) {
+                document.getElementById("search_").style.opacity = 1;
+                searchdiv_ = false;
+            } else
+            if (searchdiv_ == false) {
+                document.getElementById("search_").style.opacity = 0;
+                searchdiv_ = true;
+            }
+        }
+    </script>
+</body>
+
+
+</html>
