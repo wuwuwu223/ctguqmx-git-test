@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>百度首页</title>
+    <link rel="stylesheet" href="font/css/all.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="font/font_2450880_af2uwjkx2c7/iconfont.css">
+    <script src="./js/home.js"></script>
+    <style type="text/css">
+        .head {
+            width: 100%;
+            height: 60px;
+            min-width: 1470px;
+        }
+        .head_cont {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 60px;
+            padding: 0 24px;
+            box-sizing: border-box;
+            font: 13px/23px Arial,sans-serif;
+        }
+        .head_left {
+            height: 100%;
+            box-sizing: border-box;
+            z-index: 9999;
+        }
+        .head_left li {
+            float: left;
+            margin-top: 19px;
+            margin-right: 31px;
+        }
+        .head_left a {
+            color: rgb(34, 34, 34);
+            text-decoration: none;
+        }
+        .head_left a:hover {
+            color: #315efb;
+        }
+        .head_left_a {
+            height: 60px;
+        }
+        .head_left_a:hover .web_menu {
+            display: block;
+        }
+        .web_menu {
+            display: none;
+            position: absolute;
+            top: 29px;
+            right: 0;
+            width: 304px;
+            height: 233px;
+            z-index: 99999;
+            padding: 10px 0;
+            box-sizing: border-box;
+            background: #fff;
+            box-shadow: 0 2px 10px 0 rgba(0,0,0,.15);
+            border-radius: 12px;
+        }
+        .web_menu li {
+            margin: 0;
+            padding: 0;
+        }
+        .web_menu li a {
+            display: block;
+            width: 76px;
+            height: 70px;
+            text-align: center;
+        }
+        .web_menu li .web_top {
+            margin-bottom: 19px;
+        }
+        .web_menu img {
+            width: 42px;
+            height: 42px;
+        }
+        .web_tip {
+            position: absolute;
+            top: 190px;
+            width: 100%;
+            height: 23px;
+            text-align: center;
+            color:rgb(145, 149, 163);
+        }
+        .web_tip a{
+            color:rgb(145, 149, 163);
+        }
+        .head_right {
+            width: 400px;
+            height: 100%;
+        }
+        .head_right li {
+            float: right;
+            height: 40px;
+            margin-top: 19px;
+            margin-left: 31px;
+        }
+        .head_right li a {
+            color: rgb(34, 34, 34);
+            text-decoration: none;
+        }
+        .head_right li .a_btn {
+            display: inline-block;
+            width: 48px;
+            height:24px;
+            background: #4e6ef2;
+            border-radius: 6px;font-family: inherit;
+            font-weight: 400;
+            text-align: center;
+            vertical-align: middle;
+            outline: 0;
+            border: 0;
+            font: inherit;
+            vertical-align: baseline;
+            color: #fff !important;
+        }
+        .head_right li .a_btn:hover {
+            background: #3a5ff3;
+        }
+        
+        .head_right .set {
+            display: none;
+            position: absolute;
+            top: 48px;
+            right: 72px;
+            width: 84px;
+            background: #fff;
+            padding: 8px 0;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px 0 rgba(0,0,0,.15);
+            
+        }
+        .set li {
+            height: 23px;
+            margin: 3px 16px;
+            padding: 0;
+        }
+        .head_right .li_set:hover ~ .set{
+            display: block;
+        }
+        .set:hover {
+            display: block;
+        }
+        .set a:hover {
+            color: #315efb;
+        }
+        .body_img {
+            min-width: 1470px;
+        }
+        .baidu_img {
+            width: 270px;
+            height: 129px;
+            background-image:url(img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png);
+            background-size: 270px 129px;
+            margin-bottom: 25px;
+            margin: 0 auto;
+            
+        }
+        .body_input {
+            height: 44px;
+            margin-bottom: 40px;
+            min-width: 1470px;
+        }
+        .body_input_cont {
+            width: 662px;
+            margin: 0 auto;
+            
+        }
+        .input_text {
+            position: relative;
+        }
+        .input_cont {
+            display: block;
+            float: left;
+            width: 548px;
+            height: 44px;
+            font-size: 16px;
+            margin: 0;
+            outline: 0;
+            box-shadow: none;
+            border-radius: 10px 0 0 10px;
+            border: 2px solid #c4c7ce;
+            background: #fff;
+            color: #222;
+            overflow: hidden;
+            box-sizing: border-box;
+            border-right: #4e6ef2;
+            padding: 12px 0;
+            padding-left: 16px;
+            padding-right: 48px;
+        }
+        .input_cont:focus {
+            border-color: #4e6ef2;
+        }
+        .input_btn {
+            float: left;
+            width: 108px;
+            height: 44px;
+            background-color: #4e6ef2;
+            border-radius: 0 10px 10px 0;
+            font-size: 17px;
+            color: #fff;
+            box-shadow: none;
+            font-weight: 400;
+            border: none;
+            outline: 0;
+            text-align: center;
+            line-height: 44px;
+        }
+        .input_text .iconfont {
+            display: inline-block;
+            position: absolute;
+            font-size: 24px;
+            color: #adb0ba;
+            left: 510px;
+            top: 10px;
+        }
+        
+        .input_tip {
+            display: none;
+            position: absolute;
+            right: 120px;
+            top: 49px;
+            box-shadow: 0 2px 10px 0 rgba(0,0,0,.1);
+            border-radius: 6px;
+            height: 32px;
+            width: 94px;
+            text-align: center;
+            line-height: 32px;
+            font-size: 14px;
+            color: #626675;
+        }
+        .input_text .iconfont:hover {
+            color: #315efb;
+        }
+        .input_text .iconfont:hover~.input_tip{
+            display: block;
+        }
+        .body_new {
+            min-width: 1400px;
+        }
+        .body_new_new {
+            width: 654px;
+            height: 24px;
+            margin: 0 auto;
+        }
+        .new_head {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+            font-weight: 400;
+            margin-bottom: 8px;
+        }
+        .head_one a{
+            color: #222;
+        }
+        .head_two a{
+            color: rgb(145, 149, 163);
+        }
+        .head_two a:hover {
+            color: #315efb;
+        }
+        .new_head .iconfont {
+            display: inline-block;
+            font-size: 14px;
+            margin-right: 5px;
+            
+        }
+        .new_cont {
+            width: 654px;
+        }
+        .new_six li{
+            float: left;
+            width: 268px;
+            height: 32px;
+            line-height: 32px;
+        }
+        .new_six li a {
+            display: inline-block;
+            display: flex;
+            text-decoration: none;
+            font-size: 14px;
+            color: rgb(34, 34, 34);
+        }
+        .new_six li a:hover {
+            color: #315efb;
+        }
+        .six_num {
+            width: 18px;
+            height: 24px;
+            margin-right: 2px;
+            font-size: 18px;
+            color: rgb(145, 149, 163);
+        }
+        .num_w {
+            width: 18px;
+            height: 32px;
+            margin-right: 5px;
+        }
+        .six_befor {
+            margin-right: 59px;
+        }
+        .six_after {
+            margin-left: 59px;
+        }
+        .write_color {
+            color:rgb(34, 34, 34);
+        }
+        .er {
+            position: absolute;
+            right: 24px;
+            bottom: 64px;
+            width: 44px;
+            height: 44px;
+            background-color: #fbfbfb;
+            border-radius: 22px;
+        }
+        .er_img {
+            margin-left: 10px;
+            width: 24px;
+            height: 44px;
+            margin-top: 10px;
+            text-align: center;
+        }
+        .er_img img{
+            width: 24px;
+            height: 24px;
+        }
+        .er_img .two {
+            display: none;
+        }
+        .er:hover {
+            box-shadow: 0 2px 10px 0 rgba(0,0,0,.1);
+        }
+        .er:hover .er_img .one{
+            display: none;
+        }
+        .er:hover .er_img .two{
+            display: block;
+        }
+        .show_er {
+            /* display: none; */
+           /*  position: absolute;
+            right: 90px;
+            bottom: 64px; */
+            width: 289px;
+            height: 107px;
+            background-color: #fff;
+            z-index: 303;
+            box-shadow: 0 2px 10px 0 rgba(0,0,0,.1);
+            border-radius: 12px;
+        }
+        .show_er img {
+            position: absolute;
+            right: 20px;
+            top: 15px;
+            width: 75px;
+            height: 75px;
+        }
+        .text_one {
+            position: absolute;
+            left: 10px;
+            top: 30px;
+            color: #333;
+            font-size: 18px;
+        }
+        .text_two {
+            position: absolute;
+            left: 10px;
+            top: 54px;
+            font-size: 14px;
+            color: #9195a3;
+        }
+        .show_wap {
+            display: none;
+            position: absolute;
+            right: 66px;
+            bottom: 56px;
+            width: 300px;
+            height: 120px;
+        }
+        .er:hover ~ .show_wap,.show_wap:hover{
+            display: block;
+        }
+        .bottom {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 39px;
+            line-height: 39px;
+            background: #fff;
+            
+        }
+        .bottom ul {
+            width: 1100px;
+            height: 100%;
+            margin: 0 auto;
+        }
+        .bottom ul li {
+            float: left;
+            margin-left: 18px;
+            font-size: 12px;
+            text-align: center;
+            color: #bbb;
+        }
+        .bottom ul li a {
+            text-decoration: none;
+            color: #bbb;
+        }
+        .bottom ul li a:hover {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="head">
+        <div class="head_cont">
+            <ul class="head_left">
+                <li><a href="#">新闻</a></li>
+                <li><a href="#">hao123</a></li>
+                <li><a href="#">地图</a></li>
+                <li><a href="#">直播</a></li>
+                <li><a href="#">视频</a></li>
+                <li><a href="#">贴吧</a></li>
+                <li><a href="#">学术</a></li>
+                <li style="position: relative;" class="head_left_a">
+                    <a href="#">更多</a>
+                    <div class="web_menu">
+                        <ul>
+                            <li><a href="" class="web_top">
+                                <img src="img/baidu_img/baiduyun@2x-e0be79e69e.png" alt="">
+                                <div>网盘</div>
+                            </a></li>
+                            <li><a href="" class="web_top">
+                                <img src="img/baidu_img/zhidao@2x-e9b427ecc4.png" alt="">
+                                <div>知道</div>
+                            </a></li>
+                            <li><a href="" class="web_top">
+                                <img src="img/baidu_img/baike@2x-1fe3db7fa6.png" alt="">
+                                <div>百科</div>
+                            </a></li>
+                            <li><a href="" class="web_top">
+                                <img src="img/baidu_img/tupian@2x-482fc011fc.png" alt="">
+                                <div>图片</div>
+                            </a></li>
+                            <li><a href="">
+                                <img src="img/baidu_img/baobaozhidao@2x-af409f9dbe.png" alt="">
+                                <div>宝宝知道</div>
+                            </a></li>
+                            <li><a href="">
+                                <img src="img/baidu_img/wenku@2x-f3aba893c1.png" alt="">
+                                <div>文库</div>
+                            </a></li>
+                            <li><a href="">
+                                <img src="img/baidu_img/jingyan@2x-e53eac48cb.png" alt="">
+                                <div>经验</div>
+                            </a></li>
+                            <li><a href="">
+                                <img src="img/baidu_img/yinyue@2x-c18adacacb.png" alt="">
+                                <div>音乐</div>
+                            </a></li>
+                        </ul>
+                        <div class="web_tip">
+                            <a href="">查看全部百度产品></a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <ul class="head_right">
+                <li><a href="#" class="a_btn">登录</a></li>
+                <li class="li_set"><a href="#" class="a_set">设置</a></li>
+                <ul class="set">
+                    <li><a href="">搜索设置</a></li>
+                    <li><a href="">高级搜索</a></li>
+                    <li><a href="">关闭预测</a></li>
+                    <li><a href="">隐私设置</a></li>
+                    <li><a href="">关闭热榜</a></li>
+                </ul>
+            </ul>
+        </div>
+    </div>
+    <div class="body">
+        <a href="#" style="display: block;">
+            <div class="body_img">
+                <div class="baidu_img"></div>
+            </div>
+        </a>
+        <div class="body_input">
+            <div class="body_input_cont">
+                <div class="input_text">
+                    <i class="iconfont">&#xe604;</i>
+                    <input type="text" class="input_cont">
+                    <a href="#" style="display: inline-block;"><div class="input_btn">百度一下</div></a>
+                    <div class="input_tip">按图片搜索</div>
+                </div>
+            </div>
+        </div>
+        <div class="body_new">
+            <div class="body_new_new">
+            <div class="new_head">
+                <div class="head_one"><a href="#" style="text-decoration: none;">百度热搜</a></div>
+                
+                <div class="head_two"><a href="#" style="text-decoration: none;"><i class="iconfont">&#xe619;</i>换一换</a></div>
+            </div>
+            <div class="new_cont">
+                <ul class="new_six" style="display: block;">
+                    <li class="six_befor">
+                        <a href="">
+                            <div style="color:#fe2d46; 
+                            width: 18px;
+                            height: 24px;
+                            margin-right: 2px;
+                            font-size: 18px;">1</div>
+                            <div class="write_color">航拍苏伊士运河堵船震撼画面</div>
+                        </a>
+                    </li>
+                    <li class="six_after">
+                        
+                            <a href="">
+                                <div class="six_num">4</div>
+                                <div class="write_color">嫦娥五号太空稻移栽至试验田新</div>
+                            </a>
+                       
+                    </li>
+                    <li class="six_befor">
+                        
+                            <a href="">
+                                <div style="color:#fe2d46; 
+                                width: 18px;
+                                height: 24px;
+                                margin-right: 2px;
+                                font-size: 18px;">2</div>
+                                <div class="write_color">三任公安局长收受贿赂成黑伞</div>
+                            </a>
+                       
+                    </li>
+                    <li class="six_after">
+                       
+                            <a href="">
+                                <div class="six_num ">5</div>
+                                <div class="write_color">苏伊士运河堵了数千牛羊</div>
+                            </a>
+                   
+                    </li>
+                    <li class="six_befor">
+                       
+                            <a href="">
+                                <div style="color:#fe2d46; 
+                                width: 18px;
+                                height: 24px;
+                                margin-right: 2px;
+                                font-size: 18px;">3</div>
+                                <div class="write_color">TVB老戏骨廖启智因胃癌去世</div>
+                            </a>
+                      
+                    </li>
+                    <li class="six_after">
+                    
+                            <a href="">
+                                <div class="six_num">6</div>
+                                <div class="write_color">官方通报患者捐遗产被收20万咨询费</div>
+                            </a>
+                  
+                    </li>
+                </ul>
+                <ul class="new_six" style="display: none;">
+                    <li class="six_befor">
+                        <a href="">
+                            <div class="six_num">7</div>
+                            <div class="write_color">红火蚁已传播至我国435个县市区</div>
+                        </a>
+                    </li>
+                    <li class="six_after">
+                        
+                            <a href="">
+                                <div class="six_num num_w">10</div>
+                                <div class="write_color">黑老大控制多人卖淫 是谁通风报信？</div>
+                            </a>
+                    
+                    </li>
+                    <li class="six_befor">
+                       
+                            <a href="">
+                                <div class="six_num">8</div>
+                                <div class="write_color">张亮为前妻寇静庆生</div>
+                            </a>
+                       
+                    </li>
+                    <li class="six_after">
+                        
+                            <a href="">
+                                <div class="six_num num_w">11</div>
+                                <div class="write_color">人类史上单个投资者单日亏损巅峰</div>
+                            </a>
+                     
+                    </li>
+                    <li class="six_befor">
+                        
+                            <a href="">
+                                <div class="six_num">9</div>
+                                <div class="write_color">谁该为苏伊士运河大塞船损失负责新</div>
+                            </a>
+                     
+                    </li>
+                    <li class="six_after">
+                     
+                            <a href="">
+                                <div class="six_num num_w">12</div>
+                                <div class="write_color">夫妻住民宿遭偷拍8小时 隐私被贩卖</div>
+                            </a>
+                      
+                    </li>
+            </ul>
+                <ul class="new_six" style="display: none;">
+                    <li class="six_befor">
+                        <a href="">
+                            <div class="six_num num_w">13</div>
+                            <div class="write_color">赵立坚驳斥所谓鼓动民众抵制外货</div>
+                        </a>
+                    </li>
+                    <li class="six_after">
+                        <a href="">
+                            <a href="">
+                                <div class="six_num num_w">16</div>
+                                <div class="write_color">罗永浩回应被限制出行：一直在还债</div>
+                            </a>
+                        </a>
+                    </li>
+                    <li class="six_befor">
+                       
+                            <a href="">
+                                <div class="six_num num_w">14</div>
+                                <div class="write_color">患艾滋男子性侵15岁女生改判10年</div>
+                            </a>
+                      
+                    </li>
+                    <li class="six_after">
+                       
+                            <a href="">
+                                <div class="six_num num_w">17</div>
+                                <div class="write_color">男子在动物园狮笼里发现一只金毛</div>
+                            </a>
+                     
+                    </li>
+                    <li class="six_befor">
+                        
+                            <a href="">
+                                <div class="six_num num_w">15</div>
+                                <div class="write_color">美国一儿童频道删除两集海绵宝宝</div>
+                            </a>
+                       
+                    </li>
+                    <li class="six_after">
+                     
+                            <a href="">
+                                <div class="six_num num_w">18</div>
+                                <div class="write_color">青岛泄题事件一名嫌疑人已抓获</div>
+                            </a>
+                     
+                    </li>
+            </ul>
+                <ul class="new_six" style="display: none;">
+                            <li class="six_befor">
+                                <a href="">
+                                    <div class="six_num num_w">19</div>
+                                    <div class="write_color">新疆家长现场打脸外媒寄宿学校谣言</div>
+                                </a>
+                            </li>
+                            <li class="six_after">
+                               
+                                    <a href="">
+                                        <div class="six_num num_w">22</div>
+                                        <div class="write_color">拜登呼吁各州恢复口罩令新</div>
+                                    </a>
+                              
+                            </li>
+                            <li class="six_befor">
+                                
+                                    <a href="">
+                                        <div class="six_num num_w">20</div>
+                                        <div class="write_color">东京奥运会门票不能全额退</div>
+                                    </a>
+                              
+                            </li>
+                            <li class="six_after">
+                              
+                                    <a href="">
+                                        <div class="six_num num_w">23</div>
+                                        <div class="write_color">微信表情包上限变成999</div>
+                                    </a>
+                               
+                            </li>
+                            <li class="six_befor">
+                               
+                                    <a href="">
+                                        <div class="six_num num_w">21</div>
+                                        <div class="write_color">足协公布中超准入名单</div>
+                                    </a>
+                             
+                            </li>
+                            <li class="six_after">
+                               
+                                    <a href="">
+                                        <div class="six_num num_w">25</div>
+                                        <div class="write_color">包钢通报职工跳入高炉钢水</div>
+                                    </a>
+                              
+                            </li>
+            </ul>
+                <ul class="new_six" style="display: none;">
+                        <li class="six_befor">
+                            <a href="">
+                                <div class="six_num num_w">26</div>
+                                <div class="write_color">狗不理回应北京最后门店停业</div>
+                            </a>
+                        </li>
+                        <li class="six_after">
+                            <a href="">
+                                <a href="">
+                                    <div class="six_num num_w">29</div>
+                                    <div class="write_color">新疆官员喊话HM擦亮眼睛热</div>
+                                </a>
+                            </a>
+                        </li>
+                        <li class="six_befor">
+                            
+                                <a href="">
+                                    <div class="six_num num_w">27</div>
+                                    <div class="write_color">入侵物种巴西龟被装入盲盒销售</div>
+                                </a>
+                          
+                        </li>
+                        <li class="six_after">
+                          
+                                <a href="">
+                                    <div class="six_num num_w">30</div>
+                                    <div class="write_color">2000年前的小熊高压锅</div>
+                                </a>
+                         
+                        </li>
+                        <li class="six_befor">
+                          
+                                <a href="">
+                                    <div class="six_num num_w">28</div>
+                                    <div class="write_color">中传回应招生被指男女不平等</div>
+                                </a>
+                          
+                        </li>
+                        <li class="six_after">
+                           
+                                <a href="">
+                                    <div class="six_num num_w">31</div>
+                                    <div class="write_color">龙丹妮不再担任哇唧唧哇实控人</div>
+                                </a>
+                           
+                        </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="er">
+        <div class="er_img">
+            <img src="img/baidu_img/qrcode@2x-daf987ad02.png" alt="" class="one">
+            <img src="img/baidu_img/qrcode-hover@2x-f9b106a848.png" alt="" class="two">
+        </div>
+    </div>
+    <div class="show_wap">
+        <div class="show_er">
+            <div class="show_cont">
+                <div class="text_one"><i class="iconfont" style="font-size: 18px; color: #333;">&#xe600;</i>  百度APP扫码登录</div>
+                <div class="text_two">有事搜一搜 没事看一看</div>
+                <div class="img">
+                    <img src="img/baidu_img/qrcode.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom">
+        <ul>
+            <li><a href="">设为首页</a></li>
+            <li><a href="">关于百度</a></li>
+            <li><a href="">About Baidu</a></li>
+            <li><a href="">百度营销</a></li>
+            <li><a href="">使用百度前必读</a></li>
+            <li><a href="">意见反馈</a></li>
+            <li><a href="">帮助中心</a></li>
+            <li><a href="">京公网安备11000002000001号</a></li>
+            <li><a href="">京ICP证030173号</a></li>
+            <li>©2021 Baidu</li>
+            <li>(京)-经营性-2017-0020</li>
+        </ul>
+    </div>
+    <div class="app">
+        <div class="app_wap">
+            <div class="app_cont"></div>
+        </div>
+    </div>
+</body>
+</html>

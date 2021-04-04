@@ -1,0 +1,430 @@
+body{
+    background-color: wheat;
+    color: black;
+    font-size: 12px;
+    font-family: "Microsoft YaHei";
+    margin: 0 auto;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+.write{
+height: 1386px;
+width: 980px;
+background-color: white;
+margin: 0 auto;
+padding: 0 44px;
+box-sizing: border-box;
+}
+header .box1{
+background-color: rgb(219, 62, 117);
+width: 110px;
+height: 61px;
+position: relative;
+}
+header .box1 p{
+    font-size: 12px;
+    color: #ffffff;
+    font-family: "SimHei";
+    position: absolute;
+    bottom: 2px;
+    margin-left: 4px;
+}
+header{
+    position: relative;
+    margin-bottom: 30px;
+}
+header .time{
+    font-size: 12px;
+    color: #d45d5c;
+    font-family: "SimHei";
+    position: absolute;
+    right: 0;
+    bottom: 5px;
+}
+header .underline{
+    height: 2px;
+    background-color: rgb(134, 139, 142);
+    margin-top: 0;
+    border: none;
+}
+.part_one{
+    position: relative;
+}
+.part_one img{
+    width: 641px;
+    height: 301px;
+}
+.left_img{
+    position: absolute;
+    width: 191px;
+    height: 301px;
+    background-color: rgba(114, 169, 111, 0.7);
+    top: 0;
+}
+.right_img{
+    position: absolute;
+    width:191px;
+    height: 301px;
+    top: 0;
+    background-color: rgba(151, 84, 120, 0.7);
+    right: 251px;
+}
+.right_write{
+    position: absolute;
+    top: 0;
+    right: 0px;
+    width: 203px;
+}
+.underlinetwo{
+    width: 203px;
+    height: 2px;
+    background-color: rgb(240, 27, 38);
+    border: none;
+}
+.wenzione{
+    font-family: "Microsoft YaHei";
+    font-size: 24px;
+    text-decoration: underline;
+    color:black;
+    text-transform:capitalize;
+    line-height: 40px;
+    font-variant: small-caps;
+}
+
+.wenzitwo{
+    font-family: "KaiTi";
+    font-size: 12px;
+    color: #676767;
+    line-height: 10px;
+}
+.numbel{
+    font-size: 116px;
+    color: #75b86b;
+    text-decoration: underline;
+    font-style: italic;
+    right: 10px;
+}
+.num{
+    position: relative;
+    width: 80px;
+   /* top: 10px;*/
+   
+}
+.num1{
+    font-size: 55px;
+    color: #cc8091;
+}
+.num2{
+    font-size: 21px;
+    color: #cc8091;
+    right: -30px;
+    position: absolute;
+    top: 25px;   
+}
+.num3{
+    font-size: 12px;
+    color: #cc8091;
+    width: 110px;
+    position: absolute;
+    top: 45px;
+    right: -110px;
+}
+.part_two{
+    position: relative;
+}
+.what{
+    width: 200px;
+}
+.what h2{
+    font-size: 16px;
+    color: #418c59;
+    text-decoration: underline;
+    font-weight: bolder;
+    margin-top: 15px;
+    
+}
+.what p{
+    margin-top: 7px;
+    font-size: 12px;
+    color: #767777;
+    font-family: "SimSun";
+    line-height: 16px;
+}
+.when{
+    width: 200px;
+    margin-left: 220px;
+    margin-top: -203px;
+}
+.when h2{
+    font-size: 16px;
+    color: #d2994f;
+    text-decoration: underline;
+    font-weight: bolder;
+    margin-top: 15px;
+}
+.when p{
+    margin-top: 7px;
+    font-size: 12px;
+    color: #767777;
+    font-family: "SimSun";
+    line-height: 16px;
+}
+.how{
+    width: 200px;
+    margin-left: 440px;
+    margin-top: -172px;
+}
+.how h2{
+    font-size: 16px;
+    color: #cc7680;
+    text-decoration: underline;
+    margin-top: 15px;
+}
+.how p{
+    margin-top: 7px;
+    font-size: 12px;
+    color: #767777;
+    font-family: "SimSun";
+    line-height: 16px;
+}
+.what2{
+    position: absolute;
+    top: 135px;
+    right: 313px;
+}
+.what2 p{
+    font-size: 12px;
+    color: #231815;
+    line-height: 16px;
+    opacity:0.7;
+}
+.what2 span{
+    font-size: 12px;
+    line-height: 16px;
+    color: #cd4a48;
+    opacity: 0.7;
+    font-style: italic;
+}
+.part_three{
+    position: relative;
+    float: left;
+    width: 415px;
+}
+.up{
+    position: relative;
+    top: 160px;
+    width: 200px;
+    height: 200px;
+}
+.up1 span{
+    font-size: 72px;
+    color: #f5e327;
+    font-family: "SimHei";
+    font-style: italic;
+    font-weight: bolder;
+    margin-right: 16px;
+}
+.up1{
+    font-size: 42px;
+    color: #11456b;
+    font-family: "SimHei";
+    font-weight: bolder;
+    line-height: 35px;
+    width: 400px;
+    height: 85px;
+}
+.up2{
+    font-size: 33px;
+    color: #11456b;
+    font-family: "SimHei";
+    font-weight: bolder;
+    width: 220px;
+}
+.underlinethree{
+    width: 415px;
+    height: 2px;
+    background-color: #11456b;
+    border: none;
+    margin-top: 10px;
+}
+.down{
+    position: relative;
+    top: 115px;
+    width: 415px;
+}
+.down p{
+    font-size: 12px;
+    color: #767777;
+    line-height: 16px;
+    font-family: "SimSun";
+}
+.down p span{
+    font-size: 70px;
+    color: #f5e327;
+    padding: 20px 3px 28px 0;
+    float: left;
+}
+.down img{
+    float: right;
+    padding: 10px;
+    width: 200px;
+    height: 250px;
+}
+.part_four{
+    float: right;
+}
+
+.right img{
+    width: 458px;
+    height: 275px;
+    float: right;
+    position: relative;
+    top: 150px;
+}
+.color
+{
+    width: 458px;
+    height: 61px;
+    background-color: black;
+    top: 364px;
+    position: relative;
+    opacity: 0.5;
+    right: -1px;
+}
+.col1{
+    height: 44px;
+    border-left:3px solid #72b167;
+    position: relative;
+    top: 312px;
+    left: 30px;
+}
+.col2{
+    font-size: 26px;
+    color:#ffffff;
+    position: absolute;
+    top: 3px;
+    left: 10px;
+}
+.col3{
+    font-size: 12px;
+    color: #72b16a;
+    font-style: italic;
+    position: absolute;
+    top: 16px;
+    left:140px;
+    letter-spacing: 4px;
+}
+.right_down{
+    width: 459px;
+    height: 318px;
+    position: relative;
+    top: 180px;
+    float: right;
+    background-color: rgb(234, 241, 207);
+}
+.right_down1{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+}
+.right_down1 img{
+    width: 10px;
+    height: 10px;
+    top: 27px;
+    right: 57px;
+}
+.zi1{
+    font-size: 16px;
+    color: #5a5b5b;
+    font-family: "SimSun";
+    line-height: 20px;
+    position: absolute;
+    top: 20px;
+    right: -300px;
+    width: 350px;
+}
+.zi2{
+    font-size: 12px;
+    font-family: "SimSun";
+    color: #5a5b5b;
+    font-style: italic;
+    line-height: 20px;
+    top: 20px;
+    right: -282px;
+    position: absolute;
+}
+.right_down2{
+    width: 260px;
+    height: 160px;
+    position: relative;
+    background-color: rgb(219, 62, 117);
+    top: 158px;
+    float: left;
+}
+#r2{
+    font-size: 110px;
+    color: #ffffff;
+}
+.r3{
+    border-left: 2px solid #ffffff ;   
+    height: 86px;
+    top: 30px;
+    position: absolute;
+    right: -10px;
+    width: 200px;
+}
+.r4{
+    font-size: 21px;
+    color: #ffffff;
+    font-family: "SimHei";
+    right: 29px;
+    position: absolute;
+}
+.r5{
+    font-size: 12px;
+    color: #ffffff;
+    font-family:"SimHei" ;
+    position: absolute;
+    right: 45px;
+    top: 50px;
+}
+.r6{
+    position: relative;
+}
+ blockquote::before{
+     content: "\201c";
+    font-size: 72px;
+    color: #d45d5c;
+    font-family: "SimHei";
+    position: absolute;
+    top: 150px;
+    right: 145px;
+}
+blockquote::after{
+    content: "\201d";
+   font-size: 72px;
+   color: #d45d5c;
+   font-family:"SimHei";
+   position: absolute;
+   top: 260px;
+   right: -10px;
+}
+.udnerline4
+{
+    width: 892px;
+    background-color: #938e8c;
+    height: 1px;
+    position: relative;
+    top: 180px;
+    border: none;
+}
+.end{
+    font-size: 12px;
+    color: #d45d5c;
+    font-family: "SimHei";
+    position: relative;
+    float: right;
+    top: 180px;
+}
