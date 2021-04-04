@@ -1,0 +1,330 @@
+.top{
+    position :relative;
+    width:100%;
+    height:10%;
+    left:9px;
+    min-width: 1467px;
+    min-height: 90px;
+}
+
+.bottom{
+    position :fixed;
+    width:100%;
+    height:4%;
+    left:0;
+    bottom:0;
+    overflow:hidden;
+}
+
+.top .left{
+    position :relative;
+    width:60%;
+    height:20%;
+    left:9px;
+    display:inline;
+}
+
+.top .right{
+    position :relative;
+    width:15%;
+    height:20%;
+    right:20px;
+    display:inline;
+}
+
+.mn-top{
+    position:relative;
+    display:inline-block;
+    width:45px;
+    height:30px;
+    text-align:center;
+}
+
+.more-top-btn{
+    position:relative;
+    display:inline-block;
+    width:40px;
+    height:40px;
+    text-align:center;
+}
+
+.icon-hover{
+    display: none;
+    border-radius: 25px;
+    box-shadow:0 0 2px 0 rgb(200 200 200);
+}
+
+.icon-more:hover .icon-more{
+    display: none;
+}
+
+.qrcode:hover .icon-hover{
+    display:block;
+}
+
+.qrcode:hover .icon-more{
+    display:block;
+}
+.qrcode:hover .icon{
+    display:none;
+}
+.more-top-btn:hover .more-top{
+    display:block;
+}
+
+#right-div:hover .top-set{
+    display:block;
+}
+
+.more-top{
+    display:none;
+    position:absolute;
+    top:37px;
+    height:220px;
+    width:280px;
+    right:0;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow:0 2px 10px 0 darkgrey;
+}
+
+.top-set{
+    display:none;
+    position: absolute;
+    top:29px;
+    right: 5px;
+    height:140px;
+    width:100px;
+    border-radius: 12px;
+    box-shadow:0 2px 10px 0 darkgrey;
+}
+
+.icon-more,.soutu-button-hover{
+    display: none;
+    position: absolute;
+    bottom:0;
+    right:49px;
+    height:90px;
+    width:300px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow:0 2px 10px 0 darkgrey;
+}
+.soutu-button-hover{
+    cursor:pointer;
+}
+.soutu-button:hover .soutu-button-hover{
+    display:block;
+}
+
+.qrcode{
+    display:block;
+    right:20px;
+    height:50px;
+    width:50px;
+    bottom:80px;
+    border-radius:27px;
+    background-color:rgb(250 250 250);
+    float:right;
+    position:fixed;
+}
+
+.more-top-content{
+    position:relative;
+    margin-top: 25px;
+    height:70px;
+    width:300px;
+}
+
+
+
+.more-top-content-mn{
+    position:relative;
+    height:70px;
+    width:70px;
+    display: inline-block;
+    float:left;
+    background-color: white;
+    text-align: center;
+}
+
+
+
+.mn-bottom{
+    position:relative;
+    display:inline-block;
+    width:100px;
+    height:30px;
+    text-align:center;
+}
+
+.link,.set-link,.true-link{
+    color:rgb(0,0,0);
+    font-size:15px;
+    font-weight:500;
+    text-decoration:none;
+    display: block;
+    top:20px;
+    padding: 3px;
+}
+
+.true-link{
+    float:left;
+}
+.set-link{
+    margin-top: 7px;
+}
+
+.bo-link{
+    font-size:10px;
+    font-weight:400;
+    text-decoration:none;
+    color:rgb(150,150,150);
+    vertical-align: bottom;
+}
+
+.more-link{
+    color:rgb(0,0,0);
+    font-size:12px;
+    font-weight:500;
+    text-decoration:none;
+    display: inline-block;
+    text-align: center;
+}
+
+a:hover{
+    color:blue;
+    cursor:pointer;
+}
+
+#input:hover{
+    border-color:darkgrey;
+    border-radius:10px 0 0 10px;
+}
+
+#input:focus{
+    border-color:#4e6ef2;
+    border-radius:10px 0 0 10px;
+    outline:none;
+    color: black;
+}
+
+.inbo-div{
+    width:590px;
+    min-width: 240px;
+    position: relative;
+}
+
+#input{
+    width:500px;
+    min-width: 200px;
+    height:40px;
+    padding: 12px;
+    right:0;
+    border-radius:10px 0 0 10px;
+    border:2px solid #c4c7c1;
+    margin:0;
+    display:inline;
+    box-sizing: border-box;
+    vertical-align: top;
+    cursor:text;
+    position:relative;
+
+}
+.soutu-button{
+    background-image:url(https://dss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/searchbox/nicon-2x-6258e1cf13.png);
+    background-size:24px;
+    background-repeat:no-repeat;
+    background-position:0 -45.9px;
+    width: 40px;
+    height: 38px;
+    position: relative;
+    display: inline-block;
+    right: 90px;
+    z-index: 100;
+}
+
+.soutu-button:hover{
+    background-position:0 -69.8px;
+}
+
+input{
+    color:royalblue;
+    background-color: white;
+}
+
+#button{
+    width:90px;
+    min-width:40px;
+    height:40px;
+    outline:none;
+    left:0;
+    color:white;
+    background:#4e6ef2;
+    font-size:15px;
+    border-radius:0 10px 10px 0;
+    margin:0;
+    border:0;
+    padding:0;
+    display:inline;
+    vertical-align: top;
+    cursor:pointer;
+    position: relative;
+}
+
+.pic-btn{
+    right:16px;
+    width:24px;
+    height:20px;
+    text-align:right;
+}
+
+#right-div{
+    position:relative;
+    float:right;
+    margin-left: 15px;
+}
+
+#right-div1{
+    position:relative;
+    margin-left: 15px;
+    background-color: #4e6ef2;
+    border-radius: 12px;
+    float: right;
+}
+
+.more-img,.icon{
+    width:51px; height:51px;
+    border-radius: 6px;
+    position: relative;
+    z-index: 99;
+    display: block;
+}
+
+.menus{
+    display: block;
+    width: 660px;
+    height:40%;
+    background-color:white;
+    margin: 35px auto 0;
+}
+
+.menus-top{
+    width: 100%;
+    height:30px;
+}
+
+.menus-bottom{
+    width: 100%;
+    height:350px;
+}
+
+.menus-mini{
+    display: inline-block;
+    margin-right: 24px;
+    margin-left: 10px;
+    margin-top: 6px;
+    font-size: 14px;
+    color: #0d66d0;
+    cursor: pointer;
+}

@@ -1,0 +1,45 @@
+.header{
+    margin: 20px 50px;
+}
+section{
+    margin: 10px auto;
+}
+#main .main-title h2>i{
+    color: #5397c5;
+}
+#main .main-title h2{
+    line-height: 20px;
+    padding: 5px auto;
+}
+#submit .form-box{
+    margin: 40px auto;
+}
+#submit .form-button{
+    text-align: center;
+}
+.row .form-group label{
+    padding: 6px auto;
+    text-align: right;
+}
+@media screen and (min-width:992px){
+    #main-box{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 25vh;
+        margin: auto;
+    }
+}
+@media screen and (max-width:992px){
+    #submit .img-box{
+        margin: 20px auto;
+        text-align: center
+    }
+    #submit .img-box img{
+        width: 30%;
+    }
+}
+@media screen and (max-width:768px){
+
+}

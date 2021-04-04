@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+	<head lang="zh-CN">
+		<meta charset="utf-8" />
+		<title>微软 Bing 搜索 - 国内版</title>
+		<script type="text/javascript">
+			window.onload = function(){
+				var img1 = document.getElementById("img1");
+				var imgArr = ["img/wind.jpg","img/Darling.jpg","img/house.jpg","img/beer.jpg","img/girl.jpg"];
+				var index=0;
+				var timer;
+				var btn01=document.getElementById("btn01");
+				btn01.onclick=function(){
+					clearInterval(timer);
+					timer=setInterval(function(){
+							index++;
+							if(index>=imgArr.length){
+								index=0;
+							}
+							img1.src=imgArr[index];
+						},2000);
+					};
+					var btn02=document.getElementById("btn02");
+					btn02.onclick=function(){
+						clearInterval(timer);
+					};
+					}
+					 
+				
+		</script>
+		<style>
+			
+			#btn01{
+			     position:fixed;
+				 bottom:60px;
+				 right:250px;
+				 z-index:9999;
+			     color: #ffffff;  
+			     background-color:#dadada;
+			     border: none;
+			     border-radius: 30%;
+			     width: 50px;
+			     height: 40px;
+			}
+			#btn02{
+			     position:fixed;
+				 bottom:60px;
+				 right:150px;
+				 z-index:9999;
+			     color: #ffffff;  
+			     background-color:#dadada;
+			     border: none;
+			     border-radius: 30%;
+			     width: 50px;
+			     height: 40px;
+			}
+			
+			#header_left{
+				margin-top:10px;
+				margin-left: 50px;
+			}
+			
+			#header_left a{
+			padding-left:25px;
+			font-size:14px;
+			}
+			
+			#header_right{
+				text-align: right;
+				margin-top:-15px;
+				margin-right:150px;
+			}
+			
+			#header_right a{
+				padding-right:30px;
+				font-size:14px;
+			}
+			#setting{
+				position:fixed;
+				        right:100px;
+						top:11px;
+						width:30px;
+						height:30px;
+			}
+			
+			#microsoft{
+				margin-top:80px;
+				margin-left:60px;
+				margin-bottom:-52px;
+			}
+			
+			#search{
+				height: 400px;
+				margin-top:-20px;
+				margin-left:130px;
+				
+			}
+			#search2{
+				
+				height:40px;
+				width:40px;
+			}
+			#search-text{
+				
+				    border: 1.7px solid #b8b8b8;
+				   line-height:20px;
+				
+			}
+			li{
+			    list-style-type: none;
+			}
+			#menu {
+				position:fixed;
+				right:-190px;
+				top:-33px;
+			    width: 370px;
+			    margin: 30px auto 0px;
+			    height: 45px;
+			    background-color:none;
+			}
+			#menu li{
+			    float: left;
+			    width: 92px;
+			    line-height:39px;
+			    text-align: center;
+			    position:relative;
+			    border:none;
+			}
+			#menu li a {
+			    font-size:16px; color: #e6f8e9;
+			    display:block;
+			    outline:0;
+			    text-decoration:none; 
+			}
+			#menu li:hover a {
+			    color: #ff0000; /*导航栏文字颜色 */
+			}
+			#menu li:hover .dropdown_1column {
+			    left:0px;
+			    top:38px;
+			}
+			.dropdown_1column{ /* 下拉菜单边框颜色*/
+			    margin: 0px auto;
+			    float: left;
+			    position: absolute;
+			    left: -999em;
+			    text-align: left;
+			    border: 1px solid #ffffff;
+			    border-top: none;
+			    background: #F4F4F4;
+			    width: 140px;
+			}
+			#menu li:hover div a { /* 下拉菜单文字颜色*/
+			font-size:13px
+			;color:#444;
+			}
+			
+			#menu li:hover div a:hover{color:#d3d3d3;} /*下拉带单鼠标停留颜色*/
+			
+			#menu li ul {
+			list-style:none;padding:10px 5px;
+			margin:0;
+			}
+			#menu li ul li {
+			font-size:12px;
+			line-height:26px;
+			position:relative;
+			padding:0;margin:0;
+			float:none;
+			text-align:left;
+			width:130px;
+			}
+			#menu li ul li:hover {
+			background:none;
+			border:none;padding:0;
+			margin:0;
+			}
+			.white{
+				text-decoration:none;
+				color: #d2d2d2;
+			}
+			
+			.white2{
+				text-decoration:none;
+				color:#ffffff;
+			}
+		</style>
+	</head>
+	<body>
+		<div >
+		<img id="img1"
+		     style="position:fixed;
+		            left:0px;
+					top:0px;
+					width:1280px;
+					height:680px;
+					z-Index:-1;"
+					src="img/wind.jpg"/>
+		</div>
+		
+		<div id="header_left">
+			<a href="https://cn.bing.com/images/trending?form=Z9LH" class="white">图片</a>
+			<a href="https://cn.bing.com/videos/trending?form=Z9LH1" class="white">视频</a>
+			<a href="https://cn.bing.com/academic/?FORM=Z9LH2" class="white">学术</a>
+			<a href="https://cn.bing.com/dict?FORM=Z9LH3" class="white">词典</a>
+			<a href="https://cn.bing.com/maps?FORM=Z9LH4" class="white">地图</a>
+			<a href="#" class="white2">|</a>
+			<a href="https://www.office.com/?WT.mc_id=O16_BingHP" class="white">Office</a>
+			<a href="https://outlook.com/?WT.mc_id=O16_BingHP?mkt=zh-CN" class="white">Outlook.com</a>
+			
+		</div>
+		
+		<div id="header_right">
+			<a href="#" class="white2">用户</a>
+			<img style="position:fixed;
+		            right:145px;
+					top:11px;
+					width:30px;
+					height:30px;
+					z-Index:0;"
+					src="./img/user.png" >
+			<div id="menu">
+			<ul>
+			    
+			    <li><a href="" class="drop"><img src="img/菜单.png" style="width:30px;
+				height:30px;"/></a>
+			    <div class="dropdown_1column">
+			        <div class="col_1">
+			                <ul class="simple">
+			                        <li><a href="#"><img src="img/设置.png" style="width:30px;height:30px;"/>设置</a></li>
+									
+			                        <li><a href="#"><img src="img/安全搜索.png" style="width:30px;height:30px;" />安全搜索</a></li>
+			                        <li><a href="#"><img src="./img/历史记录.png" style="width:30px;height:30px;"/>历史记录</a></li>
+									<li><a href="#"><img src="img/隐私.png" style="width:30px;height:30px;"/>隐私</a></li>
+									<li><a href="#"><img src="./img/反馈.png" style="width:30px;height:30px;"/>反馈</a></li>
+									<li><a href="#"><img src="./img/主页.png" style="width:30px;height:30px;"/>自定义主页</a></li>
+			                </ul>
+			        </div>
+			    </div>
+			    </li>
+			   
+			</ul>
+			</div>
+		</div>
+		
+		<div id="microsoft">
+			<img src="img/micrsoft.jpg" style="width: 70px;
+			                                   height:70px;" />
+		</div>
+		
+		<div id="search">
+			
+			    <input type="text" name="wd" id="search-text" size=60  placeholder="          Bing搜索          有问必应" />
+			   <input type="image"  id= "search2" src="img/search.png"   /> 
+				
+		</div>
+		
+		
+	
+		<div id="switch">
+			<button id="btn01">自动放映</button>
+			<button id="btn02">停止放映</button>
+		</div>
+		
+	</body>
+</html>
