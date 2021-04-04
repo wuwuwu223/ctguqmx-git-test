@@ -20,3 +20,11 @@
 网页格式
 https://n404name.gitee.io/ctguqmx-git-test/ + 你的文件夹 + 你文件夹内的文件夹 + 你的网页即可  
 https://n404name.gitee.io/ctguqmx-git-test/李灵智/home-page-butterflies-master/index.html
+
+##### 成功部署网页展示
+> 请自己直接通过gitee修改编辑readme.md文件增加
+> 换行是两个空格
+
+1. https://n404name.gitee.io/ctguqmx-git-test/李灵智/home-page-butterflies-master/index.html  
+2. https://n404name.gitee.io/ctguqmx-git-test/%E5%96%BB%E9%91%AB%E9%94%90/html/index.html yxr  
+3. https://n404name.gitee.io/ctguqmx-git-test/吴奔/index.html
