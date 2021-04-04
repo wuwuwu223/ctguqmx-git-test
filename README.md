@@ -1,22 +1,22 @@
 # ctguqmxGitTest
 已开启 Gitee Pages 服务
-# [网站地址]( https://n404name.gitee.io/ctguqmx-git-test)： https://n404name.gitee.io/ctguqmx-git-test
+## [网站地址]( https://n404name.gitee.io/ctguqmx-git-test)https://n404name.gitee.io/ctguqmx-git-test
 
 
 #### 请按照格式上传周任务！！！
-├─某某某
-│  └─text1
-│      ├─css.
-│      ├─img.
-│      ├─js.
-│      └─index.html
-│  └─text2
-│      ├─css.
-│      ├─img.
-│      ├─js.
-│      └─index.html
-> 这里输入引用文本首页入口默认index.html且在外层
-
+├─某某某  
+│  └─text1  
+│      ├─css.  
+│      ├─img.  
+│      ├─js.  
+│      └─index.html  
+│  └─text2  
+│      ├─css.  
+│      ├─img.  
+│      ├─js.  
+│      └─index.html  
+> 这里输入引用文本首页入口默认index.html且在外层  
+  
 ####第一周周任务  
 1.注册gitee账号  
 2.加入该仓库成为管理员  
