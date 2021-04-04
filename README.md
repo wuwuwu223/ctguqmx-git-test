@@ -1,6 +1,22 @@
 # ctguqmxGitTest
+已开启 Gitee Pages 服务
+# [网站地址]( https://n404name.gitee.io/ctguqmx-git-test)： https://n404name.gitee.io/ctguqmx-git-test
 
-#### 介绍
+
+#### 请按照格式上传周任务！！！
+├─某某某
+│  └─text1
+│      ├─css.
+│      ├─img.
+│      ├─js.
+│      └─index.html
+│  └─text2
+│      ├─css.
+│      ├─img.
+│      ├─js.
+│      └─index.html
+> 这里输入引用文本首页入口默认index.html且在外层
+
 ####第一周周任务  
 1.注册gitee账号  
 2.加入该仓库成为管理员  
@@ -24,7 +40,3 @@ https://n404name.gitee.io/ctguqmx-git-test/李灵智/home-page-butterflies-maste
 ##### 成功部署网页展示
 > 请自己直接通过gitee修改编辑readme.md文件增加
 > 换行是两个空格
-
-1. https://n404name.gitee.io/ctguqmx-git-test/李灵智/home-page-butterflies-master/index.html  
-2. https://n404name.gitee.io/ctguqmx-git-test/%E5%96%BB%E9%91%AB%E9%94%90/html/index.html yxr  
-3. https://n404name.gitee.io/ctguqmx-git-test/吴奔/index.html
