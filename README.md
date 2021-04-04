@@ -5,12 +5,12 @@
 
 #### 请按照格式上传周任务！！！
 ├─某某某  
-│&nbsp;&nbsp;└─text1  
+│&nbsp;&nbsp;└─test1  
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─css.  
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─img.  
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─js.  
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─index.html  
-│&nbsp;&nbsp;└─text2  
+│&nbsp;&nbsp;└─test2  
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─css.  
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─img.  
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─js.  
