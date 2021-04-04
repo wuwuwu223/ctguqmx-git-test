@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>图片切换</title>
+    <link rel="stylesheet" href="./style.css">
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+	<script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+	<script>
+	    var arrayName = new Array('吴奔','吴香虹','喻鑫锐','平子涵','庞胜梅',
+		'张沛恒','张铭铖','张韩','曹倜源','曾至阳',
+		'李子涵','毛振宇','王倩芳','王子铭','王祥文','芦艺森','陈凌茜','魏天宇','魏荐书','张毅强');  
+	    var arrayTest = new Array('test1','test2','test3','test4','test5','test6','test7','test8');  
+	    function createSelect(name,str){  
+	        var _select = document.getElementById(name)
+	        var firstOption = document.createElement("option");  
+	        firstOption.value = "------select------";  
+	        firstOption.text = "------请选择------";  
+	        _select.appendChild(firstOption);  
+	        for ( i = 0; i < str.length; i++){  
+	            var _option = document.createElement("option");  
+	            _option.value = str[i];  
+	            _option.text = str[i];  
+	            if (name == str[i]){  
+	                _option.selected = "true";  
+	            }  
+	            _select.appendChild(_option);  
+	        }  
+	    }  
+		function creatLink(testNum){
+			var name = $("#name"+testNum).val();
+			var test = $("#test"+testNum).val();
+			if(name == '------select------'){
+				alert("请选择内容再生成");
+				return;
+			}
+			var newLink = 'https://n404name.gitee.io/ctguqmx-git-test/' + name + '/' + test;
+			$("#link"+testNum).attr('href',newLink);
+			$("#link"+testNum).text(newLink);
+		}
+	</script> 
+</head>
+<body>
+	
+<div class="container-fluid">
+	<div class="row-fluid">
+		<div class="span12">
+		</div>
+	</div>
+</div>
+<div class="slider">
+  <input name="control" id="page1" type="radio" checked/>
+  <input name="control" id="page2" type="radio"/>
+  <input name="control" id="page3" type="radio"/>
+  <input name="control" id="page4" type="radio"/>
+  
+  <div class="slider--el slider--el-1 anim-4parts">    
+    <!-- 第一张图背景分为4个区域，为后面动画做调整 -->
+    <div class="slider--el-bg">
+      <div class="part top left"></div>
+      <div class="part top right"></div>
+      <div class="part bot left"></div>
+      <div class="part bot right"></div>
+    </div>
+    <div class="slider--el-content">
+      <!-- 文字部分只是随意写的，可以修改成你使用的 -->
+      <h2 class="slider--el-heading">test1</h2>
+	<div style="opacity: 0.85;">
+		<select class="form-control" id="name1">
+			  </select>
+			 <select class="form-control"  id="test1">
+				</select>
+			<button type="button" class="btn btn-primary btn-lg btn-block"  onclick="creatLink(1)">生成链接</button>	
+			  <button type="button" class="btn btn-default btn-lg btn-block" style="overflow: auto;"><a id="link1" href="https://gitee.com/N404name/ctguqmx-git-test/pages" >
+			  等待生成链接（若访问失败，请先点我去更新）</a></button>
+		 </div>
+	</div>
+
+  </div>
+
+  <div class="slider--el slider--el-2 anim-9parts">
+    <!-- 第二张图背景分为9个区域，为后面动画做调整 -->
+    <div class="slider--el-bg">
+      <div class="part left-top"></div>
+      <div class="part mid-top"></div>
+      <div class="part right-top"></div>
+      <div class="part left-mid"></div>
+      <div class="part mid-mid"></div>
+      <div class="part right-mid"></div>
+      <div class="part left-bot"></div>
+      <div class="part mid-bot"></div>
+      <div class="part right-bot"></div>
+    </div>
+    <div class="slider--el-content" >
+      <!-- 文字部分只是随意写的，可以修改成你使用的 -->
+      <h2 class="slider--el-heading">Test2 海报制作</h2>
+	  <div style="opacity: 0.85;">
+			<select class="form-control" id="name2">
+			  </select>
+			 <select class="form-control"  id="test2">
+				</select>
+			<button type="button" onclick="creatLink(2)" class="btn btn-primary btn-lg btn-block"  >生成链接</button>	
+			  <button type="button" class="btn btn-default btn-lg btn-block" style="overflow: auto;"><a id="link2" href="https://gitee.com/N404name/ctguqmx-git-test/pages" >
+			  等待生成链接（若访问失败，请先点我去更新）</a></button>
+	  </div>
+
+    </div>
+  </div>
+
+  <div class="slider--el slider--el-3 anim-5parts">
+    <!-- 第三张图背景分为5个区域，为后面动画做调整 -->
+    <div class="slider--el-bg">
+      <div class="part part-1"></div>
+      <div class="part part-2"></div>
+      <div class="part part-3"></div>
+      <div class="part part-4"></div>
+      <div class="part part-5"></div>
+    </div>
+    <div class="slider--el-content">
+      <!-- 文字部分只是随意写的，可以修改成你使用的 -->
+      <h2 class="slider--el-heading">Third Slide</h2>
+	  <div style="opacity: 0.85;">
+	  			<select class="form-control" id="name3">
+	  			  </select>
+	  			 <select class="form-control"  id="test3">
+	  				</select>
+	  			<button type="button" onclick="creatLink(3)" class="btn btn-primary btn-lg btn-block"  >生成链接</button>	
+	  			  <button type="button" class="btn btn-default btn-lg btn-block" style="overflow: auto;"><a id="link3" href="https://gitee.com/N404name/ctguqmx-git-test/pages" >
+	  			  等待生成链接（若访问失败，请先点我去更新）</a></button>
+	  </div>
+    </div>
+  </div>
+
+  <div class="slider--el slider--el-4 anim-3parts">
+    <!-- 第四张图背景分为5个区域，为后面动画做调整 -->
+    <div class="slider--el-bg">
+      <div class="part left"></div>
+      <div class="part mid"></div>
+      <div class="part right"></div>
+    </div>
+    <div class="slider--el-content">
+      <!-- 文字部分只是随意写的，可以修改成你使用的 -->
+      <h2 class="slider--el-heading">Fourth Slide</h2>
+	  <div style="opacity: 0.85;">
+	  			<select class="form-control" id="name4">
+	  			  </select>
+	  			 <select class="form-control"  id="test4">
+	  				</select>
+	  			<button type="button" onclick="creatLink(4)" class="btn btn-primary btn-lg btn-block"  >生成链接</button>	
+	  			  <button type="button" class="btn btn-default btn-lg btn-block" style="overflow: auto;"><a id="link4" href="https://gitee.com/N404name/ctguqmx-git-test/pages" >
+	  			  等待生成链接（若访问失败，请先点我去更新）</a></button>
+	  </div>
+    </div>
+  </div>
+  <div class="slider--control left">
+    <label class="page1-left" for="page1"></label>
+    <label class="page2-left" for="page2"></label>
+    <label class="page3-left" for="page3"></label>
+    <label class="page4-left" for="page4"></label>
+  </div>
+  <div class="slider--control right">
+    <label class="page1-right" for="page1"></label>
+    <label class="page2-right" for="page2"></label>
+    <label class="page3-right" for="page3"></label>
+    <label class="page4-right" for="page4"></label>
+  </div>  
+</div>
+<!-- partial -->
+<script>  
+	createSelect('name1', arrayName);  
+	createSelect('test1', arrayTest);
+	createSelect('name2', arrayName);
+	createSelect('test2', arrayTest);
+	createSelect('name3', arrayName);
+	createSelect('test3', arrayTest);
+	createSelect('name4', arrayName);
+	createSelect('test4', arrayTest);
+</script>
+
+</body>
+</html>
