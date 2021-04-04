@@ -192,6 +192,7 @@ body{
     opacity: 1;
 }
 .mid .search .enter{
+    outline: none;
     border: none;
     padding: 0 0;
     float: left;
