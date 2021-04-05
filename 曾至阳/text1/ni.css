@@ -78,4 +78,131 @@ a{
     font-size: 10px;
     word-spacing: 15px;
 }
+.right .setting{
+    background-color: white;
+}
+.right .log{
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 6px;
+    padding: 0;
+    background-color: #4e6ef2;
+    *zoom: 1;
+    font-family: inherit;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    outline: 0;
+    border: 0;
+    height: 30px;
+    width: 80px;
+    line-height: 30px;
+    font-size: 13px;
+    cursor: pointer;
+    color: white;
+}
+.top .left .line1{
+    display: inline-block;
+    position: relative;
+    margin-right:25px;
+    margin-top: 5px;
+    font: 13px/23px;
+}
+.top .left .line1 .more{
+    padding-bottom: 15px;
+}
+.top .left .line1:hover .more{
+    color: rgb(64,95,253);
+}
+.top .left .line1 .more-1{
+    position: absolute;
+    background-color:white;
+    box-shadow: 0 2px 10px 0 rgb(0 0 0 / 15%);
+    right: -12px;
+    top: 29px;
+    width: 304px;
+    height: 223px;
+    border-radius: 12px;
+    display: none;
+}
+.top .left .line1:hover .more-1{
+    display: block;
+}
+.top .left .line1 .more-1 .part{
+    padding-top: 16px;
+    height: 73px;
+}
+.top .left .line1 .more-1 .img{
+    float: left;
+    height: 70px;
+    width: 76px;
+    box-sizing: border-box;
+}
+.top .left .line1 .more-1 .img img{
+    display: block;
+    border-radius: 12px;
+    width: 45px;
+    height: 45px;
+    border: 1px solid rgba(0,0,0,.03);
+    margin: 0 16px;
+}
+.top .left .line1 .more-1 .word{
+    margin-top: 3px;
+    font: 13px/23px;
+    text-align: center;
+}
+.top .left .line1 .more-1 .more-more{
+    color: #9195a3;
+    text-align: center;
+    margin-top: 7px;
+    font: 13px/23px;
+}
+.top .left .line1 .more-1 a:hover{
+    color: rgb(64,95,253);
+}
+.top .right .setting{
+    display: inline-block;
+    padding-bottom: 10px;
+    cursor: pointer;
+    margin-top: 19px;
+    font: 13px/23px;
+    margin-top: 5px;
+}
+.top .right .line2{
+    position: absolute;
+    background:white;
+    border: 1px solid #d7d9e0;
+    border-radius: 12px;
+    right: 80px;
+    top: 20px ;
+    width: 80px;
+    padding-top: 5px ;
+    padding-bottom: 5px;
+    padding-left:0px;
+    display: none;
+    text-align: center;
+    line-height:2;
+}
+.top .right .setting:hover .line2{
+    display:inline;
+}
+.top .right .line2>li:hover{
+    color: rgb(12, 48, 248);
+}
+.m-l {
+    margin-left: 28%;
+    margin-top: 4%;
+    height: 30px;
+    line-height: 32px;
+    color: #222;
+    margin-right: 59px;
+}
+.m-r {
+    margin-left: 55%;
+    margin-top: -2%;
+    height: 32px;
+    line-height: 32px;
+    color: #222;
+    margin-right: 59px;
+}
 
