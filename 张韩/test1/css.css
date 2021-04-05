@@ -1,0 +1,86 @@
+#d1{
+    position: absolute;
+    right: 10px;
+}
+#d1 ul{
+    list-style: none;
+}
+#d1 a{
+    font-family: "微雅软黑";
+    color: black;
+    font-size: 13px;
+    
+}
+#d1 li{
+    float: left;
+    margin-left: 18px;
+    text-align: center;
+}
+#d1 input[type="button"]{
+    background-color: #3388FF;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    color: white;
+}
+#d1 input[type="button"]:hover{
+    cursor: pointer;
+}
+#d2{
+    position:relative;
+    text-align: center;
+    top: 100px
+}
+#d2 input[type="text"]{
+    width:541px;
+    height:32px;
+    margin-top: 41px;
+    font-size: 20px;
+    border-width: 1px;
+    background: url(../img/照相机.png) no-repeat 510px;
+}
+#d2 input[type="submit"]{
+    height: 36px;
+    width:100px;
+    background-color: #3388FF;
+    border-width: 0px;
+    font-size: 15px;
+    color: white;
+    margin-left: -5px;
+}
+#d2 input[type="submit"]:hover{
+    cursor: pointer;
+}
+#d3{
+    top: 280px;
+    position: relative;
+}
+#d4{
+    position: relative;
+    top:290px;
+    text-align: center;
+    color:#999999;
+}
+#d4 a{
+   font-family: "微雅软黑";
+   color:#999999;
+   font-size: 4px;
+}
+#d4 ul{
+    list-style: none;
+}
+#d4 li{
+    float: right;
+    margin-left: 15px;
+}
+#a1{
+    margin-bottom:100px;
+}
+.s{
+    font-weight: bold;
+}
+
+#t:active{
+    border-color: #3388FF;
+}

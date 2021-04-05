@@ -1,0 +1,30 @@
+{
+  "id": "2450880",
+  "name": "baidu",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "16635976",
+      "name": "扫一扫",
+      "font_class": "saoyisao",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "7795828",
+      "name": "刷新",
+      "font_class": "shuaxin",
+      "unicode": "e619",
+      "unicode_decimal": 58905
+    },
+    {
+      "icon_id": "6345958",
+      "name": "camera",
+      "font_class": "camera",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    }
+  ]
+}
