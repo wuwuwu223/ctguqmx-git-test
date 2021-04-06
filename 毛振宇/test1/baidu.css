@@ -183,13 +183,13 @@ body{
     box-sizing: content-box;
     border-right: none;
 }
+.mid .search .gets:hover{
+    border-color: rgb(168,170,181);
+}
 .mid .search .gets:focus{
     outline: none;
     border-color: #4e6ef2;
     opacity: 1;
-}
-.mid .search .gets:hover{
-    border-color: rgb(168,170,181);
 }
 .mid .search .enter{
     border: none;
