@@ -1,5 +1,5 @@
 body {
-    background-image: url(https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201811%2F16%2F20181116233416_rpkgm.thumb.700_0.gif&refer=http%3A%2F%2Fb-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1620477312&t=d38a70581e1cae83e3e2c9a36eda8046);
+    background-color:#cc8091;
     background-size:auto 500px;
 }
 .all {
@@ -9,6 +9,7 @@ body {
     margin: 0 auto;
     padding: 0 44px;
     box-sizing: border-box;
+    box-shadow:20px 20px 20px #0f0501;
 }
 
 .a1 {
