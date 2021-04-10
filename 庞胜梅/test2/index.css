@@ -194,7 +194,7 @@ h2{
     font-family:微软雅黑;
     }
 div.background1{
-    background-image: url(https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fshouyou.3dmgame.com%2Fuploadimg%2Fupload%2Fimage%2F20191012%2F20191012151807_66474.jpg&refer=http%3A%2F%2Fshouyou.3dmgame.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1620652883&t=1825c891452adb2113e9365380479ab6);
+    background-image: url(https://bit-images.bj.bcebos.com/bit-new/file/20210410/1j0r.png);
     position:relative;
     background-size:641px 301px;
     height:301px;
@@ -344,4 +344,4 @@ div.transbox p {
 footer{
     position:relative;
     top: 630px; 
-}v
+}
