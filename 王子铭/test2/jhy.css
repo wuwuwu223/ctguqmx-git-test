@@ -322,6 +322,7 @@ header {
     float: right;
     position: relative;
     top:70px;
+    left:-20px;
 }
 
 .s4 img {
