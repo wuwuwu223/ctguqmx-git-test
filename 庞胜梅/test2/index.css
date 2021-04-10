@@ -194,14 +194,14 @@ h2{
     font-family:微软雅黑;
     }
 div.background1{
-    background-image: url(https://bit-images.bj.bcebos.com/bit-new/file/20210410/1j0r.png);
+    background-image: url(img/1.png);
     position:relative;
     background-size:641px 301px;
     height:301px;
     width:641px;
 }
 div.background2{
-    background-image: url(http://pics0.baidu.com/feed/32fa828ba61ea8d3195819441185c048241f588a.jpeg?token=16e52a878bce004403e65d40c722266f);
+    background-image: url(img/1.jpg);
     position:relative;
     background-size:458px 275px;
     height:275px;
