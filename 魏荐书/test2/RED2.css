@@ -1,5 +1,8 @@
 body {
     background-image: url(ipg？/1572700052_983024.jpg);
+    margin: 0;
+    background-size: cover;
+    background-size: 100%;
 }
 
 .haibao {
