@@ -1,0 +1,531 @@
+body {
+    background-image: url(ipg？/1572700052_983024.jpg);
+}
+
+.haibao {
+    width: 980px;
+    height: 1386px;
+    background-color: rgb(253, 224, 210);
+    margin: 0 auto;
+    padding: 0 44px;
+    box-sizing: border-box;
+}
+
+.text1 {
+    background-color: #ee0e0e;
+    height: 61px;
+    width: 110px;
+    position: relative;
+}
+
+.text1 p {
+    position: absolute;
+    color: #ffffff;
+    font-size: 12px;
+    font-family: "SimHei";
+    bottom: 0;
+    margin-left: 4px;
+}
+
+.linetop {
+    background-color: rgb(87, 85, 85);
+    height: 2px;
+    width: 892px;
+    margin-top: 0;
+    border: none;
+}
+
+head {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.h1 {
+    font-family: "Microsoft YaHei";
+    font-size: 24px;
+    text-decoration: underline;
+    line-height: 40px;
+    margin: 0;
+    position: absolute;
+    left: 730px;
+    top: 20px;
+}
+
+.h2 {
+    font-family: "Microsoft YaHei";
+    font-size: 24px;
+    text-decoration: underline;
+    line-height: 40px;
+    margin: 0;
+    position: absolute;
+    left: 730px;
+    top: 44px;
+}
+
+.h3 {
+    font-size: 12px;
+    color: #676767;
+    font-family: "KaiTi";
+    line-height: 22px;
+    margin: 0;
+    position: relative;
+    left: 730px;
+    top: 86px;
+}
+
+.h4 {
+    font-size: 116px;
+    color: #fcaf17;
+    font-family: "Microsoft YaHei";
+    text-decoration: underline;
+    margin: 0;
+    font-style: italic;
+    position: relative;
+    left: 730px;
+    top: 60px;
+}
+
+.s1 {
+    position: relative;
+}
+
+.n1 {
+    font-size: 50px;
+    color: #f8083c;
+    font-family: "Microsoft YaHei";
+    margin: 0;
+    font-style: italic;
+    position: relative;
+    left: 650px;
+    top: 33px;
+}
+
+.time {
+    position: relative;
+    font-size: 12px;
+    color: #e40808;
+    right: 0;
+    float: right;
+    margin-top: -18px;
+    margin-bottom: 0;
+}
+
+.n2 {
+    font-size: 21px;
+    color: #a32d47;
+    font-family: "Microsoft YaHei";
+    position: relative;
+    left: 680px;
+    top: 0px;
+}
+
+.n3 {
+    font-size: 12px;
+    color: #f7a902;
+    font-family: "Microsoft YaHei";
+    position: relative;
+    left: 750px;
+    top: -40px;
+}
+
+.s2 {
+    position: relative;
+}
+
+.what {
+    width: 200px;
+}
+
+.what h2 {
+    font-size: 16px;
+    color: #ff7300;
+    text-decoration: underline;
+    font-weight: bolder;
+    font-family: "Microsoft YaHei";
+}
+
+.what p {
+    font-size: 12px;
+    color: #767777;
+    line-height: 16px;
+    font-family: "SimSun";
+}
+
+.when {
+    width: 200px;
+    margin-left: 220px;
+    margin-top: -240px;
+}
+
+.when h2 {
+    font-size: 16px;
+    color: #d2994f;
+    text-decoration: underline;
+    font-weight: bolder;
+    font-family: "Microsoft YaHei";
+}
+
+.when p {
+    font-size: 12px;
+    color: #767777;
+    line-height: 16px;
+    font-family: "SimSun";
+}
+
+.how {
+    width: 200px;
+    margin-left: 440px;
+    margin-top: -200px;
+}
+
+.how h2 {
+    font-size: 16px;
+    color: #cc7680;
+    text-decoration: underline;
+    font-weight: bolder;
+    font-family: "Microsoft YaHei";
+}
+
+.how p {
+    font-size: 12px;
+    color: #767777;
+    line-height: 16px;
+    font-family: "SimSun";
+}
+
+.s3 {
+    position: relative;
+    float: left;
+    width: 430px;
+}
+
+.s3 {
+    position: relative;
+    float: left;
+    width: 430;
+}
+
+.b {
+    top: 70px;
+    width: 415px;
+    height: 180px;
+    position: relative;
+    text-align: left;
+}
+
+.b span {
+    font-size: 72px;
+    color: #f5e327;
+    font-family: "SimHei";
+    font-style: italic;
+    font-weight: bolder;
+    margin-right: 16px;
+    text-align: left;
+}
+
+.we1 {
+    font-size: 42px;
+    color: #ff0000;
+    font-family: "SimHei";
+    font-weight: bolder;
+    line-height: 16px;
+    text-align: left;
+    left: 20px;
+    position: relative;
+    margin: 20px;
+}
+
+.we2 {
+    font-size: 42px;
+    color: #ff0000;
+    font-family: "SimHei";
+    font-weight: bolder;
+    line-height: 16px;
+    text-align: left;
+    left: 20px;
+    position: relative;
+    margin: 20px;
+}
+
+.we4 img {
+    float: right;
+    padding: 10px;
+    width: 200px;
+    height: 240px;
+}
+
+.toptextleft {
+    position: absolute;
+    height: 301px;
+    width: 191px;
+    background: rgba(22, 21, 24, 0.489);
+    top: 0;
+}
+
+.toptextright {
+    position: absolute;
+    left: 455px;
+    height: 301px;
+    width: 191px;
+    background: rgba(173, 140, 68, 0.489);
+    top: 0;
+}
+
+.we3 {
+    font-size: 33px;
+    color: #6b1111;
+    font-family: "SimHei";
+    font-weight: bolder;
+    position: relative;
+    margin: 0;
+    top: 0;
+    left: 40px;
+    text-align: left;
+}
+
+.underlinemid {
+    width: 415px;
+    height: 2px;
+    background-color: #11456b;
+    border: none;
+    margin-top: 10px;
+}
+
+.we4 {
+    position: relative;
+    width: 415px;
+    top: 20px;
+}
+
+.we4 p {
+    font-size: 12px;
+    color: #767777;
+    line-height: 16px;
+    font-family: "SimSun";
+    font-style: italic;
+}
+
+.we4 span {
+    font-size: 70px;
+    color: #f5e327;
+    float: left;
+    padding: 20px 3px 30px 0;
+}
+
+.s4 {
+    float: right;
+    position: relative;
+}
+
+.s4 img {
+    height: 275px;
+    width: 458px;
+    float: right;
+    position: absolute;
+    top: 660px;
+    right: 300px;
+}
+
+.dw {
+    position: relative;
+    height: 600px;
+    width: 460px;
+    left: 320px;
+    top: -580px;
+}
+
+.yas {
+    height: 61px;
+    width: 458px;
+    background-color: rgb(99, 81, 3);
+    position: relative;
+    float: right;
+    top: 790px;
+    right: 300px;
+    opacity: 0.5;
+}
+
+.we5b {
+    height: 44px;
+    border-left: 3px solid #ff0000;
+    position: relative;
+    float: right;
+    top: -5px;
+    right: 140px;
+}
+
+.we6 {
+    font-size: 26px;
+    color: #ffffff;
+    font-family: "Microsoft YaHei";
+    position: relative;
+    right: -25px;
+    top: 5px
+}
+
+.we7 {
+    font-size: 12px;
+    color: #72b16a;
+    font-style: italic;
+    font-family: "Microsoft YaHei";
+    position: relative;
+    right: -55px;
+    top: 10px;
+}
+
+.right3 {
+    width: 459px;
+    height: 318px;
+    position: absolute;
+    float: right;
+    background-color: rgb(255, 0, 0);
+    top: 960px;
+    right: 300px;
+}
+
+.right3 img {
+    width: 10px;
+    height: 10px;
+    top: 5px;
+    right: 465px;
+}
+
+.we8 {
+    font-size: 16px;
+    color: #5a5b5b;
+    font-family: "SimSun";
+    line-height: 20px;
+}
+
+.we9 {
+    font-size: 12px;
+    font-family: "SimSun";
+    color: #5a5b5b;
+    font-style: italic;
+    line-height: 20px;
+}
+
+.right4 {
+    height: 160px;
+    width: 260px;
+    background-color: rgb(226, 226, 46);
+    position: relative;
+    float: left;
+    top: 48px;
+}
+
+.we10 {
+    font-size: 110px;
+    color: #ff0000;
+    font-family: "Microsoft YaHei";
+    font-style: italic;
+}
+
+.we11 {
+    height: 86px;
+    border-left: 2px solid #ff0000;
+    position: absolute;
+    top: 30px;
+    right: 120px;
+}
+
+.we12 {
+    font-size: 21px;
+    color: #ffffff;
+    font-family: "SimHei";
+    line-height: 24px;
+    font-style: italic;
+    right: -60px;
+    top: -20px;
+    position: absolute;
+}
+
+.we13 {
+    font-size: 12px;
+    color: #ffffff;
+    font-family: "SimHei";
+    position: relative;
+    right: -10px;
+    top: 50px;
+}
+
+.we14 {
+    font-size: 14px;
+    color: #5a5b5b;
+    font-family: "SimHei";
+    font-style: italic;
+    line-height: 16px;
+    position: absolute;
+    top: 170px;
+    right: 1px;
+    width: 180px;
+    text-indent: 2em;
+}
+
+blockquote::before {
+    content: "\201c";
+    font-size: 72px;
+    color: yellow;
+    font-family: "SimHei";
+    position: absolute;
+    top: 165px;
+    right: 150px;
+}
+
+blockquote::after {
+    content: "\201d";
+    font-size: 72px;
+    color: yellow;
+    font-family: "SimHei";
+    position: absolute;
+    top: 260px;
+    right: 40px;
+}
+
+.ex {
+    position: relative;
+    top: 580px;
+    left: -260px;
+}
+
+.ex p {
+    font-size: 12px;
+    font-family: "Microsoft YaHei";
+    line-height: 16px;
+    opacity: 70%;
+}
+
+.ex span {
+    font-size: 12px;
+    line-height: 16px;
+    font-family: "Microsoft YaHei";
+    color: #cd4a48;
+    opacity: 70%;
+    font-style: italic;
+}
+
+.udnerline4 {
+    width: 892px;
+    background-color: #938e8c;
+    height: 1px;
+    top: 70px;
+    border: none;
+    position: relative;
+}
+
+.end {
+    font-size: 12px;
+    color: #ffe600;
+    font-family: "SimHei";
+    position: relative;
+    float: right;
+    top: 50px;
+}
+
+s .linebottom {
+    background-color: rgb(87, 85, 85);
+    height: 2px;
+    width: 892px;
+    margin-top: 0;
+    border: none;
+}
