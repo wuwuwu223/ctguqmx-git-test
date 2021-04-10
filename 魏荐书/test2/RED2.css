@@ -517,7 +517,7 @@ blockquote::after {
     position: relative;
 }
 
-.end {
+.end1 {
     font-size: 12px;
     color: #ffe600;
     font-family: "SimHei";
