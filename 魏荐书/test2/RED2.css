@@ -136,11 +136,11 @@ head {
     position: relative;
 }
 
-.what {
+.honour {
     width: 200px;
 }
 
-.what h2 {
+.honour h2 {
     font-size: 16px;
     color: #ff7300;
     text-decoration: underline;
@@ -148,20 +148,20 @@ head {
     font-family: "Microsoft YaHei";
 }
 
-.what p {
+.honour p {
     font-size: 12px;
     color: #767777;
     line-height: 16px;
     font-family: "SimSun";
 }
 
-.when {
+.story {
     width: 200px;
     margin-left: 220px;
     margin-top: -240px;
 }
 
-.when h2 {
+.story h2 {
     font-size: 16px;
     color: #d2994f;
     text-decoration: underline;
@@ -169,20 +169,20 @@ head {
     font-family: "Microsoft YaHei";
 }
 
-.when p {
+.story p {
     font-size: 12px;
     color: #767777;
     line-height: 16px;
     font-family: "SimSun";
 }
 
-.how {
+.end {
     width: 200px;
     margin-left: 440px;
     margin-top: -200px;
 }
 
-.how h2 {
+.end h2 {
     font-size: 16px;
     color: #cc7680;
     text-decoration: underline;
@@ -190,7 +190,7 @@ head {
     font-family: "Microsoft YaHei";
 }
 
-.how p {
+.end p {
     font-size: 12px;
     color: #767777;
     line-height: 16px;
@@ -508,7 +508,7 @@ blockquote::after {
     font-style: italic;
 }
 
-.udnerline4 {
+.midlinepro {
     width: 892px;
     background-color: #938e8c;
     height: 1px;
