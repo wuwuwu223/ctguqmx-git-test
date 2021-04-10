@@ -317,15 +317,13 @@ header {
     width: 250px;
     height: 350px;
 }
-
 .s4 {
     float: right;
     position: relative;
     top:70px;
     left:-20px;
 }
-
-.kong img
+.s2 .kong img
 {
     height: 150px;
     width: 125px;
