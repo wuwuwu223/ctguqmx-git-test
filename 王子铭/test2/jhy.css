@@ -325,6 +325,14 @@ header {
     left:-20px;
 }
 
+.kong img
+{
+    height: 150px;
+    width: 125px;
+    position:absolute;
+    margin-top:-120px;
+    right:60px;
+}
 .s4 img {
     height: 275px;
     width: 458px;
