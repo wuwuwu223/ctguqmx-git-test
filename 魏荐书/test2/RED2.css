@@ -11,6 +11,10 @@ body {
     box-sizing: border-box;
 }
 
+.em2 {
+    text-indent: 2em;
+}
+
 .text1 {
     background-color: #ee0e0e;
     height: 61px;
