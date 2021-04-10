@@ -1,0 +1,49 @@
+.poster {
+  height: 100vh; 
+  display: grid; 
+  grid-template-rows: 2.5fr 1fr; 
+  margin: 10px; 
+}
+
+.poster-name {
+  position: absolute; 
+  z-index: 1;
+  padding-left: 40px; 
+  top: 59%; 
+}
+
+.poster-name h2 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  color: #007BBB; 
+  padding-top: 0px; 
+  letter-spacing: 3px;
+}
+
+.poster-top img { 
+  max-height: 100%;
+  width: 100%; 
+  overflow: hidden; 
+  object-fit: cover;
+  object-position: top;
+  filter: grayscale(50%);
+}
+
+.poster-bottom {
+  background-color: #E9E9E9; 
+  display: grid; 
+  grid-template-columns: 2fr 2fr 0.5fr;
+  grid-gap: 20px; 
+}
+
+.poster-bottom p {
+  padding: 60px 0px 0px 30px; 
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+}
+
+.poster-bottom-p2 {
+  font-style: italic; 
+  color: #ff5500; 
+}
