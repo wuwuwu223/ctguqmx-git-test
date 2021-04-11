@@ -2,11 +2,58 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Google</title>
 </head>
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;  /*字体设置*/
+        font-size: 13px;    /*字体大小*/
+    }
+    #search{
+        border: none;   /*去掉边距*/
+        width: 480px;   
+        height: 40px;
+        outline: none;  /*去掉边框*/
+        margin-left: 10px;
+        color: rgb(112,112,112);
+    }
+    #logo{
+        text-align: center;
+    }
+    .searchbar{
+        border: 1px solid #ccc;  /*线宽，实现，颜色*/
+        border-radius: 16px;       /*圆角边框*/
+        width: 550px;
+        height: 42px;
+        margin: 0 auto; /*上下边距为0，左右边距auto即平分剩余空间*/
+        box-shadow: 0px 0px 5px rgb(212, 212, 212); 
+        /*添加阴影。水平阴影的位置，垂直阴影的位置，模糊距离，阴影颜色*/
+    }
+    #search, .mcp{
+        vertical-align: middle; /*垂直居中*/
+    }
+    header{
+        text-align:right;   /*居中显示*/
+    }
+    p{
+        font-weight: bold;
+        line-height: 35px;
+        margin: 0 10px 0 10px;  /*上下左右边距*/
+        font-size: medium;      /*字体粗细*/
+
+    }
+</style>
+
 <body>
-    
+    <header>
+        <p>Gmail &nbsp Images</p>
+    </header>
+    <div id="logo"><img src="logo.png"/></div>      
+    <div class="searchbar">
+        <input type="text" id="search" value="search">
+        <img height="30px" width="30px" src="micro.png" class="mcp"/>
+    </div>
+        
 </body>
 </html>
