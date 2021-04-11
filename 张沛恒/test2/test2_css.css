@@ -181,7 +181,6 @@ h4 {
 }
 
 .subject .mid {
-  background-color: aqua;
   margin-top: 10px;
   width: 959px;
   height: 301px;
@@ -206,9 +205,17 @@ h4 {
 
 .subject .mid .mid4 {
   position: absolute;
-  width: 200px;
+  width: 400px;
   margin-left: 440px;
-  top: 100px;
+  top: 500px;
+}
+
+.subject .mid .mid4 span {
+  font-size: 12px;
+  line-height: 16px;
+  color: #cd4a48;
+  opacity: 0.7;
+  font-style: italic;
 }
 
 .subject .mid p {
@@ -222,18 +229,77 @@ h4 {
   position: absolute;
   left: 15px;
   margin-top: 10px;
-  background-color: yellow;
   width: 458px;
   height: 600px;
+}
+
+.subject .down-l-up {
+  display: inline-block;
+  position: relative;
+  width: 500px;
+  font-size: 35px;
+  font-weight: bold;
+  margin-right: 0;
+  color: #11456b;
+  font-family: "黑体";
+}
+
+.subject .down-l .first {
+  font-size: 72px;
+  color: #f5e327;
+  font-family: "SimHei";
+  font-style: italic;
+  font-weight: bolder;
+  margin-right: 16px;
+}
+
+.subject .down-l-down {
+  line-height: 16px;
+  font-family: 黑体;
 }
 
 .subject .down-r {
   right: 15px;
   position: absolute;
-  background-color: green;
   margin-top: 10px;
   width: 458px;
   height: 600px;
+}
+
+.subject .down-r-top {
+  position: absolute;
+  top: 270px;
+  right: 0px;
+  width: 458px;
+  height: 31px;
+  background-color: rgb(94, 85, 211, 0.5);
+}
+
+.subject .down-r-text {
+  width: 400px;
+  text-align: right;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  font-size: 26px;
+  color: aliceblue;
+}
+
+.subject .down-r-d {
+  width: 459px;
+  height: 318px;
+  position: relative;
+  top: 319px;
+  right: -245px;
+  background-color: rgb(234, 241, 207);
+}
+
+.subject .footer {
+  position: relative;
+  top: 1183px;
+  right: 89px;
+  float: right;
+  font-size: 10px;
 }
 
 .weiruanyahei {
