@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/animate.min.css">
+    <link rel="stylesheet" href="./layui-v2.5.7/layui-v2.5.7/layui/css/layui.css">
+    <link rel="stylesheet" href="./Bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/remixicon/remixicon.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>yxr的图床</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-toggle" data-toggle="collapse" data-target="#mynavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <span class="navbar-brand">yxr的小图床</span>
+                </div>
+                <div class="collapse navbar-collapse" id="mynavbar" style="float: right;">
+                    <ul class="nav navbar-nav">
+                        <li><a href="">你好</a></li>
+                        <li><a href="">你好</a></li>
+                        <li><a href="">你好</a></li>
+                        <li><a href="">你好</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="" id="main" style="position: absolute; top: 100px;">
+        <div class="container">
+            <div class="col-xs-offset-2 col-sm-offset-0">
+                <div class="div-css col-lg-6 col-md-6 col-sm-12 col-xs-12" id="img-pre">
+                    <!-- <img src="http://47.102.198.114:9091/img-update/img/2021/March/31/17.jpg" alt="" style="width: 100%;"> -->
+                </div>
+            </div>
+            <div class="col-xs-offset-2 col-sm-offset-0">
+                <div class="div-css col-lg-6 col-md-6 col-sm-9 col-xs-9" ">
+                    <!-- <img src="http://47.102.198.114:9091/img-update/img/2021/March/31/17.jpg" alt="" style="width: 100%;"> -->
+                    <button type="file" class="layui-btn" style="position: relative;">
+                        <input type="file" style="opacity:0;z-index: 0;position: absolute;" name="file" id="uploadFile">
+                        <i class="layui-icon" style="z-index: 1;">&#xe67c;</i>上传图片
+                    </button>
+                    <button type="button" onclick="senToUser()" class="layui-btn" style="display: block;margin-top: 10px;margin-left: 0;">提交</button>
+                    <div style="margin: 20px auto;">
+                        <form action="">
+                            <div class="layui-form-item">
+                                <label class="layui-form-label" style="text-align: center;">访问</label>
+                                <div class="layui-input-block">
+                                    <input type="text" name="title" id="fangwen" placeholder="请输入标题" autocomplete="off" class="layui-input" style="position: relative;">
+                                    <a class="layui-btn" style="position:absolute;right: -80px;top: 0;" id="copy1">Copy</a>
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label" style="text-align: center;">引用</label>
+                                <div class="layui-input-block">
+                                  <input type="text" name="title" id="refer" placeholder="请输入标题" autocomplete="off" class="layui-input">
+                                  <a class="layui-btn" style="position:absolute;right: -80px;top: 0;" id="copy2">Copy</a>
+                                
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label" style="text-align: center;">HTML</label>
+                                <div class="layui-input-block">
+                                  <input type="text" name="title" id="HTML" placeholder="请输入标题" autocomplete="off" class="layui-input">
+                                  <a class="layui-btn" style="position:absolute;right: -80px;top: 0;" id="copy3">Copy</a>
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label" style="text-align: center;">MarkDown</label>
+                                <div class="layui-input-block">
+                                  <input type="text" name="title" id="markdown" placeholder="请输入标题a" autocomplete="off" class="layui-input">
+                                  <a class="layui-btn" style="position:absolute;right: -80px;top: 0;" id="copy4">Copy</a>
+                                
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+<script type="text/javascript" src="./js/jquery.min.js"></script>
+<script type="text/javascript" src="./Bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="./layui-v2.5.7/layui-v2.5.7/layui/layui.all.js"></script>
+<script type="text/javascript" src="./js/jquery.counterup.min.js"></script>
+<script type="text/javascript">
+    function senToUser(){
+        var file = $("input[name='file']").val();
+        var formData = new FormData();
+        formData.append('upload',$("#uploadFile")[0].files[0]);
+        $.ajax({
+            type: "post",
+            url: "http://47.102.198.114:9090/upload/one",
+            data : formData,
+			processData : false,
+			contentType : false,
+            success: function(data){
+                var html = '';
+                console.log(data.msg);
+                console.log(data.path);
+                html += '<img src="' + data.path +'" alt="ahaha" width="100%">';
+                $("#img-pre").html(html);
+                $("#fangwen").val(data.path);
+                $("#refer").val(data.path);
+                $("#HTML").val(data.html);
+                $("#markdown").val(data.markdown);
+                alert("success");
+            },
+            error: function(xhr){
+                console.log(xhr.status);
+                alert("error");
+            }
+        })
+    }
+    $("#copy1").click("tap",function(){
+        console.log("1");
+        var obj = document.getElementById("fangwen");
+        obj.select();
+        try{
+            if(document.execCommand("copy","false",null)){
+                alert("复制成功");
+                console.log("success");
+            }
+            else{
+                alert("复制失败");
+                console.log("error");
+            }
+        }catch(err){
+            alert("复制出错!");
+            console.log("error");
+        }
+    })
+    $("#copy4").click("tap",function(){
+        console.log("1");
+        var obj = document.getElementById("markdown");
+        obj.select();
+        try{
+            if(document.execCommand("copy","false",null)){
+                alert("复制成功");
+                console.log("success");
+            }
+            else{
+                alert("复制失败");
+                console.log("error");
+            }
+        }catch(err){
+            alert("复制出错!");
+            console.log("error");
+        }
+    })
+    $("#copy2").click("tap",function(){
+        console.log("1");
+        var obj = document.getElementById("refer");
+        obj.select();
+        try{
+            if(document.execCommand("copy","false",null)){
+                alert("复制成功");
+                console.log("success");
+            }
+            else{
+                alert("复制失败");
+                console.log("error");
+            }
+        }catch(err){
+            alert("复制出错!");
+            console.log("error");
+        }
+    })
+    $("#copy3").click("tap",function(){
+        console.log("1");
+        var obj = document.getElementById("HTML");
+        obj.select();
+        try{
+            if(document.execCommand("copy","false",null)){
+                alert("复制成功");
+                console.log("success");
+            }
+            else{
+                alert("复制失败");
+                console.log("error");
+            }
+        }catch(err){
+            alert("复制出错!");
+            console.log("error");
+        }
+    })
+</script>
+</html>
