@@ -1,5 +1,5 @@
 body { 
-    background-color: lightblue;
+    background-color: rgb(32, 35, 36);
     height:1386px;
     width:980px;
     padding-left:25px;
@@ -23,7 +23,7 @@ body {
    position:absolute;
    top:175px;
   }
-  #lf1{
+#lf1{
     color:rgb(211, 106, 36);
 }
 #dx1{
@@ -49,7 +49,7 @@ body {
     }
 .bj2{
     position:absolute;
-    top:49px;
+    top:51px;
     }
 .bj3{
     position:relative;
@@ -170,6 +170,10 @@ p.part7{
     color:rgb(177, 79, 22);
     font-family:微软雅黑;
 } 
+.part17{
+    position:relative;
+    left:10px;
+}
 .part18{
     position:absolute;
     top:-60px;
@@ -259,6 +263,16 @@ div.transbox p {
    left:25px;
    top:12.5px;
    }
+.container4{
+    background-color:rgb(162, 216, 247);
+    width:1000px;
+    margin:0 auto;
+    position:absolute;
+    height:1500px;
+    left:10%;
+    right:10%;
+    margin-top:-(500的一半=250px)px;
+}
 .left1{
     width:70%;
     height:20px;
