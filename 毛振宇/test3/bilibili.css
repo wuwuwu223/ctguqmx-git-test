@@ -1,0 +1,85 @@
+body{
+    min-width: 1200px;
+}
+.comtain{
+    position: relative;
+}
+.top .left{
+    position: absolute;
+    top: 0;
+    padding-left: 20px;
+}
+.top li{
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: 12px;
+    font-size: 14px;
+    color: white;
+    line-height: 32px;
+}
+.top .search{
+    position: absolute;
+    top: 0;
+    width: 300px;
+    left: 100px;
+    right: 0;
+    margin: 10px auto;
+}
+.top .search .gets{
+    padding: 0 20px 0 10px;
+    border: 1px solid hsla(0,0%,100%,0);
+    border-radius: 2px;
+    background-color: #fff;
+    overflow: hidden;
+    height: 36px;
+    width: 210px;
+    box-sizing: border-box;
+    line-height: 30px;
+}
+.top .search .gets:focus{
+    outline: none;
+}
+.top .search .enter{
+    position: absolute;
+    left: 200px;
+    width: 48px;
+    height: 36px;
+    border: none;
+    border-radius: 2px;
+    background: #e7e7e7;
+    line-height: 26px;
+    cursor: pointer;
+}
+.top .search .enter:focus{
+    outline: none;
+}
+.top .right{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.top .right .more{
+    display: inline-block;
+    margin-right: 12px;
+    margin-top: 10px;
+    font-size: 14px;
+    color: white;
+    line-height: 32px;
+}
+.mid .t1 .class .c{
+    display: inline-block;
+    line-height:68px;
+    width: 48px;
+    height: 66px;
+}
+.mid .t1 .class .c1 img{
+    position: absolute;
+}
+.mid .t1 .all .a{
+    display: inline-block;
+    width: 61px;
+    height: 20px;
+}
+.mid .t1 .more .m{
+    display: inline-block;
+}

@@ -1,0 +1,406 @@
+body {
+    background-color: wheat;
+    color: black;
+    font-size: 12px;
+    font-family: "Microsoft YaHei";
+    margin: 0 auto;
+}
+.hiabao {
+    height: 1420px;
+    width: 980px;
+    background-color: white;
+    margin: 0 auto;
+    padding: 0 44px;
+    box-sizing: border-box;
+    position: relative;
+}
+.head {
+    position: relative;
+    margin-bottom: 30px;
+}
+.left {
+    width: 200px;
+    height: 61px;
+   
+}
+.left_img {
+    float: left;
+    background-image: url(../img/u=1605245922\,3922122576&fm=26&gp=0.jpg);
+    background-size: cover;
+    width: 200px;
+    height: 61px;
+    margin-top: 8px;
+}
+.right {
+    position: absolute;
+    bottom: 5px;
+    right: 0;
+}
+/* .underline {
+    margin: 0;
+    padding: 0;
+    height: 2px;
+    background-color: rgb(134, 139, 142);
+    border: none;
+} */
+.cent_cont {
+    position: relative;
+}
+.img {
+    position: absolute;
+    left: 0;
+    width: 641px;
+    height: 301px;
+    background-image: url(../img/u=1887333225\,3220403259&fm=26&gp=0.jpg);
+    background-size: cover;
+}
+.infor {
+    border-top: 1px solid red;
+    position: absolute;
+    right: 0px;
+    width: 203px;
+    height: 301px;
+}
+.infor_cont {
+    width: 300px;
+    margin: 0 auto;
+}
+.infor_cont .underline {
+    margin: 0;
+    padding: 0;
+    height: 2px;
+    background-color:red;
+    border: none;
+}
+.infor_cont .one {
+    font-family: "Microsoft YaHei";
+    font-size: 24px;
+    text-decoration: underline;
+    color: black;
+    text-transform: capitalize;
+    line-height: 40px;
+    font-variant: small-caps;
+    margin-bottom: 5px;
+}
+.infor_cont .two {
+    font-family: "KaiTi";
+    font-size: 12px;
+    color: #676767;
+    line-height: 10px;
+    margin-bottom: 5px;
+}
+.infor_cont .three {
+    font-size: 116px;
+    color: #75b86b;
+    text-decoration: underline;
+    font-style: italic;
+    right: 10px;
+    margin-bottom: 20px;
+}
+.four {
+    width: 80px;
+    position: relative;
+}
+.four_o {
+    font-size: 55px;
+    color: #cc8091;
+}
+.four_t {
+    font-size: 21px;
+    color: #cc8091;
+    position: absolute;
+    top: 0;
+    right: -133px;
+}
+.four_e {
+    font-size: 12px;
+    color: #cc8091;
+    width: 110px;
+    position: absolute;
+    top: 40px;
+    right: -200px;
+}
+.cent_write {
+    position: absolute;
+    top: 362px;
+    width: 890px;
+    height: 250px;
+    margin-top: 55px;
+}
+.cent_write .one {
+    float: left;
+    width: 200px;
+    height: 250px;
+    margin-right: 25px;
+}
+.cent_write .two { 
+    float: left;
+    width: 200px;
+    height: 250px;
+    margin-right: 25px;
+}
+.cent_write .three {
+    float: left;
+    width: 200px;
+    height: 250px;
+}
+.cent_write h2 {
+    font-size: 16px;
+    text-decoration: underline;
+    font-weight: bolder;
+    margin-bottom: 15px;
+    font-family: "微软雅黑";
+}
+.one_write,.two_write,.three_write{
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 2px;
+}
+.men {
+    margin-top: 15px;
+    margin-left: 15px;
+}
+.men p {
+    margin-bottom: 10px;
+}
+.write_style {
+    position: absolute;
+    top: 700px;
+    width: 400px;
+    height: 200px;
+}
+.write_cont .one {
+    font-family: "heiti";
+    font-style: italic;
+    font-size: 40px;
+    color: yellow;
+    font-weight: bold;
+}
+.write_cont .two {
+    position: absolute;
+    top: 40px;
+    left: 180px;
+    font-size: 45px;
+    color: #11456b;
+    font-weight: bold;
+}
+.write_cont .three {
+    position: absolute;
+    top: 85px;
+    left: 80px;
+    font-size: 40px;
+    color: #11456b;
+    font-weight: bold;
+}
+.write_cont .four {
+    width: 400px;
+    position: absolute;
+    top: 140px;
+    font-size: 35px;
+    color: #11456b;
+    font-family: "heiti";
+    font-weight: bold;
+}
+.write_cont .five {
+    width: 400px;
+    height: 2px;
+    background-color: #676767;
+    position: absolute;
+    bottom: 0;
+}
+.img_lu {
+    position: absolute;
+    right: 44px;
+    top: 700px;
+    width: 450px;
+    height: 300px;
+    background: url(../img/146-bigskin-1.jpg);
+    background-size: 450px 300px;
+}
+.write_bo {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: 950px;
+    left: 44px;
+    
+}
+.write_head {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 30px;
+    line-height: 50px;
+    font-weight: bold;
+    color: #f5e372;
+}
+.write_bo .one {
+    font-size: 12px;
+    line-height: 16px;
+    width: 330px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.write_bo .two {
+    font-size: 12px;
+    line-height: 16px;
+    width: 200px;
+    height: 300px;
+    position: absolute;
+    top: 52px;
+    left: 0;
+}
+.write_bo .three {
+    font-size: 12px;
+    line-height: 16px;
+    width: 400px;
+    height: 40px;
+    position: absolute;
+    bottom: 0;
+}
+.write_bo .four {
+    width: 190px;
+    height: 290px;
+    background-image: url(../img/u=3730982271\,1838093636&fm=26&gp=0.jpg);
+    background-size: 190px 290px;
+    position: absolute;
+    top: 60px;
+    right: 0;
+}
+.bo {
+    width: 450px;
+    height: 340px;
+    position: absolute;
+    top: 1010px;
+    right: 44px;
+}
+
+.bo .one {
+    width: 450px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+}
+.bo .one .one_w {
+    margin: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    width: 400px;
+    height: 25px;
+}
+.bo .one .two_w {
+    margin-left: 30px;
+    margin-bottom: 10px;
+    color: rgb(212, 23, 23);
+    font-weight: bold;
+    font-size: 13px;
+    width: 400px;
+    height: 25px;
+}
+.bo .one .three_w {
+    margin-left: 30px;
+    margin-bottom: 10px;
+    color: green;
+    font-weight: bold;
+    font-size: 13px;
+    width: 400px;
+    height: 25px;
+}
+.bo .one .four_w {
+    margin-left: 30px;
+    margin-bottom: 10px;
+    color: blue;
+    font-weight: bold;
+    font-size: 13px;
+    width: 400px;
+    height: 25px;
+}
+.bo .two {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.bo .two .one_l {
+    color: #fff;
+    width: 60px;
+    height: 100px;
+    background-color: chocolate;
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    font-size: 100px;
+}
+.bo .two .one_f {
+    width: 120px;
+    height: 100px;
+    position: absolute;
+    top: 50px;
+    left: 70px;
+    border-left: 2px solid #fff;
+}
+.one_f .f_one {
+    margin-left: 8px;
+    line-height: 60px;
+    font-size: 20px;
+    width: 120px;
+    height: 50px;
+}
+.one_f .f_two {
+    margin-left: 8px;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    font-size: 20px;
+    width: 120px;
+    height: 50px;
+}
+.one_g {
+    text-align: center;
+    font-size: 40px;
+    letter-spacing: initial;
+    width: 250px;
+    height: 200px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.one_k {
+    letter-spacing: initial;
+    position: absolute;
+    top: 40px;
+}
+.one_g_h {
+    color: pink;
+    font-size: 80px;
+    position: absolute;
+    left: -30px;
+    top: 5px;
+}
+.one_g_f {
+    color: pink;
+    position: absolute;
+    right:  0;
+    bottom: -35px;
+    font-size: 80px;
+}
+.bo_hr {
+    width: 892px;
+    height: 2px;
+    background-color: #aaa;
+    position: absolute;
+    bottom: 60px;
+}
+.author {
+    width: 100px;
+    height: 60px;
+    position: absolute;
+    right: 44px;
+    bottom: 0;
+}
