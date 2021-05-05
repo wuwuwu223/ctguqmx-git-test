@@ -1,0 +1,133 @@
+ .qujin {
+     position: relative;
+     width: 800px;
+     height: 180px;
+     display: flex;
+     top: -400px;
+     left: 330px;
+ }
+ 
+ .q1,
+ .q2,
+ .q3,
+ .q4 {
+     background-color: chartreuse;
+     width: 200px;
+     height: 180px;
+ }
+ 
+ .q1 {
+     position: absolute;
+     width: 200px;
+     height: 180px;
+     top: 352px;
+     left: 50%;
+     margin-left: -398px;
+     background: url(../图片/west_01_3ca39fe.png) no-repeat;
+     animation: west01 1.4s steps(8) infinite;
+ }
+ 
+ @-webkit-keyframes west01 {
+     0% {
+         background-position: 0 0;
+     }
+     100% {
+         background-position: -1600px 0;
+     }
+ }
+ 
+ @keyframes west01 {
+     0% {
+         background-position: 0 0;
+     }
+     100% {
+         background-position: -1600px 0;
+     }
+ }
+ 
+ .q2 {
+     position: absolute;
+     width: 200px;
+     height: 180px;
+     top: 356px;
+     left: 50%;
+     margin-left: -198px;
+     background: url(../图片/west_02_47bad19.png) no-repeat;
+     animation: west02 1.4s steps(8) infinite;
+ }
+ 
+ @-webkit-keyframes west02 {
+     0% {
+         background-position: 0 0;
+     }
+     100% {
+         background-position: -1600px 0;
+     }
+ }
+ 
+ @keyframes west02 {
+     0% {
+         background-position: 0 0;
+     }
+     100% {
+         background-position: -1600px 0;
+     }
+ }
+ 
+ .q3 {
+     position: absolute;
+     width: 170px;
+     height: 240px;
+     top: 326px;
+     left: 50%;
+     margin-left: -11px;
+     background: url(../图片/west_03_f962447.png) no-repeat;
+     animation: west03 1.4s steps(8) infinite;
+ }
+ 
+ @-webkit-keyframes west03 {
+     0% {
+         background-position: 0 0;
+     }
+     100% {
+         background-position: -1360px 0;
+     }
+ }
+ 
+ @keyframes west03 {
+     0% {
+         background-position: 0 0;
+     }
+     100% {
+         background-position: -1360px 0;
+     }
+ }
+ 
+ .q4 {
+     position: absolute;
+     width: 210px;
+     height: 200px;
+     top: 372px;
+     left: 50%;
+     margin-left: 198px;
+     background: url(../图片/west_04_6516d80.png) no-repeat;
+     animation: west04 1.4s steps(8) infinite;
+ }
+ 
+ @-webkit-keyframes west04 {
+     0% {
+         background-position: 0 0;
+     }
+     100% {
+         background-position: -1680px 0;
+     }
+ }
+ 
+ @keyframes west04 {
+     0% {
+         background-position: 0 0;
+     }
+     100% {
+         background-position: -1680px 0;
+     }
+ }

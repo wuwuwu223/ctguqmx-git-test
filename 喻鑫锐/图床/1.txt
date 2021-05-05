@@ -1,0 +1,5 @@
+            <div class="img-box">
+                <div id="img-pre"></div>
+            </div>
+            <input type="file" name="file" id="uploadFile">
+            <input type="button" class="btn btn-primary" id="senToUser" onclick="senToUser()" value="提交">
