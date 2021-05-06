@@ -1,0 +1,58 @@
+.mofang {
+    width: 200px;
+    height: 200px;
+    margin: 300px auto;
+    transform-style: preserve-3d;
+    animation: zhuan 20s  infinite linear;
+}
+.mofang div {
+    position: absolute;
+    opacity: 0.7;
+}
+.mo_one {
+    width: 200px;
+    height: 200px;
+    background-image: url(img/u=1107489723\,2373759529&fm=26&gp=0.jpg);
+    background-size: 200px 200px;
+    transform: rotateY(90deg) translateZ(100px);
+}
+.mo_two {
+    width: 200px;
+    height: 200px;
+    background-image: url(img/u=2260940957\,3625192166&fm=26&gp=0.jpg);
+    background-size: 200px 200px;
+    transform: rotateY(-90deg) translateZ(100px);
+}
+ .mo_three {
+    width: 200px;
+    height: 200px;
+    background-image: url(img/u=2400908607\,2784112238&fm=26&gp=0.jpg);
+    background-size: 200px 200px;
+    transform: rotateX(90deg) translateZ(100px);
+}
+.mo_four {
+    width: 200px;
+    height: 200px;
+    background-image: url(img/u=2567778653\,898240793&fm=26&gp=0.jpg);
+    background-size: 200px 200px;
+    transform: rotateX(-90deg) translateZ(100px);
+}
+.mo_five {
+    width: 200px;
+    height: 200px;
+    background-image: url(img/u=2647749361\,3166673728&fm=26&gp=0.jpg);
+    background-size: 200px 200px;
+    transform: translateZ(100px);
+}
+.mo_six {
+    width: 200px;
+    height: 200px;
+    background-image: url(img/u=4132089976\,4046666175&fm=26&gp=0.jpg);
+    background-size: 200px 200px;
+    transform: rotateY(180deg) translateZ(100px);
+}
+@keyframes zhuan {
+    to {
+        transform: rotateY(360deg) rotateZ(360deg);
+    }
+} 
