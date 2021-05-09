@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index.html</title>
+    <link rel="stylesheet" href="./index.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script type="text/javascript">
+        $('div .button').click(function(){
+        $('nav .button span').toggleClass("rotate");
+        });
+    </script>
+</head>
+<body>
+    <div class="sec1">
+        <header class="banner" id="banner">
+            <!-- data-* 属性用于存储页面或应用程序的私有自定义数据。 -->
+              <div class="view">
+                <img src="img/bilibili-spring-view-1.png" data-move-multiple="16.395"> 
+              </div>
+              <div class="view">
+                <img src="img/bilibili-spring-view-2.png" data-move-multiple="16.395">
+              </div>
+              <div class="view">
+                <img src="img/bilibili-spring-view-3.png" data-move-multiple="12.145">
+              </div>
+              <div class="view">
+                <img src="img/bilibili-spring-view-4.png" data-move-multiple="3.718">
+              </div>
+              <div class="view">
+                <img src="img/bilibili-spring-view-5.png" data-move-multiple="14.573">
+              </div>
+              <div class="view">
+                <img src="img/bilibili-spring-people-1.png" data-move-multiple="29.277" data-is-opacity="0">
+              </div>
+              <div class="view">
+                <img src="img/bilibili-spring-view-6.png" data-move-multiple="2.342" >
+              </div>
+              <div class="view">
+                <img src="img/bilibili-spring-view-7.png" data-move-multiple="1.952" >
+              </div>
+              <div class="view">
+                <img src="img/bilibili-spring-people-2.png" data-move-multiple="4.098" data-is-opacity="1">
+              </div>
+              <div class="view">
+                <img src="img/bilibili-spring-people-3.png" data-move-multiple="2.826" data-is-opacity="1">
+              </div>
+              <div class="view">
+                <img src="img/bilibili-spring-view-8.png" data-move-multiple="1.457" >
+              </div>
+              <div class="view">
+                <img src="img/bilibili-spring-view-9.png" data-move-multiple="1.092" >
+              </div>
+              <div class="view">
+                <img src="img/bilibili-spring-people-4.png" data-move-multiple="1.104" >
+              </div>
+              <div class="view">
+                <img src="img/bilibili-spring-view-10.png" data-move-multiple="0.781">
+              </div>
+              <div class="view">
+                <img src="img/bilibili-spring-view-11.png" data-move-multiple="0.546" >
+              </div>
+              <canvas id="canvas" width="1920" height="180"></canvas>
+          </header>
+            <script src="./script.js"></script>
+        <div class="nav1">
+          <div class="left1">
+            <ul class="nav-link-ul">
+                <li class="part11"><a href="https://www.bilibili.com/?spm_id_from=333.851.b_696e7465726e6174696f6e616c486561646572.1" id="part1"><img src=img/b1.png style="width:18px;height:18px"/></a></li>
+                <li class="part11"><a href="https://www.bilibili.com/?spm_id_from=333.851.b_696e7465726e6174696f6e616c486561646572.1" id="part1">主站</a></li>
+                <li class="part11"><a href="https://www.bilibili.com/anime/?spm_id_from=666.4.b_696e7465726e6174696f6e616c486561646572.2" id="part1">番剧</a></li>
+                <li class="part11"><a href="https://game.bilibili.com/platform/?spm_id_from=666.4.b_696e7465726e6174696f6e616c486561646572.3" id="part1">游戏中心</a></li>
+                <li class="part11"><a href="https://live.bilibili.com/?spm_id_from=666.4.b_696e7465726e6174696f6e616c486561646572.4" id="part1">直播</a></li>
+                <li class="part11"><a href="https://show.bilibili.com/platform/home.html?msource=pc_web&spm_id_from=666.4.b_696e7465726e6174696f6e616c486561646572.5" id="part1">会员购</a></li>
+                <li class="part11"><a href="https://manga.bilibili.com/?from=bill_top_mnav&spm_id_from=666.4.b_696e7465726e6174696f6e616c486561646572.6" id="part1">漫画</a></li>
+                <li class="part11"><a href="https://www.bilibili.com/v/game/match/?spm_id_from=666.4.b_696e7465726e6174696f6e616c486561646572.7" id="part1">赛事</a></li>
+                <li class="part11"><a href="https://app.bilibili.com/?spm_id_from=333.790.b_696e7465726e6174696f6e616c486561646572.8" id="part1"><img src=img/b2.png style="width:18px;height:18px"/></a></li>
+                <li class="part11"><a href="https://app.bilibili.com/?spm_id_from=333.790.b_696e7465726e6174696f6e616c486561646572.8" id="part1">下载APP</a></li>
+            </ul>
+        </div>
+        <div class="right1">
+            <ul class="nav-link-u2">
+                <li class="part11"><a href="https://account.bilibili.com/account/big" id="part1">大会员</a></li>
+                <li class="part11"><a href="https://www.bilibili.com/anime/?spm_id_from=666.4.b_696e7465726e6174696f6e616c486561646572.2" id="part1">消息</a></li>
+                <li class="part11"><a href="https://game.bilibili.com/platform/?spm_id_from=666.4.b_696e7465726e6174696f6e616c486561646572.3" id="part1">动态</a></li>
+                <li class="part11"><a href="https://live.bilibili.com/?spm_id_from=666.4.b_696e7465726e6174696f6e616c486561646572.4" id="part1">收藏</a></li>
+                <li class="part11"><a href="https://show.bilibili.com/platform/home.html?msource=pc_web&spm_id_from=666.4.b_696e7465726e6174696f6e616c486561646572.5" id="part1">历史</a></li>
+                <li class="part11"><a href="https://manga.bilibili.com/?from=bill_top_mnav&spm_id_from=666.4.b_696e7465726e6174696f6e616c486561646572.6" id="part1">创作中心</a></li>
+                <li class="part11"><a href="https://www.bilibili.com/v/game/match/?spm_id_from=666.4.b_696e7465726e6174696f6e616c486561646572.7" id="part1">投稿</a></li>
+            </ul>
+        </div>
+        <div class="center">
+            <form id="nav-search">
+                <input class="sousuokuang" type="text">
+                <div class="search-btn">
+                   <button class="sousuozi" type="botton"><img src="img/b3.png" style="height:30px;width:40px"></button>
+                </div>
+            </form>
+        </div>
+      </div>
+    </div>
+    <div class="sec2">
+        <ul class="sec2-link-u1">
+            <li class="part22" id="part222"><a href="https://www.bilibili.com/" id="part2"><img src="img/首页.png" id=sec2-link-u1-t><span class="part2222">首页</span></a></li>
+            <li class="part22" id="part222"><a href="https://t.bilibili.com/?spm_id_from=333.851.b_7072696d61727950616765546162.2" id="part2"><img src="img/动态.png" id=sec2-link-u1-t><span class="part2222">动态</span></a></li>
+            <li class="part22" id="part222"><a href="https://www.bilibili.com/v/popular/all?spm_id_from=333.851.b_7072696d61727950616765546162.3" id="part2"><img src="img/热门.png" id=sec2-link-u1-t><span class="part2222">热门</span></a></li>
+            <li class="part22" id="part222"><a href="https://www.bilibili.com/v/channel?spm_id_from=333.851.b_7072696d61727950616765546162.4" id="part2"><img src="img/频道.png" id=sec2-link-u1-t><span class="part2222">频道</span></a></li>
+        </ul>
+        <div class="sec2-link-u2">
+          <ul class="sec2-link-u2-top">
+            <li class="part22"><a href="https://www.bilibili.com/v/douga/?spm_id_from=333.851.b_7072696d6172794368616e6e656c4d656e75.1" id="part2">动画</a></li>
+            <li class="part22"><a href="https://www.bilibili.com/v/music/?spm_id_from=333.5.b_7072696d6172794368616e6e656c4d656e75.9" id="part2">音乐</a></li>
+            <li class="part22"><a href="https://www.bilibili.com/v/dance/?spm_id_from=333.5.b_7072696d6172794368616e6e656c4d656e75.34" id="part2">舞蹈</a></li>
+            <li class="part22"><a href="https://www.bilibili.com/v/technology/?spm_id_from=333.5.b_7072696d6172794368616e6e656c4d656e75.45" id="part2">知识</a></li>
+            <li class="part22"><a href="https://www.bilibili.com/v/life/?spm_id_from=333.5.b_7072696d6172794368616e6e656c4d656e75.51" id="part2">生活</a></li>
+            <li class="part22"><a href="https://www.bilibili.com/v/fashion/?spm_id_from=333.5.b_7072696d6172794368616e6e656c4d656e75.70" id="part2">时尚</a></li>
+            <li class="part22"><a href="https://www.bilibili.com/v/ent/?spm_id_from=333.5.b_7072696d6172794368616e6e656c4d656e75.87" id="part2">娱乐</a></li>
+            <li class="part22"><a href="https://www.bilibili.com/cinema/?spm_id_from=333.5.b_7072696d6172794368616e6e656c4d656e75.82" id="part2">放映厅</a></li>
+          </ul>
+          <ul class="sec2-link-u2-bottom">
+            <li class="part22"><a href="https://www.bilibili.com/anime/?spm_id_from=666.6.b_7072696d6172794368616e6e656c4d656e75.8" id="part2">番剧</a></li>
+            <li class="part22"><a href="https://www.bilibili.com/guochuang/?spm_id_from=333.851.b_7072696d6172794368616e6e656c4d656e75.26" id="part2">国创</a></li>
+            <li class="part22"><a href="https://www.bilibili.com/v/game/?spm_id_from=666.5.b_7072696d6172794368616e6e656c4d656e75.41" id="part2">游戏</a></li>
+            <li class="part22"><a href="https://www.bilibili.com/v/digital/?spm_id_from=333.5.b_7072696d6172794368616e6e656c4d656e75.43" id="part2">数码</a></li>
+            <li class="part22"><a href="https://www.bilibili.com/v/kichiku/?spm_id_from=333.5.b_7072696d6172794368616e6e656c4d656e75.66" id="part2">鬼畜</a></li>
+            <li class="part22"><a href="https://www.bilibili.com/v/information/?spm_id_from=333.5.b_7072696d6172794368616e6e656c4d656e75.82" id="part2">咨询</a></li>
+            <li class="part22"><a href="https://www.bilibili.com/v/cinephile/?spm_id_from=333.5.b_7072696d6172794368616e6e656c4d656e75.90" id="part2">影视</a></li>
+            <li class="part22">
+                <div class="caidan">
+                    <label for="btn" class="button">更多<span class="fas fa-caret-down"></span></label>
+                    <input type="checkbox" id="btn" class="kuang">
+                    <ul class="menu">
+                        <li><a href="https://www.bilibili.com/v/life/funny#/">搞笑</a></li>
+                        <li><a href="https://www.bilibili.com/v/food">美食</a></li>
+                        <li><a href="https://www.bilibili.com/v/car">汽车</a></li>
+                        <li><a href="https://www.bilibili.com/v/life/daily/#/530003">vlog</a></li>
+                        <li><a href="https://www.bilibili.com/v/life/daily/#/530003">动物圈</a></li>
+                        <li><a href="https://www.bilibili.com/v/game/stand_alone#/">单机游戏</a></li>
+                    </ul>
+                    </input>
+                </div></li>
+          </ul>
+        </div>
+        <div class="sec2-link-u3">
+            <ul class="sec2-link-u3-top">
+                <li class="part22"><a href="https://www.bilibili.com/anime/?spm_id_from=666.6.b_7072696d6172794368616e6e656c4d656e75.8" id="part2"><img src="img/专栏.png" style="height:25px;width:25px" id=sec2-link-u3-t></a></li>
+                <li class="part22"><a href="https://www.bilibili.com/anime/?spm_id_from=666.6.b_7072696d6172794368616e6e656c4d656e75.8" id="part2">专栏</a></li>
+                <li class="part22"><a href="https://www.bilibili.com/guochuang/?spm_id_from=333.851.b_7072696d6172794368616e6e656c4d656e75.26" id="part2"><img src="img/活动.png" style="height:25px;width:25px" id=sec2-link-u3-t></a></li>
+                <li class="part22"><a href="https://www.bilibili.com/guochuang/?spm_id_from=333.851.b_7072696d6172794368616e6e656c4d656e75.26" id="part2">小活动</a></li>
+                <li class="part22"><a href="https://www.bilibili.com/v/game/?spm_id_from=666.5.b_7072696d6172794368616e6e656c4d656e75.41" id="part2"><img src="img/小黑屋.png" style="height:25px;width:25px" id=sec2-link-u3-t></a></li>
+                <li class="part22"><a href="https://www.bilibili.com/v/game/?spm_id_from=666.5.b_7072696d6172794368616e6e656c4d656e75.41" id="part2">小黑屋</a></li>
+            </ul>
+            <ul class="sec2-link-u3-bottom">
+                <li class="part22"><a href="https://www.bilibili.com/anime/?spm_id_from=666.6.b_7072696d6172794368616e6e656c4d656e75.8" id="part2"><img src="img/直播.png" style="height:25px;width:25px" id=sec2-link-u3-t></a></li>
+                <li class="part22"><a href="https://www.bilibili.com/anime/?spm_id_from=666.6.b_7072696d6172794368616e6e656c4d656e75.8" id="part2">直播</a></li>
+                <li class="part22"><a href="https://www.bilibili.com/guochuang/?spm_id_from=333.851.b_7072696d6172794368616e6e656c4d656e75.26" id="part2"><img src="img/课堂.png" style="height:25px;width:25px" id=sec2-link-u3-t></a></li>
+                <li class="part22"><a href="https://www.bilibili.com/guochuang/?spm_id_from=333.851.b_7072696d6172794368616e6e656c4d656e75.26" id="part2">课堂</a></li>
+                <li class="part22"><a href="https://www.bilibili.com/v/game/?spm_id_from=666.5.b_7072696d6172794368616e6e656c4d656e75.41" id="part2"><img src="img/音乐plus.png" style="height:25px;width:25px" id=sec2-link-u3-t></a></li>
+                <li class="part22"><a href="https://www.bilibili.com/v/game/?spm_id_from=666.5.b_7072696d6172794368616e6e656c4d656e75.41" id="part2">音乐Plus</a></li>
+            </ul> 
+        </div>
+    </div>
+    <div class="sec3">
+        <div id="sec3-lunbo">
+            <div class="wrap">
+                <ul class="list">
+                    <li class="item active"> <img src="img/1.png" style="width:459px;height:202px"/></li>
+                    <li class="item"><img src="img/2.png" style="width:459px;height:202px"/></li>
+                    <li class="item"><img src="img/3.png" style="width:459px;height:202px"/></li>
+                    <li class="item"><img src="img/4.png" style="width:459px;height:202px"/></li>
+                    <li class="item"><img src="img/5.png" style="width:459px;height:202px"/></li>
+                </ul>
+                <ul class="pointList">
+                    <li class="point active" data-index='0'></li>
+                    <li class="point" data-index='1'></li>
+                    <li class="point" data-index='2'></li>
+                    <li class="point" data-index='3'></li>
+                    <li class="point" data-index='4'></li>
+                </ul>
+                    <button type="button" class="btn" id="goPre"><</button>
+                    <button type="button" class="btn" id="goNext">></button>
+            </div>
+            <script type="text/javascript">
+                var items=document.getElementsByClassName('item');
+                var points=document.getElementsByClassName("point");
+                var goPreBtn=document.getElementById('goPre');
+                var goNextBtn=document.getElementById('goNext');
+                var index=0;//表示第几层图片的展示
+                var time=0;
+                var clearActive=function(){
+                    for(var i=0;i<items.length;i++){
+                        items[i].className='item';
+                    }
+                    for(var i=0;i<points.length;i++){
+                       points[i].className='point';
+                    }
+                }
+                var goIndex=function(){
+                    clearActive();
+                    points[index].className='point active';
+                    items[index].className='item active';
+                }
+                var goNext=function(){
+                    if(index<4){
+                        index++;
+                    }
+                    else{
+                        index=0;
+                    }
+                    goIndex();
+                }
+                var goPre=function(){
+                    if(index==0){
+                        index=4;
+                    }else{
+                        index--;
+                    }
+                    goIndex();
+                }
+                goNextBtn.addEventListener('click',function(){
+                    goNext();
+                })
+                goPreBtn.addEventListener('click',function(){
+                    goPre();
+                })
+                for(var i=0;i<points.length;i++){
+                   points[i].addEventListener('click',function(){
+                       var pointIndex=this.getAttribute('data-index');
+                       index=pointIndex;
+                       goIndex();
+                       time=0;
+                   })
+                }
+                //自动播放
+                setInterval(function(){
+                    time++;
+                    if(time==20){
+                        goNext();
+                        time=0;
+                    }
+                },100)
+            </script>
+        </div>
+        <div class="sec3-link-u1">
+            <div class="sec3-link-u2-top">
+                <li><a href="https://www.bilibili.com/video/BV1BV411n7rB?spm_id_from=333.851.b_7265636f6d6d656e64.1"><img src="img/t1.png" style="width:170px;height:96px;"/></a></li>
+                <li><a href="https://www.bilibili.com/video/BV1BV411n7rB?spm_id_from=333.851.b_7265636f6d6d656e64.1"><img src="img/t1.png" style="width:170px;height:96px;"/></a></li>
+                <li><a href="https://www.bilibili.com/video/BV1BV411n7rB?spm_id_from=333.851.b_7265636f6d6d656e64.1"><img src="img/t1.png" style="width:170px;height:96px;"/></a></li>
+            </div>
+            <div class="sec3-link-u2-bottom">
+                <li><a href="https://www.bilibili.com/video/BV1BV411n7rB?spm_id_from=333.851.b_7265636f6d6d656e64.1"><img src="img/t1.png" style="width:170px;height:96px;"/></a></li>
+                <li><a href="https://www.bilibili.com/video/BV1BV411n7rB?spm_id_from=333.851.b_7265636f6d6d656e64.1"><img src="img/t1.png" style="width:170px;height:96px;"/></a></li>
+                <li><a href="https://www.bilibili.com/video/BV1BV411n7rB?spm_id_from=333.851.b_7265636f6d6d656e64.1"><img src="img/t1.png" style="width:170px;height:96px;"/></a></li>
+            </div>
+        </div>
+    </div>      
+    <div class="sec4">
+        <div class="sec4-link-u1-top">
+            <ul class="list1">
+                <li class="week">最新</li>
+                <li class="week">周一</li>
+                <li class="week">周二</li>
+                <li class="week">周三</li>
+                <li class="week">周四</li>
+                <li class="week">周五</li>
+                <li class="week">周六</li>
+                <li class="week">周日</li>
+            </ul>
+        </div>
+        <div class="sec4-link-ul-bottom">
+            <div id="zuixin" class="zhou" style="display:block">
+                <a href="https://www.bilibili.com/bangumi/play/ss33942/?spm_id_from=333.851.b_62696c695f7265706f72745f616e696d65.3"><img src="img/zuixin.png">海懒波乐</a>
+                <a href="https://www.bilibili.com/bangumi/play/ss33942/?spm_id_from=333.851.b_62696c695f7265706f72745f616e696d65.3"><img src="img/zuixin1.png"></a>
+            </div>
+            <div id="zhouyi" class="zhou"><a href="https://www.bilibili.com/bangumi/play/ss33942/?spm_id_from=333.851.b_62696c695f7265706f72745f616e696d65.3"><img src="img/zhouyi.png" style="height:150px;width:150px"></a></div>
+            <div id="zhouer" class="zhou"><a href="https://www.bilibili.com/bangumi/play/ss33942/?spm_id_from=333.851.b_62696c695f7265706f72745f616e696d65.3"><img src="img/zhouer.png" style="height:150px;width:150px"></a></div>
+            <div id="zhousan" class="zhou"><a href="https://www.bilibili.com/bangumi/play/ss33942/?spm_id_from=333.851.b_62696c695f7265706f72745f616e696d65.3"><img src="img/zhousan.png" style="height:150px;width:150px;"></a></div>
+            <div id="zhousi" class="zhou"><a href="https://www.bilibili.com/bangumi/play/ss33942/?spm_id_from=333.851.b_62696c695f7265706f72745f616e696d65.3"><img src="img/zhousi.png" style="width:200px;height:200px"></a></div>
+            <div id="zhouwu" class="zhou"><a href="https://www.bilibili.com/bangumi/play/ss33942/?spm_id_from=333.851.b_62696c695f7265706f72745f616e696d65.3"><img src="img/zhouwu.png" style="width:200px;height:200px"></a></div>
+            <div id="zhouliu" class="zhou"><a href="https://www.bilibili.com/bangumi/play/ss33942/?spm_id_from=333.851.b_62696c695f7265706f72745f616e696d65.3"><img src="img/zhouliu.png" style="width:200px;height:200px"></a></div>
+            <div id="zhouri" class="zhou"><a href="https://www.bilibili.com/bangumi/play/ss33942/?spm_id_from=333.851.b_62696c695f7265706f72745f616e696d65.3"><img src="img/zhouri.png" style="width:200px;height:200px"></a></div>
+        </div>
+        <script>
+            //逻辑：1.移动到哪个选项卡，自己的背景颜色改变 2.对应的内容区域要展示
+            //同理，移出时，背景颜色回复，对应内容区域隐藏对应的内容      
+            let week=document.getElementsByClassName('week');
+            let zhou=document.getElementsByClassName('zhou');
+            for(let i=0;i<week.length;i++){
+                week[i].index=i;
+                week[i].onmousedown=function(){//鼠标点击时激发的事件
+                    this.style.backgroundColor='yellow';
+                    for(let j=0;j<zhou.length;j++){
+                        zhou[j].style.display='none';
+                    }
+                    zhou[this.index].style.display='block';
+                }
+                week[i].onmouseout=function(){
+                    week[i].style.backgroundColor='bisque';
+                }
+            }
+        </script>
+    </div>
+</body>
+</html>
