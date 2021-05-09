@@ -1,0 +1,164 @@
+.xx1 {
+    width: 1198px;
+    height: 242px;
+    margin-bottom: 40px;
+    position: relative;
+    top: 0px;
+    left: 176px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.x1 {
+    width: 550px;
+    height: 242px;
+}
+
+.content {
+    width: 550px;
+    height: 242px;
+}
+
+.imglist img {
+    width: 550px;
+    height: 242px;
+}
+
+.content .imglist li img {
+    position: absolute;
+    left: -5px;
+    top: 0px;
+}
+
+.xx2 {
+    width: 638px;
+    height: 242px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.xxxhz {
+    width: 206px;
+    height: 116px;
+    background-color: chartreuse;
+}
+
+.xxxhz img {
+    width: 100%;
+    height: 100%;
+}
+
+.xxxhz a {
+    color: #fff;
+    transition: color .3s;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.info {
+    width: 206px;
+    height: 116px;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: relative;
+    top: -120px;
+}
+
+.info {
+    display: none;
+}
+
+.xxxhz:hover .info {
+    transition: opacity .2s;
+    display: block;
+}
+
+.info p {
+    line-height: 20px;
+    font-weight: 500;
+}
+
+.shangzz {
+    padding-top: 10px;
+    font-size: 16px;
+}
+
+.xiazz {
+    font-size: 0.07361963rem;
+    color: #fff;
+    margin: 0;
+    padding-left: 15px;
+    position: relative;
+    top: -10px;
+}
+
+.up {
+    margin: 0;
+}
+
+.play {
+    margin: 0;
+}
+
+.haiyou {
+    color: #fff;
+    height: 20.8px;
+    width: 206px;
+    margin: 0;
+    position: relative;
+    top: -30px;
+}
+
+.haiyou p {
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.xxxhz:hover .haiyou {
+    transition: opacity .2s;
+    display: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+.pointer {
+    position: relative;
+    display: flex;
+    z-index: 9999;
+    margin: auto auto;
+    width: 150px;
+    height: 15px;
+    top: 195px;
+    left: 200px;
+}
+
+.pointer a {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    float: left;
+    margin: 0 2px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+}
+
+.pointer a:hover,
+.pointer a.active {
+    background-color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+img {
+    z-index: 1;
+}
+
+.im:target {
+    z-index: 5;
+}
