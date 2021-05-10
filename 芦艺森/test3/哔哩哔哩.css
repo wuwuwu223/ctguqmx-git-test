@@ -181,12 +181,12 @@ footer {
 
 .you2:hover span {
     transform: rotate(360deg);
-    transition: all .5s;
 }
 
 .you2 span {
     display: inline-block;
     margin-left: 3.5px;
+    transition: all 1s;
 }
 
 .you2 p {
