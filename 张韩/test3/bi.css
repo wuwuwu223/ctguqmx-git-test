@@ -2,24 +2,22 @@ body{
     text-align: center;
     margin: 0;
     padding: 0;
-    height: 100vh;
-    width: 100vw;
 }
-#father{
+.home{
     position: relative;
     padding: 0;
     width: 1264px;
     height: 5300px;
     margin: 0 auto;
 }
-#top{
+.top{
     position: absolute;
     top: 0;
     left: 0;
     width: 1264px;
     height: 300px;
 }
-#certain{
+.unknown{
     position: absolute;
     top: 0;
     left: 0;
@@ -32,7 +30,7 @@ body{
     left: 80px;
     z-index: 1;
 }
-#maxtop{
+.top{
     position: absolute;
     top: 6px;
     left: 0;
@@ -41,7 +39,7 @@ body{
     z-index: 1000;
     margin: 0 auto;
 }
-.nav-link{
+.navleft{
     width: 500px;
     height: 36px;
     position: absolute;
@@ -73,7 +71,7 @@ body{
     color: orange;
     font-size: 15px;
 }
-.nav-search-box{
+.navsearchbox{
     margin: 0 10px;
     width: 254x;
     height: 36px;
@@ -81,7 +79,7 @@ body{
     top: 2px;
     left: 455px;
 }
-.nav-search{
+.navsearch{
     margin: 0;
     padding: 0;
     display: inline-block;
@@ -110,7 +108,7 @@ body{
     color: orange;
     font-size: 15px;
 }
-.nav-user-center{
+.navright{
     width: 500px;
     height: 36px;
     display: inline-block;
@@ -119,7 +117,7 @@ body{
     top: 10px;
     right: 10px;
 }
-.denglu{
+.login{
     display: block;
     width: 36px;
     height: 36px;
@@ -129,17 +127,17 @@ body{
     top: -5px;
     left: 30px;            
 }
-.denglu>a{
+.login>a{
     line-height: 36px;
     color: #73c9e5;
     font-size: 13px;
     text-decoration: none;     
 }
-.denglu>a:hover{
+.login>a:hover{
     color: orange;
     font-size: 14px;
 }
-.nav-link2{
+.linkright{
     height: 36px;
     width: 300px;
     z-index: 1000;
@@ -172,7 +170,7 @@ body{
     color: orange;
     font-size: 15px;
 }
-.tougao{
+.contribution{
     display: block;
     width: 94px;
     height: 33px;
@@ -182,17 +180,17 @@ body{
     top: -4px;
     left: 403px;
 }
-.tougao>a{
+.contribution>a{
     font-size: 13px;
     text-decoration: none;
     color: white;
     line-height: 33px
 }
-.tougao>a:hover{
+.contribution>a:hover{
     color: #73c9e5;
     font-size: 15px;
 }
-#topdown{
+.binary{
     width: 1085px;
     height: 100px;
     position: absolute;
@@ -202,51 +200,51 @@ body{
     right: 0px;
     margin: 0 auto;
 }
-.topdown1{
+.b1{
     position: absolute;
     top: 0px;
     left: 20px;
 }
-.topdown1 span{
+.b1 span{
     color: black;
     font-size: 14px;
 }
-.topdown1 span:hover{
+.b1 span:hover{
     color: orange;
 }
-.topdown1 .img{
+.b1 .img{
    display: inline-block;
     width: 36px;
     height: 60px;
     margin-right: 10px;
 }
-.topdown2{
+.b2{
     position: absolute;
     top: 6px;
     left: 235px;
 }
-.topdown2 .p1{
+.b2 .p1{
     margin-bottom: 10px;
 }
-.topdown2 .p2{
+.b2 .p2{
     margin-right: 20px;
 }
-.topdown2 .text{
+.b2 .text{
     display: inline-block;
     width: 70px;
     height: 18px;
     font-size: 14px;
 }
-.topdown2 .text:hover{
+.b2 .text:hover{
     color: orange;
 }
-.topdown2 .fyt{
+.b2 .fyt{
     width: 90px;
 }
-.topdown2 .text .num{
+.b2 .text .num{
     display: inline-block;
 }
-.topdown2 .num{
+.b2 .num{
     font-style: normal;
     font-size: 12px;
     display: inline-block;
@@ -258,24 +256,24 @@ body{
     width: 32px;
     text-align: center;
 }
-.topdown3{
+.b3{
     position: absolute;
     top: 4px;
     left: 875px;
 }
-.topdown3 .img{
+.b3 .img{
     display: inline-block;
     width: 60x;
     height: 20px;
     font-size: 14px;
 }
-.topdown3 .img:hover{
+.b3 .img:hover{
     color: orange;
 }
-.topdown3 .p3{
+.b3 .p3{
     margin-bottom: 14px;
 }
-#mid{
+.mid{
     position: absolute;
     top: 257px;
     left: 93px;
@@ -283,21 +281,21 @@ body{
     height: 600px;
     z-index: 1001;
 }
-#mid .m1{
+.mid .m1{
     height: 202px;
 }
-#mid .m1-left{
+.id .mleft1{
     position: relative;
     width: 459px;
     height: 202px;
     margin-left:20px;
 }
-#mid .m1-left .img{
+.mid .mleft1 .img{
     position: absolute;
     width: 459px;
     height: 202px;
 }
-#mid .m1-left .img img{
+.mid .mleft1 .img img{
     position: absolute;
     left: 0px;
     height: 202px;
@@ -320,7 +318,7 @@ body{
 	border-radius: 50%;
 	margin-left: 5px;
 }
-#mid .m1-right{
+.mid .mright1{
     position: absolute;
     right: 0;
     top: 0;
@@ -328,28 +326,28 @@ body{
     height: 202px;
     width: 550px;
 }
-#mid .m1-right a{
+.mid .mright1 a{
     display: inline-block;
     width: 170px;
     height:90px;
     margin-right: 5px;
 }
-#mid .m1-right .bottom{
+.mid .mright1 .bottom{
     margin-top: 22px;
 }
-#mid .m2{
+.mid .m2{
     height: 224px;
     width: 999px;
     top: 30px;
     left: 19px;
     position: relative;
 }
-#mid .m2 .img5{
+.mid .m2 .img5{
     position: absolute;
     left: 0;
     top: 0;
 }
-#mid .m2 .gklb{
+.mid .m2 .gklb{
     width: 263px;
     height: 30px;
     border: 1px solid #e7e7e7;
@@ -362,18 +360,18 @@ body{
     right: 0px;
     top: 5px;
 }
-#mid .m2 .gklb:hover{
+.mid .m2 .gklb:hover{
     color: orange;
     font-size: 14px;
 }
-#mid .m2 .m2-right{
+.mid .m2 .mright2{
     position: absolute;
     right: 0;
     bottom: 0px;
     width: 265px;
     height: 172px;
 }
-.m2 .m2-left{
+.m2 .mleft2{
     width: 710px;
     height: 172px;
     position: absolute;
@@ -381,11 +379,11 @@ body{
     bottom: 0px;
     text-align: left;
 }
-.m2 .m2-left a{
+.m2 .mleft2 a{
     display:inline-block;
     margin-right: 3px;
 }
-#last{
+.last{
     position: absolute;
     top: 800px;
     left: 93px;
@@ -393,7 +391,7 @@ body{
     height: 4500px;
     z-index: 1001;
 }
-#last .down{
+.last .down{
     background-color: orange;
     width: 999px;
     height: 224px;
@@ -401,14 +399,14 @@ body{
     margin-left: 18px;
     position: relative;
 }
-#last .down a{
+.last .down a{
     color: #212121;
     font-size: 20px;
     position: absolute;
     left: 0;
     top: -22px;
 }
-#list-box{
+.list-box{
     position: fixed;
     top: 150px;
     margin-left: 520px;
@@ -419,17 +417,17 @@ body{
     border: 1px solid #e7e7e7;
     border-radius: 10px;
 }
-#list-box .name{
+.list-box .name{
     width: 56px;
     height: 24px;
     line-height: 24px;
     text-align: center;
 }
-#list-box .name a{
+.list-box .name a{
     font-size: 12px;
     color: #212121;
 }
-#list-box .name:hover{
+.list-box .name:hover{
     background-color: orange;
 }
 

@@ -1,0 +1,68 @@
+.content {
+    box-sizing: border-box;
+    width: 600px;
+    height: 600px;
+    margin: 100px auto;
+    position: relative;
+}
+.btn {
+    width: 640px;
+    height: 640px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0,0, 0.3);
+    z-index: 2;
+}
+.btn button {
+    background: none;
+    border: none;
+    background-size: 100% 100%;
+    /* 鼠标变为手 */
+    cursor: pointer;
+    outline: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+.starbtn button {
+    width: 200px;
+    height: 80px;
+    background-size: 200px 80px;
+    background-image: url(../img/kai.png);
+    margin-left: -100px;
+    margin-top: -40px;
+}
+.pusebtn {
+    display: none;
+}
+.pusebtn button {
+    width: 70px;
+    height: 70px;
+    background-size: 70px 70px;
+    background-image: url(../img/u=2801506739\,388608588&fm=26&gp=0.jpg);
+    margin-left: -35px;
+    margin-top: -35px;
+}
+#snakewrap {
+    /* box-sizing: border-box; */
+    width: 600px;
+    height: 600px;
+    background: #225675;
+    border: 20px solid #7dd9ff;
+    position: relative;
+}
+.snakehead {
+    box-sizing: border-box;
+    border: 10px solid brown;
+    border-right-color: transparent;
+    border-top-color:transparent;
+    border-bottom-color:transparent;
+}
+.snakebody {
+    background-color: #9ddbb1;
+    border-radius: 50%;
+}
+.food {
+    background-color: red;
+}
