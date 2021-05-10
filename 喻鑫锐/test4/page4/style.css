@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+}
+header {
+  height: 160px;
+  position: relative;
+  overflow: hidden;
+  --percentage: 0.5;
+}
+header .view,
+header .tree {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header img,
+header video {
+  position: absolute;
+  display: block;
+  width: 150%;
+  height: 100%;
+  object-fit: cover;
+}
+header .view {
+  transform: translateX(calc(var(--percentage) * 150px));
+}
+header .tree {
+  transform: translateX(calc(var(--percentage) * 50px));
+  filter: blur(2px);
+}
+header .morning {
+  z-index: 20;
+  opacity: calc(1 - (var(--percentage) - 0.25) / 0.25);
+}
+header .afternoon {
+  z-index: 10;
+  opacity: calc(1 - (var(--percentage) - 0.4) / 0.4);
+}
+header .view,
+header .tree,
+header .morning,
+header .afternoon {
+  transition: 0.2s all ease-in;
+}
+header.moving .view,
+header.moving .tree,
+header.moving .morning,
+header.moving .afternoon {
+  transition: none;
+}
+/*# sourceMappingURL=style.css.map */
