@@ -1,5 +1,5 @@
 body { 
-    background-color: lightblue;
+    background-color: rgb(32, 35, 36);
     height:1386px;
     width:980px;
     padding-left:25px;
@@ -23,7 +23,7 @@ body {
    position:absolute;
    top:175px;
   }
-  #lf1{
+#lf1{
     color:rgb(211, 106, 36);
 }
 #dx1{
@@ -49,7 +49,7 @@ body {
     }
 .bj2{
     position:absolute;
-    top:49px;
+    top:51px;
     }
 .bj3{
     position:relative;
@@ -170,6 +170,10 @@ p.part7{
     color:rgb(177, 79, 22);
     font-family:微软雅黑;
 } 
+.part17{
+    position:relative;
+    left:10px;
+}
 .part18{
     position:absolute;
     top:-60px;
@@ -179,7 +183,7 @@ p.part7{
 .in1{
     position:relative;
     bottom:-5px;
-    color:rgb(211, 106, 36)；
+    color:rgb(211, 106, 36)
     }
 span{
     float:left;
@@ -194,14 +198,14 @@ h2{
     font-family:微软雅黑;
     }
 div.background1{
-    background-image: url(https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fshouyou.3dmgame.com%2Fuploadimg%2Fupload%2Fimage%2F20191012%2F20191012151807_66474.jpg&refer=http%3A%2F%2Fshouyou.3dmgame.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1620652883&t=1825c891452adb2113e9365380479ab6);
+    background-image:url(./img/2.jpg);
     position:relative;
     background-size:641px 301px;
     height:301px;
     width:641px;
 }
 div.background2{
-    background-image: url(http://pics0.baidu.com/feed/32fa828ba61ea8d3195819441185c048241f588a.jpeg?token=16e52a878bce004403e65d40c722266f);
+    background-image:url(./img/1.jpg);
     position:relative;
     background-size:458px 275px;
     height:275px;
@@ -259,6 +263,16 @@ div.transbox p {
    left:25px;
    top:12.5px;
    }
+.container4{
+    background-color:rgb(162, 216, 247);
+    width:1000px;
+    margin:0 auto;
+    position:absolute;
+    height:1500px;
+    left:10%;
+    right:10%;
+    margin-top:-(500的一半=250px)px;
+}
 .left1{
     width:70%;
     height:20px;
@@ -344,4 +358,4 @@ div.transbox p {
 footer{
     position:relative;
     top: 630px; 
-}v
+}
