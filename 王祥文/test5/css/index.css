@@ -152,7 +152,7 @@ body {
 }
 .content_two {
   text-align: center;
-  padding-bottom: 100px;
+  margin-bottom: 100px;
   height: 410px;
 }
 .content_two .container .fen_one {
@@ -247,7 +247,7 @@ body {
     margin: 50px 0!important;
   }
   .content_two {
-    padding-bottom: 50px!important;
+    margin-bottom: 140px!important;
   }
   .last {
     padding: 50px auto!important;
