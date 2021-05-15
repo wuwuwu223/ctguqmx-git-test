@@ -1,0 +1,238 @@
+/* 初始化 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* 头部 */
+header {
+    width: 100%;
+    height: 118px;
+    background-color: #005a99;
+    position: relative;
+}
+
+header .tp1 {
+    position: absolute;
+    top: 18px;
+    left: 55px;
+}
+
+header .tp2 {
+    position: absolute;
+    right: 0px;
+    height: 118px;
+    z-index: 0;
+}
+
+header form {
+    position: absolute;
+    top: 35px;
+    right: 50px;
+}
+
+header form input {
+    width: 225px;
+    height: 32px;
+    right: 0px;
+    outline: none;
+    float: left;
+    padding-left: 20px;
+    color: #757575;
+}
+
+header form button {
+    width: 40px;
+    height: 36px;
+    outline: none;
+    margin-left: 5px;
+    float: right;
+}
+
+/* 中间 */
+section {
+    width: 1183px;
+    margin: 0px auto;
+    /* background-color: aqua; */
+}
+
+/* 轮播 */
+.lunbotp {
+    position: relative;
+    background: url();
+    height: 359px;
+    width: 1183px;
+}
+
+.lunbo {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: whitesmoke;
+}
+
+.lo {
+    left: 545px;
+    top: 330px;
+}
+
+.lw {
+    left: 570px;
+    top: 330px;
+}
+
+.ls {
+    left: 595px;
+    top: 330px;
+}
+
+section nav ul li {
+    float: left;
+}
+
+section nav ul li a {
+    padding-left: 15px;
+    padding-right: 15px;
+    display: inline-block;
+    font-size: 16px;
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+    color: black;
+}
+
+section nav ul li:hover a {
+    background-color: #0574d0;
+    color: white;
+}
+
+.dongtai {
+    width: 1183px;
+    height: 353px;
+    margin-top: 20px;
+    /* background-color: aqua; */
+}
+
+.dongtai div {
+    float: left;
+}
+
+.dongtai .left .s p,
+.dongtai .left .s a {
+    float: left;
+}
+
+.dongtai .left .s {
+    margin-bottom: 10px;
+}
+
+.dongtai .left .s p {
+    font-size: 16px;
+    margin-right: 5px;
+}
+
+.dongtai .left .s a {
+    font-size: 14px;
+    color: #569dd9;
+    margin-top: 3px;
+}
+
+.dongtai .left {
+    width: 415px;
+    height: 353px;
+}
+
+.dongtai .left .x p {
+    width: 413px;
+    height: 45px;
+    border: 1px solid #e1e1e1;
+    text-align: center;
+    line-height: 45px;
+    margin-top: -5px;
+    font-size: 18px;
+}
+
+.dongtai .left .x p span {
+    color: #ff9900;
+    font-size: 20px;
+}
+
+.dongtai .left .x p:hover {
+    color: #ff9900;
+}
+
+.dongtai .middle {
+    width: 445px;
+    height: 370px;
+    margin-left: 30px;
+}
+
+.dongtai .middle .dian {
+    float: right;
+    height: 31.5px;
+}
+
+.dongtai .middle .dian:hover {
+    color: #ff9900;
+}
+
+.middle .xia {
+    width: 445px;
+    height: 338px;
+    border-top: 4px solid #0078cc;
+}
+
+.middle .xia a {
+    display: block;
+    line-height: 51px;
+    height: 51px;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.middle .xia a p {
+    float: left;
+    font-size: 14px;
+}
+
+.middle .xia a span {
+    float: right;
+    font-size: 14px;
+}
+
+.middle .xia a:hover p {
+    color: #ff9900;
+}
+
+.right {
+    width: 272px;
+    height: 317px;
+    margin-top: 31px;
+    margin-left: 21px
+}
+
+.right a img {
+    margin-bottom: 15px;
+    width: 272px;
+}
