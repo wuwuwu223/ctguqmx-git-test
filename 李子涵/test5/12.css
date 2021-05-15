@@ -1,0 +1,730 @@
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+li {
+    list-style: none;
+    border-radius: 2px;
+}
+
+div {
+    border-radius: 2px;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+i {
+    font-style: normal;
+}
+
+
+.clearfix:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+body {
+    height: 2000px;
+}
+
+.tp {
+    font-family: "iconfont" !important;
+    font-size: 14px;
+}
+
+
+header {
+    height: 155px;
+    position: relative;
+    width: 100%;
+    background-color: aqua;
+	background-image: url(./img/tt.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+nav,
+article {
+    margin: 0 auto;
+    width: 999px !important;
+}
+
+.one {
+    height: 224px;
+}
+
+
+footer {
+    width: 100%;
+    background-color: blue;
+}
+
+
+.left {
+    position: fixed;
+    width: 20px;
+    height: 66px;
+    top: 50%;
+    margin-top: -33px;
+    font-size: 12px;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 1px solid #e7e7e7;
+    box-shadow: 0px 1px 4px 2px rgba(0, 0, 0, 0.1);
+    color: #505050;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.left:hover {
+    background-color: #f4f4f4;
+}
+
+/* 左侧标签 */
+
+/* 右侧标签 */
+.right {
+    width: 50px;
+    height: 430px;
+    position: fixed;
+    top: 257px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    border: 1px solid #e7e7e7;
+    left: 50%;
+    margin-left: 575px;
+    padding-top: 5px;
+}
+
+.right a {
+    height: 24px;
+    width: 50px;
+    text-align: center;
+    line-height: 24px;
+    font-size: 12px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.right a:hover {
+    background-color: #00a1d6;
+    color: white;
+}
+
+.right a:hover .icon-zhijiao:before {
+    color: white;
+}
+
+.right .top {
+    border-top: 1px solid #e7e7e7;
+    height: 25px;
+    margin-bottom: 0px;
+    position: relative;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.top span {
+    font-size: 22px;
+    transform: rotate(180deg);
+    top: 3px;
+    left: 14px;
+    position: absolute;
+    color: #999999;
+}
+
+.miao {
+    position: fixed;
+}
+
+/* 右侧标签 */
+
+/* right2标签 */
+.right2 {
+    width: 25px;
+    height: 75px;
+    position: absolute;
+    top: 258px;
+    left: 50%;
+    margin-left: 508px;
+    border: 1px solid #c0c0c0;
+    text-align: center;
+    border-radius: 2px;
+}
+
+.right2:hover {
+    background-color: #f4f4f4;
+}
+
+.right2:hover span {
+    transform: rotate(360deg);
+}
+
+.right2 span {
+    display: inline-block;
+    margin-left: 3.5px;
+    transition: all 1s;
+}
+
+.right2 p {
+    color: #505050;
+    font-size: 13px;
+}
+
+/* right2标签 */
+
+/* 头部 */
+.heads {
+    width: 100%;
+    height: 55px;
+    line-height: 55px;
+}
+
+/* 头部上左  */
+.hleft {
+    float: left;
+    height: 55px;
+}
+
+
+.hleft ul {
+    margin-left: 10px;
+    height: 33px;
+    margin-top: 10px;
+    line-height: 33px;
+}
+
+.hleft ul li a {
+    float: left;
+    color: white;
+    font-size: 14px;
+}
+
+.hleft ul li {
+    float: left;
+    padding-left: 8px;
+    padding-right: 2px;
+}
+
+/* 头部上中  */
+.hmiddle {
+    margin: 0px auto;
+    width: 470px;
+    height: 33px;
+    line-height: 33px;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: -250px;
+    left: 50%;
+}
+
+.hmiddle form input,
+button {
+    float: left;
+    border: none;
+    outline: none;
+}
+
+.hmiddle form input {
+    width: 400px;
+    height: 35px;
+    padding-left: 15px;
+    line-height: 33px;
+    margin-left: 10px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    float: left;
+}
+
+.hmiddle form button {
+    width: 45px;
+    height: 35px;
+    cursor: pointer;
+    line-height: 35px;
+    background-color: #e7e7e7;
+    border-radius: 2px;
+    float: left;
+    margin-left: -1px;
+}
+
+
+/* 头像 */
+.htx {
+    float: right;
+    margin-top: 10px;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+}
+
+.htx a {
+    width: 35px;
+    height: 35px;
+}
+
+.htx a img {
+    width: 35px;
+    border-radius: 50%;
+}
+
+/* 上右 */
+.hright {
+    float: right;
+    margin-right: 20px;
+    color: white;
+}
+
+.hright ul li {
+    float: left;
+    margin-left: 12px;
+    font-size: 14px;
+}
+
+.hright ul li a {
+    color: white;
+}
+
+.hright ul li a span {
+    width: 19px;
+    height: 13px;
+    background-color: #fa5a57;
+    color: white;
+    position: absolute;
+    top: -14px;
+    line-height: 13px;
+    right: -15px;
+    border-radius: 10px;
+    font-size: 11px;
+}
+
+.hright ul {
+    float: left;
+    margin-right: 10px;
+}
+
+.hright span {
+    float: left;
+    margin-left: 10px;
+    width: 100px;
+    height: 35px;
+    background-color: #fb7299;
+    text-align: center;
+    line-height: 35px;
+    border: none;
+    margin-top: 10px;
+    border-radius: 2px;
+    font-size: 14px;
+}
+
+/* 头图部分 */
+.headt {
+    width: 1375px;
+    height: 100px;
+    position: absolute;
+}
+
+.yinchang {
+    width: 233px;
+    height: 28px;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    z-index: 3;
+    display: none;
+    border-radius: 6px;
+    text-align: center;
+    line-height: 28px;
+    top: 50px;
+    left: 350px;
+    color: white;
+}
+
+.headt:hover .yinchang {
+    display: block;
+}
+
+.headt img {
+    position: absolute;
+    left: 200px;
+    width: 160px;
+    top: 18px;
+}
+
+/* nav部分 */
+nav {
+    height: 68px;
+    padding: 15px 0px 20px 0px;
+}
+
+/* nav布局 */
+.navl,
+.navm,
+.navr {
+    float: left;
+}
+
+.navl {
+    width: 200px;
+}
+
+.navl ul li {
+    float: left;
+    position: relative;
+    margin-left: 8px;
+}
+
+.navl ul {
+    height: 68px;
+    margin-left: 10px;
+}
+
+.navl ul li a div {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.navl ul li a span {
+    display: inline-block;
+    position: relative;
+}
+
+.navl ul li:hover a .q {
+    color: #15a9d9;
+}
+
+.navl ul li a .q {
+    font-size: 14px;
+    left: 4px;
+}
+
+.fangzi {
+    background-color: #ff5c7c;
+}
+
+.remen {
+    background-color: #ff716d;
+}
+
+.pindao {
+    background-color: #6dc781;
+}
+
+.navl ul li a div span {
+    position: relative;
+    top: 5px;
+    left: 7px;
+    font-size: 22px;
+}
+
+.navl ul li a div img {
+    border-radius: 50%;
+}
+
+.navl ul li a .pindao span {
+    left: 0.7px;
+    top: -4px;
+}
+
+/* nav的中部 */
+.navm {
+    width: 540px;
+    height: 46px;
+    padding: 0px 5px 0px 9px;
+    border-left: 1px solid #e7e7e7;
+    border-right: 1px solid #e7e7e7;
+    margin-top: 8px;
+}
+
+.navm a {
+    height: 23px;
+    float: left;
+    text-align: center;
+    margin-bottom: 5px;
+    margin-left: 2px;
+}
+
+.navm a span {
+    float: left;
+    font-size: 14px;
+}
+
+.navm a .navmx {
+    width: 27px;
+    height: 11px;
+    background-color: #73c9e5;
+    border-radius: 1px;
+    text-align: center;
+    color: white;
+    font-size: 10px;
+    line-height: 11px;
+    margin: 4px;
+}
+
+.navm a:hover .navmm {
+    color: #16a9d9;
+}
+
+/* nav右侧 */
+.navr {
+    float: left;
+    width: 200px;
+    height: 68px;
+    line-height: 30px;
+    padding-left: 10px;
+}
+
+.navr a {
+    float: left;
+    margin-right: 8px;
+    font-size: 14px;
+}
+
+.navr a:hover .navrr {
+    color: #16a9d9;
+}
+
+/* 中间部分 */
+
+/* 左侧 */
+.al {
+    float: left;
+    position: relative;
+}
+
+.al img {
+    border-radius: 2px;
+}
+.lunbo_yuan {
+    position: absolute;
+    text-align: center;
+    width: 100px;
+    height: 10px;
+    top: 185px;
+    right: 3px;
+}
+.lunbo_yuan span {
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    float: left;
+    margin-right: 8px;
+}
+.lunbo_yuan span:hover {
+    cursor: pointer;
+    background-color: rgba(0, 161, 214);
+}
+
+/* 右侧 */
+.ar {
+    float: left;
+    width: 540px;
+    height: 202px;
+}
+
+.ar ul li {
+    float: left;
+    background-color: pink;
+    width: 170px;
+    height: 96px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    border-radius: 2px;
+    position: relative;
+}
+
+/* 面罩部分 */
+
+
+.ar ul li:hover .mask {
+    display: block;
+    transition: all .3s;
+}
+
+/* 推广部分 */
+.two {
+    width: 999px;
+    height: 224px;
+    /* background-color: #000; */
+    margin-top: 10px;
+}
+
+.two .topleft {
+    float: left;
+}
+
+.two .topleft li,
+.two .topleft li a,
+.two .topleft li a span,
+.two .topleft li a p {
+    float: left;
+}
+
+.topleft li {
+    margin-right: 10px;
+}
+
+.da {
+    font-size: 30px;
+}
+
+.daa {
+    margin-right: 3px;
+}
+
+.daaa p {
+    color: #717171;
+    font-size: 14px;
+}
+
+.daaa {
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+.topright {
+    width: 260px;
+    height: 30px;
+    float: right;
+    background-color: #f4f4f4;
+    text-align: center;
+    line-height: 30px;
+    font-size: 14px;
+}
+
+.topleft li:hover a p {
+    color: #16a9d9;
+}
+
+.topleft li:hover a .da {
+    color: #000;
+    cursor: default;
+}
+
+.topright:hover {
+    color: #16a9d9;
+}
+
+.tb {
+    height: 710px;
+    width: 100%;
+}
+
+.tb ul {
+    width: 710px;
+    height: 172px;
+    float: left;
+}
+
+.tb ul li {
+    width: 170px;
+    height: 172px;
+    background-color: pink;
+    float: left;
+}
+
+.uli {
+    margin-left: 10px;
+}
+
+.tb div {
+    width: 265px;
+    float: right;
+    background-color: purple;
+    height: 172px;
+}
+
+/* 广告部分 */
+.three {
+    position: relative;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.three img {
+    height: 83px;
+    width: 100%;
+    border-radius: 2px;
+}
+
+.three span {
+    position: absolute;
+    background-color: #ffea9f;
+    border-radius: 2px;
+    color: #ecc22f;
+    font-size: 12px;
+    height: 18px;
+    width: 38px;
+    line-height: 18px;
+    text-align: center;
+    top: 58px;
+    left: 10px;
+}
+
+/* 四 */
+.four {
+    height: 343.5px;
+}
+
+.four .x {
+    background-color: pink;
+    height: 300px;
+}
+
+.four .s p,
+span {
+    float: left;
+}
+
+.four .s span {
+    font-size: 40px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.four .s p {
+    font-size: 30px;
+}
+
+/* 五 */
+.five {
+    height: 343.5px;
+    margin-top: 30px;
+}
+
+.five .s p,
+span {
+    float: left;
+}
+
+.five .s span:before {
+    color: #7b78eb;
+    font-size: 40px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.five .s p {
+    font-size: 30px;
+}
+
+.five .x {
+    background-color: pink;
+    height: 300px;
+}

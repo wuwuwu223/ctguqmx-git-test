@@ -1,0 +1,86 @@
+.background1{
+    position:relative;
+    width:1263px;
+    height:118px;
+    background-color:rgb(24, 85, 184);
+    z-index: -2;
+}
+.zp1{
+    position:absolute;
+    height:79px;
+    width:545px;
+    z-index: -1;
+}
+.zp2{
+    width:700px;
+    float:right;
+    height:118px;
+    z-index: -1;
+}
+#search{
+    position:absolute;
+    z-index: 1;
+    top:50px;
+    left:950px;
+}
+.sousuo{
+    height:absolute;
+    height:24px;
+    width:200px;
+}
+.sousuozi{
+    position:absolute;
+    left:210px;
+    height:26px;
+    width:50px;
+    top:0px;
+}
+.nav1{
+    position:absolute;
+    display:flex;
+    list-style: none;
+}
+.nav1 li{
+    height:36px;
+    margin:11px;
+}
+.nav2{
+   position:absolute;
+   top:200px;
+}
+.list img{
+    height:359px;
+    width:1000px;
+}
+.list{
+    position:absolute;
+    width:1000px;
+    height:359px;
+    list-style:none;
+    overflow:hidden;
+}
+.pointList{
+    z-index:1000;
+    list-style:none;
+}
+.point{
+    width:8px;
+    height:8px;
+    background-color:black;
+    
+}
+.nav3{
+    position:absolute;
+    top:500px;
+}
+.nav3-left img{
+    height:322px;
+    width:415px;
+}
+.nav3-center{
+    position:absolute;
+    height:322px;
+    width:415px;
+    top:0px;
+    left:415px;
+}

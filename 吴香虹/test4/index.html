@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet"  href="./font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+<body style="text-align: center">
+    <div id="container1">
+        <div class="row">
+            <div class="box" id="one">
+                <div class="circle"></div>
+            </div>
+            <div class="box">
+                <div id="round">
+                    <div id="wave"></div>
+                </div>
+            </div>
+            <div class="box" >
+                <div class="card">
+                    <div class="card_front">
+                        <p >，，，</p>
+                    </div>
+                    <div class="card_back">
+                        <p >press</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="box" id="four">
+                <div class="jsshicha">
+                    <p>parallax</p>
+<!--                    <img  class="img" id="img-1" data-speed="6" src="https://w.wallhaven.cc/full/x8/wallhaven-x88o53.jpg">-->
+<!--                    <img  class="img" id="img-2" data-speed="-5" src="https://w.wallhaven.cc/full/6o/wallhaven-6olw9x.jpg">-->
+<!--                    <img  class="img" id="img-3" data-speed="2" src="https://w.wallhaven.cc/full/m9/wallhaven-m9q6e9.jpg">-->
+                    <i class="fa fa-star" id="img-1" data-speed="6"></i>
+                    <i class="fa fa-bolt" id="img-2" data-speed="6"></i>
+                    <i class="fa fa-circle-o" id="img-3" data-speed="6"></i>
+                    <script type="text/javascript">
+                        document.addEventListener("mousemove",parallax);
+                        function parallax(e){
+                            this.querySelectorAll('.fa').forEach(i=>{
+                                const speed=i.getAttribute('data-speed')
+                                const x = (window.innerWidth - e.pageX*speed)/100
+                                const y = (window.innerHeight - e.pageY*speed)/100
+                                i.style.transform = `translateX(${x}px) translateY(${y}px`
+                            })
+                        }
+                    </script>
+                </div>
+            </div>
+            <div class="box">
+                <div class="spirit">
+                    <div class="ghost">
+                        <div class="ghost-eyes"></div>
+                        <div class="ghost-face"></div>
+                        <div class="ghost-feet">
+                            <div class="ghost-foot"></div>
+                            <div class="ghost-foot"></div>
+                            <div class="ghost-foot"></div>
+                            <div class="ghost-foot"></div>
+                        </div>
+                    </div>
+                    <div class="shadow"></div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="sky">
+                    <div class="sun"></div>
+                    <div class="moon"></div>
+                    <div class="sea"></div>
+                    <script type="text/javascript">
+                        window.addEventListener("mousemove",(e) => {
+                            let percentage = (100 - e.clientX /
+                                window.innerWidth * 100)
+                            document.querySelector('.sun').style.clipPath =
+                                `inset(0px $(percentage)% 0px 0px)`
+                        })
+                    </script>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="box">
+<!--                <label>-->
+<!--                <input type="checkbox">-->
+                <div class="heart">
+                    <i class="fa fa-heart" aria-hidden="true"></i>
+                    <span></span>
+    <!--                    <div id="heart"></div>-->
+                </div>
+<!--                </label>-->
+            </div>
+            <div class="box">
+                <div class="light">
+                    <p>SPOTLIGHT</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="container2">
+                    <input type="radio" name="button" value="0" id="button1" checked hidden>
+                    <label for="button1"></label>
+                    <input type="radio" name="button" value="0" id="button2" checked hidden>
+                    <label for="button2"></label>
+                    <input type="radio" name="button" value="0" id="button3" checked hidden>
+                    <label for="button3"></label>
+                    <ul>
+                        <li>one</li>
+                        <li>two</li>
+                        <li>three</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

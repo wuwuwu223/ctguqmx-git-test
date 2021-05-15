@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./bilibilichun.css">
+    <link rel="stylesheet" href="./bilibili.css">
+    <link rel="stylesheet" href="./lunbotu.css">
+</head>
+<body>
+
+    <div class="comtain">
+        <div class="top" id="0">
+                <div class="bilibilichun">
+                    <div class="animate-banner" id="animate-banner">
+                        <div class="layer">
+                        <img src="./imgs/i1.png" data-move-multiple="16.395" >
+                        </div>
+                        <div class="layer">
+                        <img src="./imgs/i2.png" data-move-multiple="16.395" >
+                        </div>
+                        <div class="layer">
+                        <img src="./imgs/i3.png" data-move-multiple="12.145" >
+                        </div>
+                        <div class="layer">
+                        <img src="./imgs/i4.png" data-move-multiple="3.718" >
+                        </div>
+                        <div class="layer">
+                        <img src="./imgs/i5.png" data-move-multiple="14.573" >
+                        </div>
+                        <div class="layer">
+                        <img src="./imgs/i6.png" data-move-multiple="29.277" data-is-opacity="0">
+                        </div>
+                        <div class="layer">
+                        <img src="./imgs/i7.png" data-move-multiple="2.342" >
+                        </div>
+                        <div class="layer">
+                        <img src="./imgs/i8.png" data-move-multiple="1.952" >
+                        </div>
+                        <div class="layer">
+                        <img src="./imgs/i9.png" data-move-multiple="4.098" data-is-opacity="1">
+                        </div>
+                        <div class="layer">
+                        <img src="./imgs/i10.png" data-move-multiple="2.826" data-is-opacity="1">
+                        </div>
+                        <div class="layer">
+                        <img src="./imgs/i11.png" data-move-multiple="1.457" >
+                        </div>
+                        <div class="layer">
+                        <img src="./imgs/i12.png" data-move-multiple="1.092" >
+                        </div>
+                        <div class="layer">
+                        <img src="./imgs/i13.png" data-move-multiple="1.104" >
+                        </div>
+                        <div class="layer">
+                        <img src="./imgs/i14.png" data-move-multiple="0.781">
+                        </div>
+                        <div class="layer">
+                        <img src="./imgs/i15.png" data-move-multiple="0.546" >
+                        </div>
+                        <canvas id="canvas" width="1920" height="180"></canvas>
+                    </div>
+                    <script>
+                        // 鼠标移动
+                        const mb = document.getElementById('animate-banner')
+                        let intX
+                        let imgs = document.querySelectorAll('.layer img')
+                        imgs = [...imgs]
+                        
+                        let o_imgs_styles = imgs.map(el => {
+                        let s = window.getComputedStyle(el, null).getPropertyValue('transform')
+                        return `transform: ${s}`
+                        })
+                    
+                        let o_imgs_opacitys = imgs.map(el => {
+                        let o = window.getComputedStyle(el, null).getPropertyValue('opacity')
+                        return `opacity: ${0}`
+                        })
+                    
+                        function getTranslateVal(str) {
+                        let s = 'translate', e = ')'
+                        let si = str.indexOf(s)
+                        let ei
+                        }
+                    
+                        mb.onmouseenter = function({ x }) {
+                        intX = x
+                        }
+                        mb.onmousemove = function({ x }) {
+                        imgs.forEach((el, i) => {
+                            const dm = el.dataset.moveMultiple
+                            const dis = (intX - x) / Number(dm)
+                            const transform_arr = o_imgs_styles[i].split(',')
+                            let translate_x = Number(transform_arr[4])
+                            let new_translate_x = translate_x + dis
+                            transform_arr.splice(4, 1, String(new_translate_x))
+                            let transform_str = transform_arr.join(',')
+                    
+                            if(el.dataset.isOpacity) {
+                            const o_arr = o_imgs_opacitys[i].split(':')
+                            const o_value = Number(o_arr[1])
+                            let href_w = window.screen.width / 2
+                    
+                            const o_dis = Number(el.dataset.isOpacity) ? intX - x : x - intX
+                    
+                            let new_o_value = o_dis / href_w
+                            o_arr.splice(1, 1, new_o_value)
+                            let o_str = o_arr.join(':')
+                            transform_str += `; ${o_str}`
+                            }
+                    
+                            el.setAttribute('style', transform_str)
+                        })
+                        }
+                        mb.onmouseleave = function() {
+                        imgs.forEach((el, i) => {
+                            el.setAttribute('style', o_imgs_styles[i])
+                        })
+                        }
+                    
+                        // 樱花飘落canvas 
+                        const c = document.getElementById('canvas')
+                        const ctx = c.getContext('2d')
+                        const _w = c.width, _h = c.height;
+                        const scales = [0.03, 0.04, 0.05, 0.06, 0.07, 0.08];
+                        const slen = scales.length - 1;
+                        const speedX = 2, speedY = 3;
+                        class flower {
+                        constructor(){
+                            this.x = Math.random() * _w;
+                            this.y = 0;
+                            this.speedX = 0;
+                            this.speedY = 0;
+                            this.scale = 0;
+                            this.width = 0;
+                            this.height = 0;
+                            this.img = null
+                        }
+                        init() {
+                            this.img = new Image()
+                            const f = Math.random() * 10 > 5 ? 1 : 0
+                            const si = Math.floor(Math.random() * slen)
+                            this.speedX = Math.random() * speedX
+                            this.speedY = Math.random() * speedY
+                            this.scale = scales[si]
+                            this.width = this.height = 250 * this.scale
+                            const src = f ? "./imgs/flow1.png" : './imgs/flow2.png';
+                            this.img.src = src
+                        }
+                        draw(ctx) {
+                            this.img.onload = () => {
+                            ctx.drawImage(this.img, this.x, this.y, this.width, this.height)
+                            }
+                        }
+                        move(ctx) {
+                            this.x = this.x + this.speedX >= _w ? Math.random() * _w : this.x + this.speedX;
+                            this.y = this.y >= _h ? 0 : this.y + this.speedY;
+                            ctx.drawImage(this.img, this.x, this.y, this.width, this.height)
+                        }
+                        }
+                        const flowers = []
+                        function start() {
+                        const max = 50;
+                        for(let i = 0; i < max; i++) {
+                            const f = new flower()
+                            f.init()
+                            f.draw(ctx)
+                            flowers.push(f)
+                        } 
+                        }
+                        function move() {
+                        ctx.clearRect(0,0,_w,_h)
+                        for(let i=0; i<flowers.length; i++) {
+                            flowers[i].move(ctx)
+                        }
+                        window.requestAnimationFrame(move)
+                        }
+                        start()
+                        move()
+                    </script>
+                    </div>
+                <div class="back" style="position: absolute; top: 0; height: 70px; width: 100%; background: linear-gradient(rgba(0,0,0,.4),transparent);"></div>
+            <div class="left">
+                <ul>
+                    <li><a target="_blank" href="https://www.bilibili.com/" class="l1">主站</a></li>
+                    <li><a target="_blank" href="https://www.bilibili.com/anime/" class="l2">番剧</a></li>
+                    <li><a target="_blank" href="https://game.bilibili.com/platform/" class="l3">游戏中心</a></li>
+                    <li><a target="_blank" href="https://live.bilibili.com/" class="l4">直播</a></li>
+                    <li><a target="_blank" href="https://show.bilibili.com/platform/home.html?msource=pc_web" class="l5">会员购</a></li>
+                    <li><a target="_blank" href="https://manga.bilibili.com/?from=bill_top_mnav" class="l6">漫画</a></li>
+                    <li><a target="_blank" href="https://www.bilibili.com/v/game/match/" class="l7">赛事</a></li>
+                    <li><a target="_blank" href="https://app.bilibili.com/" class="l8">下载APP</a></li>
+                </ul>
+            </div>
+            <div class="search">
+                <form action="https://search.bilibili.com/all">
+                    <span class="group">
+                        <input name="keyword" class="gets">
+                        <span>
+                            <input type="submit" value="搜索" class="enter">
+                        </span>
+                    </span>    
+                </form>
+            </div>
+            <div class="right">
+                <a target="_blank" href="https://passport.bilibili.com/login" class="more">登录</a>
+                <a target="_blank" href="https://passport.bilibili.com/login" class="more">大会员</a>
+                <a target="_blank" href="https://passport.bilibili.com/login" class="more">消息</a>
+                <a target="_blank" href="https://t.bilibili.com/?" class="more">动态</a>
+                <a target="_blank" href="https://passport.bilibili.com/login" class="more">收藏</a>
+                <a target="_blank" href="https://passport.bilibili.com/login" class="more">历史</a>
+                <a target="_blank" href="https://passport.bilibili.com/login" class="more">创作中心</a>
+                <a target="_blank" href="https://passport.bilibili.com/login" class="more">投稿</a>
+            </div>
+        </div>
+        <div class="mid">
+            <div class="total">
+                <div class="t1">
+                    <div class="class" style="display: inline-block;">
+                        <a target="_blank" href="https://passport.bilibili.com/login" class="c1 c"> <img src="./imgs/p1.png" width="36px"> <span>首页</span></a>
+                        <a target="_blank" href="https://passport.bilibili.com/login" class="c2 c"> <img src="./imgs/p1.png" width="36px"> <span>动态</span></a>
+                        <a target="_blank" href="https://passport.bilibili.com/login" class="c3 c"> <img src="./imgs/p1.png" width="36px"> <span>热门</span></a>
+                        <a target="_blank" href="https://passport.bilibili.com/login" class="c4 c"> <img src="./imgs/p1.png" width="36px"> <span>频道</span></a>
+                    </div>
+                    <div class="all" style="width: 760px; display: inline-block;">
+                        <a target="_blank" href="https://passport.bilibili.com/login" class="a1 a">动画<div class="num">999+</div></a>
+                        <a target="_blank" href="https://passport.bilibili.com/login" class="a2 a">音乐<div class="num">999+</div></a>
+                        <a target="_blank" href="https://passport.bilibili.com/login" class="a3 a">舞蹈<div class="num">999+</div></a>
+                        <a target="_blank" href="https://passport.bilibili.com/login" class="a4 a">知识<div class="num">999+</div></a>
+                        <a target="_blank" href="https://passport.bilibili.com/login" class="a5 a">生活<div class="num">999+</div></a>
+                        <a target="_blank" href="https://passport.bilibili.com/login" class="a6 a">时尚<div class="num">999+</div></a>
+                        <a target="_blank" href="https://passport.bilibili.com/login" class="a7 a">娱乐<div class="num">999+</div></a>
+                        <a target="_blank" href="https://passport.bilibili.com/login" class="a8 a">放映<div class="num">99</div></a>
+                        <a target="_blank" href="https://passport.bilibili.com/login" class="a9 a">番剧<div class="num">999+</div></a>
+                        <a target="_blank" href="https://passport.bilibili.com/login" class="a10 a">国创<div class="num">999+</div></a>
+                        <a target="_blank" href="https://passport.bilibili.com/login" class="a11 a">游戏<div class="num">999+</div></a>
+                        <a target="_blank" href="https://passport.bilibili.com/login" class="a12 a">数码<div class="num">999+</div></a>
+                        <a target="_blank" href="https://passport.bilibili.com/login" class="a13 a">鬼畜<div class="num">999+</div></a>
+                        <a target="_blank" href="https://passport.bilibili.com/login" class="a14 a">资讯<div class="num">999+</div></a>
+                        <a target="_blank" href="https://passport.bilibili.com/login" class="a15 a">影视<div class="num">999+</div></a>
+                        <a target="_blank" href="https://passport.bilibili.com/login" class="a16 a">更多<div class="num"></div></a>
+                    </div>
+                    <div class="more" style="width: 200px; display: inline-block;">
+                        <div class="mf">
+                            <a target="_blank" href="https://passport.bilibili.com/login" class="m1 m"> <img src="./imgs/p2.png" width="15px"> 专栏</a>
+                            <a target="_blank" href="https://passport.bilibili.com/login" class="m2 m"> <img src="./imgs/p2.png" width="15px"> 活动</a>
+                            <a target="_blank" href="https://passport.bilibili.com/login" class="m3 m" style="width: 90px;"> <img src="./imgs/p2.png" width="15px"> 小黑屋</a>
+                        </div>
+                        <div class="ms">   
+                            <a target="_blank" href="https://passport.bilibili.com/login" class="m4 m"> <img src="./imgs/p2.png" width="15px"> 直播</a>
+                            <a target="_blank" href="https://passport.bilibili.com/login" class="m5 m"> <img src="./imgs/p2.png" width="15px"> 课堂</a>
+                            <a target="_blank" href="https://passport.bilibili.com/login" class="m6 m" style="width: 90px;"> <img src="./imgs/p2.png" width="15px"> 音乐PLUS</a>
+                        </div> 
+                    </div>
+                </div>
+                <div class="t2" style="position: relative;">
+                    <div class="for" target="_blank" href="https://www.bilibili.com/video/BV1qt411j7fV">
+                        <div class="picture">
+                            <p class="pg"></p>
+                            <img src="./imgs/p5.png" alt="" height="240px" width="560px"  id="for">    
+                            <p class="radius"></p>
+                            <p class="title"></p>
+                            <div class="arrowhead-left" id="al"> < </div> 
+                            <div class="arrowhead-right" id="ar"> > </div>
+                        </div>
+                        <script>
+                            let faddress = ["./imgs/p5.png", "./imgs/p6.png", "./imgs/p5.png", "./imgs/p6.png", "./imgs/p5.png", "./imgs/p6.png"];
+                            let fimgs = document.querySelector("#for");
+                            let len = faddress.length;           
+                            let str = "";
+                            let pp = document.getElementsByTagName("p"); 
+                            let al = document.getElementById("al");
+                            let ar = document.getElementById("ar");
+                            let n = 0 ;
+                            for (i = 0; i < len; i++) {
+                                str += ' <span></span>'
+                            }
+                            pp[1].innerHTML = str;
+                            let spans = pp[1].getElementsByTagName('span');
+                            spans[0].className = 'active';              
+                            for (i = 0; i < len; i++) {
+                                spans[i].index = i;            
+                                spans[i].onmouseover = function () {          
+                                    for (i = 0; i < len; i++) {
+                                        spans[i].className = "";             
+                                    }
+                                    n=this.index ;
+                                    this.className = 'active';                
+                                    fimgs.src = faddress[this.index];
+                                    pp[0].innerHTML = [this.index + 1] + "/6";    
+                                    pp[2].innerHTML = "风光" + [this.index + 1];                 
+                                }     
+                            }                   
+                            ar.onclick = function () {           
+                                n++;
+                               if (n>5) {
+                                  n=0;  
+                               } 
+                               for (i = 0; i < len; i++) {
+                                    spans[i].className = "";
+                                }
+                    
+                                spans[n].className = "active";
+                                fimgs.src = faddress[n];
+                                pp[0].innerHTML = (n+1) + "/6";
+                                pp[2].innerHTML = "风光" +(n+1);
+                              
+                            }
+                    
+                            al.onclick = function () {       
+                              n--;
+                             if (n<0) {
+                                 n=(len-1);
+                             }
+                             for (i = 0; i < len; i++) {
+                                  spans[i].className = "";
+                              }         
+                              spans[n].className = "active";
+                              fimgs.src = faddress[n];
+                              pp[0].innerHTML = (n+1) + "/6";
+                              pp[2].innerHTML = "风光" +(n+1);
+                            }                   
+                           setInterval(ar.onclick,3000);                               
+                        </script>
+                    </div>
+                    <div class="v1">
+                        <a target="_blank" href="https://www.bilibili.com/video/BV1qt411j7fV" class="video1 v"><img src="./imgs/p5.png" width="190px" height="115px"></a>
+                        <a target="_blank" href="https://www.bilibili.com/video/BV1qt411j7fV" class="video2 v"><img src="./imgs/p5.png" width="190px" height="115px"></a>
+                        <a target="_blank" href="https://www.bilibili.com/video/BV1qt411j7fV" class="video3 v"><img src="./imgs/p5.png" width="190px" height="115px"></a>
+                    </div> 
+                    <div class="v2"> 
+                    <a target="_blank" href="https://www.bilibili.com/video/BV1qt411j7fV" class="video4 v"><img src="./imgs/p5.png" width="190px" height="115px"></a>
+                    <a target="_blank" href="https://www.bilibili.com/video/BV1qt411j7fV" class="video5 v"><img src="./imgs/p5.png" width="190px" height="115px"></a>
+                    <a target="_blank" href="https://www.bilibili.com/video/BV1qt411j7fV" class="video6 v"><img src="./imgs/p5.png" width="190px" height="115px"></a>
+                    </div>
+                    <!-- <div class="change">
+                        
+                    </div>   -->
+                </div>
+                <div class="t3" style="position: relative;">
+                    <div class="top"> 推广</div>
+                    <a target="_blank" href="https://www.bilibili.com/video/BV1qt411j7fV" class="video1 v"><img src="./imgs/p5.png" width="200px" height="120px"><div class="word" style="font-size: 14px; margin-top: 10px;">派大星！派大星！派大星！派大星！派大星！</div></a>
+                    <a target="_blank" href="https://www.bilibili.com/video/BV1qt411j7fV" class="video2 v"><img src="./imgs/p5.png" width="200px" height="120px"><div class="word" style="font-size: 14px; margin-top: 10px;">派大星！派大星！派大星！派大星！派大星！</div></a>
+                    <a target="_blank" href="https://www.bilibili.com/video/BV1qt411j7fV" class="video3 v"><img src="./imgs/p5.png" width="200px" height="120px"><div class="word" style="font-size: 14px; margin-top: 10px;">派大星！派大星！派大星！派大星！派大星！</div></a>
+                    <a target="_blank" href="https://www.bilibili.com/video/BV1qt411j7fV" class="video4 v"><img src="./imgs/p5.png" width="200px" height="120px"><div class="word" style="font-size: 14px; margin-top: 10px;">派大星！派大星！派大星！派大星！派大星！</div></a>
+                    <a target="_blank" href="https://www.bilibili.com/video/BV1qt411j7fV" class="img"><img src="./imgs/p5.png" width=100% height=100%></a>
+                </div>
+                <a target="_blank" href="https://www.bilibili.com/video/BV1qt411j7fV" class="t4">
+                    <img src="./imgs/p5.png" width="100%" height="100%">
+                </a>
+            </div>
+            <div class="comtainer">
+                <div id="1" class="c1 c"><div class="name1 name">直播</div><div class="left"></div><div class="right"></div></div>
+                <div id="2" class="c2 c"><div class="name2 name">动画</div><div class="left"></div><div class="right"></div></div>
+                <div id="3" class="c3 c"><div class="name3 name">番剧</div><div class="left"></div><div class="right"></div></div>
+                <div id="4" class="c4 c"><div class="name4 name">国创</div><div class="left"></div><div class="right"></div></div>
+                <div id="5" class="c5 c"><div class="name5 name">漫画</div><div class="left"></div><div class="right"></div></div>
+                <div id="6" class="c6 c"><div class="name6 name">音乐</div><div class="left"></div><div class="right"></div></div>
+                <div id="7" class="c7 c"><div class="name7 name">舞蹈</div><div class="left"></div><div class="right"></div></div>
+                <div id="8" class="c8 c"><div class="name8 name">游戏</div><div class="left"></div><div class="right"></div></div>
+                <div id="9" class="c9 c"><div class="name9 name">知识</div><div class="left"></div><div class="right"></div></div>  
+            </div>
+            <div class="fix">
+                <a href="#1" class="f f1">直播</a>
+                <a href="#2" class="f f2">动画</a>
+                <a href="#3" class="f f3">番剧</a>
+                <a href="#4" class="f f4">国创</a>
+                <a href="#5" class="f f5">漫画</a>
+                <a href="#6" class="f f6">音乐</a>
+                <a href="#7" class="f f7">舞蹈</a>
+                <a href="#8" class="f f8">游戏</a>
+                <a href="#9" class="f f9">知识</a>
+                <a href="#1" class="f f11">直播</a>
+                <a href="#2" class="f f12">动画</a>
+                <a href="#3" class="f f13">番剧</a>
+                <a href="#4" class="f f14">国创</a>
+                <a href="#5" class="f f15">漫画</a>
+                <a href="#6" class="f f16">音乐</a>
+                <a href="#7" class="f f17">舞蹈</a>
+                <a href="#8" class="f f18">游戏</a>
+                <a href="#9" class="f f19">知识</a>
+                <a href="#0" class="f f20">👆</a>
+            </div>
+        </div>
+        <div class="bottom">
+            <a class="img1 img"><img src="" alt=""><span></span></a>
+            <a class="img2 img"><img src="" alt=""><span></span></a>
+            <a class="img3 img"><img src="" alt=""><span></span></a>
+            <a class="img4 img"><img src="" alt=""><span></span></a>
+        </div>
+    </div>
+</body>
+</html>
