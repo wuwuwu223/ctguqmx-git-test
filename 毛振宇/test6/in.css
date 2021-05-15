@@ -1,0 +1,122 @@
+.top1{
+    position: relative;
+    height: 118px;
+    background-color: rgb(31,90,154);
+}
+.top1 .t2{
+    position: absolute;
+    right: 0;
+}
+.mid1{
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 1183px;
+}
+.mid1 .sanda{
+    position: absolute;
+    left: -50px;
+    top:-100px
+}
+.mid1 .search{
+    position: absolute;
+    right: -50px;
+    top:-50px
+}
+.mid1 .top .t{
+    display: inline-block;
+    width: 65px;
+    padding-left: 11px;
+    padding-right: 11px;
+    font-size: 16px;
+    line-height: 45px;
+    color: #333;
+    text-align: center;
+}
+.mid1 .top .t5{
+    width: 128px;
+}
+.mid1 .top .t6{
+    width: 80px;
+}
+.mid1 .mid{
+    margin-top: 30px;
+}
+.mid1 .mid .m1 .xue{
+    display: inline-block;
+    font-size: 18px;
+}
+.mid1 .mid .m1 .new{
+    display: inline-block;
+    font-size: 13px;
+    color: #569DD9;
+}
+.mid1 .mid .m1 .more{
+    width: 410px;
+    height: 60px;
+    font-size: 20px;
+    line-height: 60px;
+    text-align: center;
+    border: 1px solid #E1E1E1;
+}
+.mid1 .mid .m2{
+    position: absolute;
+    left: 440px;
+    top: 20px;
+}
+.mid1 .mid .m2 .a{
+    display: block;
+    width: 400px;
+    height: 50px;
+    line-height: 40px;
+    border-bottom: 1px solid black;
+}   
+.mid1 .mid .m3{
+    position: absolute;
+    right: 0;
+    top: 20px;
+}
+.mid1 .mid .m3 .ii{
+    display: block;
+    margin-top: 15px;
+}
+.mid1 .bottom .b{
+    width: 394px;
+    margin-top: 60px;
+}   
+.mid1 .bottom .b2{
+    position: absolute;
+    left: 394px;
+    top: -60px;
+}
+.mid1 .bottom .b3{
+    position: absolute;
+    right: 0;
+    top: -60px;
+}
+.mid1 .bottom .first{
+    margin-bottom: 30px;
+}
+.mid1 .bottom a{
+    display: block;
+    height: 30px;
+}
+.mid1 .last img{
+    display: inline-block;
+    margin-right: 5px;
+}
+.bottom1 {
+    margin-top: 30px;
+    height: 100px;
+    background-color: rgb(31,90,154);
+    text-align: center;
+}
+.bottom1 .bb{
+    color: white;
+    height: 30px;
+    line-height: 30px;
+}
+a:hover{
+    color: rgb(182, 182, 48);
+}
