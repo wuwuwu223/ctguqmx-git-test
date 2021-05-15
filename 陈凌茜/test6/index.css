@@ -1,0 +1,181 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+    height: 1000px;
+}
+header{
+    width: 100%;
+    height: 130px;
+    background-color: rgb(0, 90, 153);
+}
+.jxlogo{
+    position: absolute;
+    top: 30px;
+    left: 50px;
+}
+
+.search{
+    position: absolute;
+    width: 300px;
+    height: 30px;
+    right: 300px;
+    top: 50px;
+    
+}
+.search img{
+    width: 750px;
+    height: 130px;
+    position: absolute;
+    top: -50px;
+    right: -300px;
+}
+.search-text{
+    width: 300px;
+    position: absolute;
+    height: 30px;
+
+}
+.ser-btn{
+    position: absolute;
+    width: 40px;
+    height: 35px;
+    background-color: silver;
+    left: 310px;
+}
+.text{
+    padding-left: 150px;
+    width: 80%;
+    height: 1000p;
+}
+.navlink ul li{
+    position: absolute;
+    list-style: none;
+    top: 150px;
+}
+
+
+
+
+.dongtai-hot-5{
+    width: 900px;
+    height: 260px;
+    position:absolute;
+}
+
+.pointList{
+    list-style: none;
+    position: absolute;
+    left: 530px;
+    top: 255px;
+    z-index: 100;
+}
+
+.item{
+    width: 15px;
+    height: 15px;
+    background-color:  rgb(225, 225, 225);
+    border-radius: 100%;
+  position: absolute;
+    margin-right: 30px;
+    cursor: pointer;
+}
+.item.active{
+    width: 15px;
+    height: 15px;
+    background-color:  rgb(243, 14, 14);
+    border-radius: 100%;
+  position: absolute;
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+
+
+.dongtai-hot-5 li{
+    list-style: none;
+    position: absolute;
+    left: 0px;
+    top: 60px;
+}
+.dongtai-hot-5 img{
+    position: absolute;
+    width: 1200px;
+    height: 300px;
+    
+}
+
+.hot-item.active{
+    z-index: 10;
+}
+
+.dongtai{
+    position:relative;
+    width: 900px;
+    height: 500px;
+}
+.nav1{
+    position: absolute;
+    width: 900px;
+    height: 50px;
+    top: 400px;
+}
+.nav1l{
+    color: black;
+    font-size: 20px;
+    position: absolute;
+}
+.nav1r{
+    color: rgb(15, 226, 241);
+    font-size: 14px;
+    position: absolute;
+    left: 100px;
+    top: 5px;
+}
+.dongtaiimg{
+    width: 400px;
+    height: 200px;
+    position: absolute;
+}
+.dongtaiimg img{
+    width: 400px;
+    height: 250px;
+    position: absolute;
+    top: 450px;
+}
+.imgtext{
+    position: absolute;
+    top: 700px;
+    width: 398px;
+    height: 40px;
+    text-align: center;
+    padding-top: 10px;
+    border-left: 1px solid rgb(87, 82, 85);
+    border-right: 1px solid rgb(87, 82, 85);
+    border-bottom: 1px solid rgb(87, 82, 85);
+ 
+}
+.dongtainew{
+    width: 300px;
+    height: 350px;
+    position: absolute;
+    top: 420px;
+    left: 450px;
+}
+ul li{
+    list-style: none;
+}
+.dongtainew li{
+
+    
+    line-height: 40px;
+}
+.emile{
+    width: 300px;
+    height: 350px;
+    position: absolute;
+    top: 420px;
+    left: 850px;
+}
