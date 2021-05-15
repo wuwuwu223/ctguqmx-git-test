@@ -34,6 +34,10 @@
     color: #333;
     text-align: center;
 }
+.mid1 .top .t:hover{
+    background-color:rgb(31,90,154);
+    color: white;
+}
 .mid1 .top .t5{
     width: 128px;
 }
