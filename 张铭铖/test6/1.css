@@ -1,0 +1,101 @@
+body{
+    width: 100vw;
+    height: 100vh;
+}
+main{
+    width: 1280px;
+    height: 2000px;
+    margin: 0 auto;
+}
+.top{
+    width: 1000px;
+    height: 119px;
+    *zoom: 1;
+}
+.top:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.top .logo{
+    float: left;
+    overflow: hidden;
+    margin-top: 20px;
+    margin-left: 50px;
+}
+.top .biaodan{
+    width: 300px;
+    height: 30px;
+    float: right;
+    margin-top: 40px;
+    margin-right: 70px;
+}
+.ssk{
+    width: 198px;
+    height: 26px;
+    color:  gray;
+    outline: none;
+    border: 1px dashed white;
+}
+.ss{
+    width: 59px;
+    height: 30px;
+    font-size: 14px;
+    background-color: rgb(243, 236, 236);
+    border: 1px dashed rgb(243, 236, 236);
+    outline: none;
+}
+.ss:hover{
+    color: orange;
+    font-size: 15px;
+}
+main .dhl{
+    width: 1280px;
+    height: 45px;
+}
+main .dhl ul li{
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 15px;
+    line-height: 30px;
+}
+main .dhl ul{
+    width: 1000px;
+    height: 30px;
+    margin: 0 auto;
+}
+.lunbo{
+    position: relative;
+    width: 1280px;
+    height: 359px;
+}
+.lunbo .img{
+    position: absolute;
+    width: 1183px;
+    height: 359px;
+    left: 45px;
+}
+.lunbo .img img{
+    position: absolute;
+    left: 0px;
+    height: 359px;
+    width: 1183px;
+}
+.rudis{
+    background-color:#73c9e5;
+}
+.swiper{
+    position: absolute;
+    bottom: 20px;
+    right: 50%;
+    cursor: pointer;
+}
+.swiper b{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: 1px solid white;
+    border-radius: 50%;
+}

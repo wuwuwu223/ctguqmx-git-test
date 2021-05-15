@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>三峡大学计算机与信息学院</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./lunbotu.css">
+    <link rel="stylesheet" href="./in.css">
+</head>
+<body>
+    <div class="top1">       
+        <img src="./img/p2.png" alt="" class="t2" height="118px">
+    </div>
+    <div class="mid1">
+        <img src="./img/p1.jpg" alt="" class="sanda" height="80px" width="545px">
+        <div class="search">
+            <form action="http://it.ctgu.edu.cn/searchResult?">
+                <span class="group">
+                    <input name="keyword" class="gets">
+                    <span>
+                        <input type="submit" value="搜索" class="enter">
+                    </span>
+                </span>    
+            </form>
+        </div>
+        <div class="top">
+            <div class="t t1">首页</div>
+            <div class="t t2">学院概况</div>
+            <div class="t t3">学院动态</div>
+            <div class="t t4">师资队伍</div>
+            <div class="t t5">本科生留学生培养</div>
+            <div class="t t6">研究生培养</div>
+            <div class="t t7">学科建设</div>
+            <div class="t t8">科学研究</div>
+            <div class="t t9">党建工作</div>
+            <div class="t t10">学生工作</div>
+            <div class="t t11">教工之家</div>
+            <div class="t t12">软件中心</div>
+        </div>
+            <div class="for">
+                <div class="picture">
+                    <p class="pg"></p>
+                    <img src="./img/p3.png" alt="" height="360px" width="1183px"  id="for">    
+                    <p class="radius"></p>
+                    <p class="title"></p>
+                    <div class="arrowhead-left" id="al"> < </div> 
+                    <div class="arrowhead-right" id="ar"> > </div>
+                </div>
+                <script>
+                    let faddress = ["./img/p3.png", "./img/p4.png", "./img/p3.png", "./img/p4.png", "./img/p3.png", "./img/p4.png"];
+                    let fimgs = document.querySelector("#for");
+                    let len = faddress.length;           
+                    let str = "";
+                    let pp = document.getElementsByTagName("p"); 
+                    let al = document.getElementById("al");
+                    let ar = document.getElementById("ar");
+                    let n = 0 ;
+                    for (i = 0; i < len; i++) {
+                        str += ' <span></span>'
+                    }
+                    pp[1].innerHTML = str;
+                    let spans = pp[1].getElementsByTagName('span');
+                    spans[0].className = 'active';              
+                    for (i = 0; i < len; i++) {
+                        spans[i].index = i;            
+                        spans[i].onmouseover = function () {          
+                            for (i = 0; i < len; i++) {
+                                spans[i].className = "";             
+                            }
+                            n=this.index ;
+                            this.className = 'active';                
+                            fimgs.src = faddress[this.index];
+                            pp[0].innerHTML = [this.index + 1] + "/6";    
+                            pp[2].innerHTML = "风光" + [this.index + 1];                 
+                        }     
+                    }                   
+                    ar.onclick = function () {           
+                        n++;
+                       if (n>5) {
+                          n=0;  
+                       } 
+                       for (i = 0; i < len; i++) {
+                            spans[i].className = "";
+                        }
+            
+                        spans[n].className = "active";
+                        fimgs.src = faddress[n];
+                        pp[0].innerHTML = (n+1) + "/6";
+                        pp[2].innerHTML = "风光" +(n+1);
+                      
+                    }
+            
+                    al.onclick = function () {       
+                      n--;
+                     if (n<0) {
+                         n=(len-1);
+                     }
+                     for (i = 0; i < len; i++) {
+                          spans[i].className = "";
+                      }         
+                      spans[n].className = "active";
+                      fimgs.src = faddress[n];
+                      pp[0].innerHTML = (n+1) + "/6";
+                      pp[2].innerHTML = "风光" +(n+1);
+                    }                   
+                   setInterval(ar.onclick,3000);                               
+                </script>
+            </div>
+
+        <div class="mid" style="position: relative">
+            <div class="m1 m" >
+                    <div class="xue">学院动态</div>
+                    <div class="new">NEWS</div> 
+                <a href="http://it.ctgu.edu.cn/detail/10543" style="display: block; margin-top: 10px;">
+                    <img src="./img/p6.jpg" alt="" width="414px" height="276px">
+                </a>
+                <div class="more">
+                    学院召开三界一次“两代会”
+                </div>
+            </div>
+            <div class="m2 m">
+                <a href="http://it.ctgu.edu.cn/searchResult?" class="a">Lorem ipsum dolor sit amet.</a>
+                <a href="http://it.ctgu.edu.cn/searchResult?" class="a">Lorem ipsum dolor sit amet.</a>
+                <a href="http://it.ctgu.edu.cn/searchResult?" class="a">Lorem ipsum dolor sit amet.</a>
+                <a href="http://it.ctgu.edu.cn/searchResult?" class="a">Lorem ipsum dolor sit amet.</a>
+                <a href="http://it.ctgu.edu.cn/searchResult?" class="a">Lorem ipsum dolor sit amet.</a>
+                <a href="http://it.ctgu.edu.cn/searchResult?" class="a">Lorem ipsum dolor sit amet.</a>
+                <a href="http://it.ctgu.edu.cn/searchResult?" class="a">Lorem ipsum dolor sit amet.</a>
+            </div>
+            <div class="m3 m">
+                <img src="./img/p7.png" alt="" class="ii">
+                <img src="./img/p8.png" alt="" class="ii">
+                <img src="./img/p9.png" alt="" class="ii">
+                <img src="./img/p10.png" alt="" class="ii">
+            </div>
+        </div>
+        <div class="bottom" style="position: relative;">
+            <div class="b b1"><div class="first">通知公告</div>
+                <a href="http://it.ctgu.edu.cn/searchResult?" class="aa">Lorem ipsum dolor sit amet consectetur.</a>
+                <a href="http://it.ctgu.edu.cn/searchResult?" class="aa">Lorem ipsum dolor sit amet consectetur.</a>
+                <a href="http://it.ctgu.edu.cn/searchResult?" class="aa">Lorem ipsum dolor sit amet consectetur.</a>
+                <a href="http://it.ctgu.edu.cn/searchResult?" class="aa">Lorem ipsum dolor sit amet consectetur.</a>
+                <a href="http://it.ctgu.edu.cn/searchResult?" class="aa">Lorem ipsum dolor sit amet consectetur.</a>
+                <a href="http://it.ctgu.edu.cn/searchResult?" class="aa">Lorem ipsum dolor sit amet consectetur.</a>
+                <a href="http://it.ctgu.edu.cn/searchResult?" class="aa">Lorem ipsum dolor sit amet consectetur.</a>
+            </div>
+            <div class="b b2"><div class="first">学术动态</div>
+                <a href="http://it.ctgu.edu.cn/searchResult?" class="aa">Lorem ipsum dolor sit amet consectetur.</a>
+                <a href="http://it.ctgu.edu.cn/searchResult?" class="aa">Lorem ipsum dolor sit amet consectetur.</a>
+                <a href="http://it.ctgu.edu.cn/searchResult?" class="aa">Lorem ipsum dolor sit amet consectetur.</a>
+                <a href="http://it.ctgu.edu.cn/searchResult?" class="aa">Lorem ipsum dolor sit amet consectetur.</a>
+                <a href="http://it.ctgu.edu.cn/searchResult?" class="aa">Lorem ipsum dolor sit amet consectetur.</a>
+                <a href="http://it.ctgu.edu.cn/searchResult?" class="aa">Lorem ipsum dolor sit amet consectetur.</a>
+                <a href="http://it.ctgu.edu.cn/searchResult?" class="aa">Lorem ipsum dolor sit amet consectetur.</a>
+            </div>
+            <div class="b b3"><div class="first">就业信息</div>
+                <a href="http://it.ctgu.edu.cn/searchResult?" class="aa">Lorem ipsum dolor sit amet consectetur.</a>
+                <a href="http://it.ctgu.edu.cn/searchResult?" class="aa">Lorem ipsum dolor sit amet consectetur.</a>
+                <a href="http://it.ctgu.edu.cn/searchResult?" class="aa">Lorem ipsum dolor sit amet consectetur.</a>
+                <a href="http://it.ctgu.edu.cn/searchResult?" class="aa">Lorem ipsum dolor sit amet consectetur.</a>
+                <a href="http://it.ctgu.edu.cn/searchResult?" class="aa">Lorem ipsum dolor sit amet consectetur.</a>
+                <a href="http://it.ctgu.edu.cn/searchResult?" class="aa">Lorem ipsum dolor sit amet consectetur.</a>
+                <a href="http://it.ctgu.edu.cn/searchResult?" class="aa">Lorem ipsum dolor sit amet consectetur.</a>
+            </div>
+            <div class="last">
+                <div class="first">相关链接</div>
+                <img src="./img/p11.png" alt=""><img src="./img/p11.png" alt=""><img src="./img/p11.png" alt=""><img src="./img/p11.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="bottom1">
+        <div class="bb">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</div>
+        <div class="bb">Lorem, ipsum dolor sit amet consectetur </div>
+        <div class="bb">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</div>
+    </div>   
+</body>
+</html>

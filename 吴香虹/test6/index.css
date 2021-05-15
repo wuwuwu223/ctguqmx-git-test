@@ -1,0 +1,44 @@
+.header, .footer{
+    width: 1483px;
+    height: 183px;
+    //background-color: #005A99;
+    background: url(/static/this/images/header_bg_right.png) right no-repeat;
+    /*z-index: 100;*/
+}
+.header-top{
+    margin: 0 100px 0 100px;
+    width: 1283px;
+    position: absolute;
+    display: inline-block;
+}
+.logo{
+    margin-top: 50px;
+    display: inline-block;
+}
+.search{
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+.top-img{
+    width: 545px;
+    height: 80px;
+    margin-top: 50px;
+
+}
+
+.content1, .content2, .content3{
+    height: 353px;
+    width: 1483px;
+    display: block;
+}
+
+.content1-1, .content1-2, .content1-3{
+    height: 353px;
+    width: 450px;
+    /*background-color: #9fcdff;*/
+    display: inline-block;
+    margin-right: 30px;
+    /*position: absolute;*/
+}
