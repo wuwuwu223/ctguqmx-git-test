@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>三峡大学计算机与信息学院 - 欢迎您！</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <style>
+        #header {
+            background-color: #005A99;
+            width: 1519.2px;
+            height: 118px;
+        }
+        
+        .logo {
+            width: 545px;
+            height: 99.875px;
+            position: relative;
+            top: 15px;
+            left: 50px;
+        }
+        
+        .header-top {
+            width: 1280px;
+            height: 118px;
+        }
+        
+        .header-top img {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .youtu {
+            position: relative;
+            height: 118px;
+            top: -100px;
+            left: 686px;
+        }
+        
+        .sousuo {
+            z-index: 1;
+            width: 290px;
+            height: 32px;
+            margin-top: 40px;
+            position: relative;
+            top: -208px;
+            left: 1150px;
+        }
+        
+        .daohang {
+            display: flex;
+            width: 1520px;
+            height: 45px;
+            background: #fff;
+        }
+        
+        .yuansu {
+            text-decoration: none;
+            width: 100%;
+            display: inline-block;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 45px;
+            color: #333;
+            text-align: center;
+        }
+        
+        .d1 {
+            width: 68px;
+            height: 45px;
+        }
+        
+        .d2 {
+            width: 68px;
+            height: 45px;
+        }
+        
+        .d3 {
+            width: 128px;
+            height: 45px;
+        }
+        
+        .d4 {
+            width: 80px;
+            height: 45px;
+        }
+        
+        .dingwei {
+            position: relative;
+            text-align: center;
+            left: 265px;
+        }
+        
+        .yuansu a {
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 45px;
+            color: #333;
+            text-align: center;
+        }
+        
+        .yuansu:hover {
+            background-color: #569DD9;
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        .yuansu a:hover {
+            color: #fff;
+        }
+        
+        .carousel-inner {
+            position: relative;
+            left: 170px;
+        }
+        
+        .carousel-indicators {
+            position: relative;
+            top: 350px;
+            left: 750px;
+            color: orange;
+        }
+        
+        .xxa {
+            width: 1183px;
+            height: 353px;
+        }
+        
+        .zuotu img {
+            width: 414px;
+            height: 276px;
+        }
+        
+        .shang {
+            width: 415px;
+            height: 31px;
+            display: flex;
+        }
+        
+        .shang span {
+            font-weight: normal;
+            font-size: 18px;
+            float: left;
+            margin-right: 10px;
+        }
+        
+        .shang a {
+            font-weight: normal;
+            font-size: 13px;
+            color: #569DD9;
+            display: inline-block;
+            margin-top: 7px;
+        }
+        
+        .bt a {
+            color: #333;
+            text-decoration: none;
+            color: #333;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <div class="header-top">
+            <div class="logo"><img src="./img/[it.ctgu.edu.cn][145]logo.jpg"></div>
+            <div class="youtu"><img src="./img/[it.ctgu.edu.cn][407]header_bg_right.png"></div>
+            <div class="sousuo">
+                <div class="search-box">
+                    <input id="keywords" class="wb" type="text" placeholder="请输入关键字">
+                    <button hidefocus=”true” id="search-btn" type="button" onclick="window.open('/searchResult?keywords=' + $('#keywords').val())">搜&nbsp索</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="daohang">
+        <div class="dingwei">
+            <div class="yuansu d1"><a href="#">首页</a></div>
+            <div class="yuansu d2"><a href="#">学院概况</a></div>
+            <div class="yuansu d2"><a href="#">学院动态</a></div>
+            <div class="yuansu d2"><a href="#">师资队伍</a></div>
+            <div class="yuansu d3"><a href="#">本科生留学生培养</a></div>
+            <div class="yuansu d4"><a href="#">研究生培养</a></div>
+            <div class="yuansu d2"><a href="#">学科建设</a></div>
+            <div class="yuansu d2"><a href="#">科学研究</a></div>
+            <div class="yuansu d2"><a href="#">建党工作</a></div>
+            <div class="yuansu d2"><a href="#">学生工作</a></div>
+            <div class="yuansu d2"><a href="#">教工之家</a></div>
+            <div class="yuansu d2"><a href="#">软件中心</a></div>
+        </div>
+    </div>
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="continer">
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img src="./img/[it.ctgu.edu.cn][327]ban1.png" alt="...">
+
+                </div>
+                <div class="item">
+                    <img src="./img/[it.ctgu.edu.cn][979]ban2.png" alt="...">
+
+                </div>
+                <div class="item">
+                    <img src="./img/[it.ctgu.edu.cn][346]ban3.png" alt="...">
+
+                </div>
+
+            </div>
+        </div>
+        <div class="xxa">
+            <div class="xxzuo">
+                <div class="shang">
+                    <span>学院动态  </span>
+                    <a href=""> NEWS</a>
+                </div>
+                <div class="zuotu"><img src="./img/[it.ctgu.edu.cn][688]2019091603320088.jpg" alt=""></div>
+                <div class="bt">
+                    <a href="">
+                        <span class="titlePicFlag">[图]</span> 学院召开三届一次“两代会”
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
