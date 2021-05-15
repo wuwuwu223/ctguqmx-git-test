@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css动画</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="bubble" style="--i:1"></div>
+        <div class="bubble" style="--i:2"></div>
+        <div class="bubble" style="--i:3"></div>
+        <div class="bubble" style="--i:4"></div>
+        <div class="bubble" style="--i:5"></div>
+        <div class="bubble" style="--i:6"></div>
+        <div class="bubble" style="--i:7"></div>
+        <div class="bubble" style="--i:8"></div>
+        <div class="bubble" style="--i:9"></div>
+        <div class="bubble" style="--i:10"></div>
+        <div class="bubble" style="--i:11"></div>
+        <div class="bubble" style="--i:12"></div>
+        <div class="bubble" style="--i:13"></div>
+        <div class="bubble" style="--i:14"></div>
+        <div class="bubble" style="--i:15"></div>
+        <div class="bubble" style="--i:16"></div>
+        <div class="bubble" style="--i:17"></div>
+        <div class="bubble" style="--i:18"></div>
+    </div>
+
+    <div class="cssitem" >
+    </div>
+
+        <!-- 渐变时钟 -->
+        <div class="donghua" id="cssblock">
+            <div class="clock_box">
+                <div class="clock">
+                    <p id="time"></p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 风琴相册 -->
+        <div class="donghua" id="cssfengqingpic">
+            <div class="pic">
+                <img src="img/1.jpg">
+                <div class="title">送</div>
+            </div class="pic">
+            <div class="pic">
+                <img src="img/2.jpg">
+                <div class="title">你</div>
+            </div class="pic">
+            <div class="pic">
+                <img src="img/3.jpg">
+                <div class="title">一</div>
+            </div class="pic">
+            <div class="pic">
+                <img src="img/4.jpg">
+                <div class="title">朵</div>
+            </div class="pic">
+            <div class="pic">
+                <img src="img/5.jpg">
+                <div class="title">小</div>
+            </div class="pic">
+            <div class="pic">
+                <img src="img/6.jpg">
+                <div class="title">红</div>
+            </div class="pic">
+            <div class="pic">
+                <img src="img/7.jpg">
+                <div class="title">❀</div>
+            </div class="pic">
+        </div>
+
+        <!-- 3D翻转 -->
+        <div class="donghua" id="css3dfanzhuan">
+            <div class="front">
+                <div class="csscontents">
+                    <h2>Wu Xin
+                        <br/>
+                        Ye An Shi
+                    </h2>
+                    <span>Shao Nian Ge Xing</span>
+                </div>
+            </div>
+            <div class="back">
+                <div class="csscontents">
+                    <h2>Xiao Se<br/>Xiao Chu He</h2>
+                    <span>Shao Nian Ge Xing</span>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 3D盒子 -->
+        <div class="cubeBox donghua">
+            <ul class="cube">
+                
+                <li><img src="img/7.jpg"></li>
+                <li><img src="img/1.jpg"></li>
+                <li><img src="img/2.jpg"></li>
+                <li><img src="img/3.jpg"></li>
+                <li><img src="img/4.jpg"></li>
+                <li><img src="img/5.jpg"></li>
+            </ul>
+            <ul class="cube bigCube">
+                
+                <li><img src="img/7.jpg" class="bigCubeImg"></li>
+                <li><img src="img/1.jpg" class="bigCubeImg"></li>
+                <li><img src="img/2.jpg" class="bigCubeImg"></li>
+                <li><img src="img/3.jpg" class="bigCubeImg"></li>
+                <li><img src="img/4.jpg" class="bigCubeImg"></li>
+                <li><img src="img/5.jpg" class="bigCubeImg"></li>
+            </ul>
+        </div>
+        
+        <!-- 中间插字 -->
+        <div class="csschazi donghua">
+            <div class="top">悬崖之上</div>
+            <div class="center">上世纪三十年代</div>
+            <div class="bottom">悬崖之上</div>
+        </div>
+    </div>
+
+    <!-- 华为充电 -->
+    <div class="chongdian donghua">
+        <div class="dianliang">36%</div>
+
+        <div class="Contrast ">
+            <span class="bubble1"></span>
+            <span class="bubble1"></span>
+            <span class="bubble1"></span>
+            <span class="bubble1"></span>
+            <span class="bubble1"></span>
+            <span class="bubble1"></span>
+            <span class="bubble1"></span>
+            <span class="bubble1"></span>
+            <span class="bubble1"></span>
+            <span class="bubble1"></span>
+            <span class="bubble1"></span>
+            <span class="bubble1"></span>
+            <span class="bubble1"></span>
+            <span class="bubble1"></span>
+            <span class="bubble1"></span>
+            <span class="bubble1"></span>
+            <span class="bubble1"></span>
+
+            <div class="circle"></div>
+            <div class="bubble1-home"></div>
+        </div>
+
+        <!-- 自动翻书 -->
+        <div class="card donghua" id="book">
+            <div class="imgBox">
+                <img src="img/xuan.jpg">
+            </div>
+            <div class='details'>
+                <h2>悬崖之上</h2>
+                <p>上世纪三十年代，四位曾在苏联接受特训的共产党特工组成任务小队，回国执行代号为“乌特拉”的秘密行动。由于叛徒的出卖，他们从跳伞降落的第一刻起， 就已置身于敌人布下的罗网之中。同志能否脱身，任务能否完成，雪一直下，立于“悬崖之上”的行动小组面临严峻考验······</p>
+            </div>
+        </div>
+
+
+        <!-- 音符跳动 -->
+        <div class="cssmusic">
+        <div class="loader donghua">
+            <div style="--x:0"></div>
+            <div style="--x:1"></div>
+            <div style="--x:2"></div>
+            <div style="--x:3"></div>
+            <div style="--x:4"></div>
+            <div style="--x:5"></div>
+          </div>
+        </div>
+
+
+       <!-- 搜索框 -->
+       <div class="csssearch">
+            <div class="search-box">
+                <div class="key">
+                    <input type="text" placeholder="请输入搜索关键词...">
+                </div>
+                <div class="bt">
+                    <a href="" href="#">
+                        <i class="iconfont icon-sousuo"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <script>
+    // <!-- 渐变时钟 -->
+        var time = document.querySelector("#time");
+        function up(time_el) {
+            let date = new Date();
+            let h = date.getHours();
+            let m = date.getMinutes();
+            let s = date.getSeconds();
+
+            if (h < 10) { h = "0" + h; }
+            if (m < 10) { m = "0" + m; }
+            if (s < 10) { s = "0" + s; }
+
+            time_el.textContent = h + ":" + m + ":" + s + " " ;
+
+        }
+        setInterval(() => {
+            up(time);
+        }, 1000);
+
+        // 动态搜索框
+        var box = document.querySelector('.search-box');
+
+    box.addEventListener('mouseenter', () => {
+        box.classList.add('active');
+    });
+
+    box.addEventListener('click',(e)=>{
+        e.stopPropagation();
+    });
+
+    document.body.addEventListener('mouseleave', () => {
+        box.classList.remove('active');
+    });
+    </script>
+</body>
+
+</html>

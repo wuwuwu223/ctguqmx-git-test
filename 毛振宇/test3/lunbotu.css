@@ -1,12 +1,12 @@
 .for .picture {
     position: relative;
-    width: 500px;
-    height: 333px;
+    width: 560px;
+    height: 240px;
     margin: 0 auto;
     overflow: hidden;
 }
 
-.for .radius {           /* 圆点所在的p (容器)  */
+.for .radius {      
     width: 100%;
     height: 10px;
     position: absolute;
@@ -19,11 +19,11 @@
     margin: 0;
     width: 100%;
     height: 20px;
-    background-color: rgba(0, 0, 0, .4);
     text-align: center;
     font-size: 16px;
     font-weight: 600;
     color: #fff;
+    display: none;
 }
 
 .for .title {
@@ -34,6 +34,7 @@
     font-size: 16px;
     font-weight: 600;
     color: rgb(21, 223, 72);
+    display: none;
 }
 
 .for span {
@@ -45,10 +46,9 @@
 .for .active {
     border: 10px solid #656466;
 }
-
 /* 左右箭头  */
 .for .arrowhead-left,
-.arrowhead-right {
+.for .arrowhead-right {
     position: absolute;
     width: 41px;
     height: 69px;
@@ -56,7 +56,6 @@
     line-height: 70px;
     text-align: center;
     color: #D6D8D4;
-    background-color: rgba(0,0,0,.3);
 }
 
 .for .arrowhead-left {

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" href="./bilibilichun.css">
     <link rel="stylesheet" href="./bilibili.css">
+    <link rel="stylesheet" href="./lunbotu.css">
 </head>
 <body>
 
@@ -256,9 +257,75 @@
                     </div>
                 </div>
                 <div class="t2" style="position: relative;">
-                    <a class="for" target="_blank" href="https://www.bilibili.com/video/BV1qt411j7fV">
-                        <img src="./imgs/p5.png" width="100%" height="100%">
-                    </a>
+                    <div class="for" target="_blank" href="https://www.bilibili.com/video/BV1qt411j7fV">
+                        <div class="picture">
+                            <p class="pg"></p>
+                            <img src="./imgs/p5.png" alt="" height="240px" width="560px"  id="for">    
+                            <p class="radius"></p>
+                            <p class="title"></p>
+                            <div class="arrowhead-left" id="al"> < </div> 
+                            <div class="arrowhead-right" id="ar"> > </div>
+                        </div>
+                        <script>
+                            let faddress = ["./imgs/p5.png", "./imgs/p6.png", "./imgs/p5.png", "./imgs/p6.png", "./imgs/p5.png", "./imgs/p6.png"];
+                            let fimgs = document.querySelector("#for");
+                            let len = faddress.length;           
+                            let str = "";
+                            let pp = document.getElementsByTagName("p"); 
+                            let al = document.getElementById("al");
+                            let ar = document.getElementById("ar");
+                            let n = 0 ;
+                            for (i = 0; i < len; i++) {
+                                str += ' <span></span>'
+                            }
+                            pp[1].innerHTML = str;
+                            let spans = pp[1].getElementsByTagName('span');
+                            spans[0].className = 'active';              
+                            for (i = 0; i < len; i++) {
+                                spans[i].index = i;            
+                                spans[i].onmouseover = function () {          
+                                    for (i = 0; i < len; i++) {
+                                        spans[i].className = "";             
+                                    }
+                                    n=this.index ;
+                                    this.className = 'active';                
+                                    fimgs.src = faddress[this.index];
+                                    pp[0].innerHTML = [this.index + 1] + "/6";    
+                                    pp[2].innerHTML = "风光" + [this.index + 1];                 
+                                }     
+                            }                   
+                            ar.onclick = function () {           
+                                n++;
+                               if (n>5) {
+                                  n=0;  
+                               } 
+                               for (i = 0; i < len; i++) {
+                                    spans[i].className = "";
+                                }
+                    
+                                spans[n].className = "active";
+                                fimgs.src = faddress[n];
+                                pp[0].innerHTML = (n+1) + "/6";
+                                pp[2].innerHTML = "风光" +(n+1);
+                              
+                            }
+                    
+                            al.onclick = function () {       
+                              n--;
+                             if (n<0) {
+                                 n=(len-1);
+                             }
+                             for (i = 0; i < len; i++) {
+                                  spans[i].className = "";
+                              }         
+                              spans[n].className = "active";
+                              fimgs.src = faddress[n];
+                              pp[0].innerHTML = (n+1) + "/6";
+                              pp[2].innerHTML = "风光" +(n+1);
+                            }                   
+                           setInterval(ar.onclick,3000);                               
+                        </script>
+                    </div>
                     <div class="v1">
                         <a target="_blank" href="https://www.bilibili.com/video/BV1qt411j7fV" class="video1 v"><img src="./imgs/p5.png" width="190px" height="115px"></a>
                         <a target="_blank" href="https://www.bilibili.com/video/BV1qt411j7fV" class="video2 v"><img src="./imgs/p5.png" width="190px" height="115px"></a>
