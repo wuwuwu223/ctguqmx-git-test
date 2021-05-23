@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+  <title>Bootstrap</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+  <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+  <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+  <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+  <style>
+    .biaodan {
+      margin-top: 30px;
+    }
+
+    .input-group {
+      margin-bottom: 10px;
+    }
+
+    .butt {
+      margin-left: 546px;
+      width: 50px;
+      height: 30px;
+      border-radius: 14px;
+      margin-bottom: 10px;
+      outline: none;
+    }
+
+    .btn-default {
+      margin-top: 20px;
+      margin-bottom: 15px;
+      outline: none;
+    }
+    body {
+      background:#a97d7d;
+    }
+    .container-fluid {
+      padding: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <!-- 轮播图 -->
+    <div class="row clearfix">
+      <div class="col-md-12 column">
+        <div class="carousel slide" id="carousel-673337">
+          <ol class="carousel-indicators">
+            <li class="active" data-slide-to="0" data-target="#carousel-673337">
+            </li>
+            <li data-slide-to="1" data-target="#carousel-673337">
+            </li>
+            <li data-slide-to="2" data-target="#carousel-673337">
+            </li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="item active">
+              <img alt=""
+                src="https://cdn.jsdelivr.net/gh/lysijj/image-host/imagelunbo/930b864dfe97c4851e1330a16131edc4_3ce1d49edb069681507db7e56dc47241760c4081.jpg" />
+            </div>
+            <div class="item">
+              <img alt=""
+                src="https://cdn.jsdelivr.net/gh/lysijj/image-host/imagelunbo/b638c3be586a56d0c58419ceec459b60_1483416347978.jpg" />
+            </div>
+            <div class="item">
+              <img alt=""
+                src="https://cdn.jsdelivr.net/gh/lysijj/image-host/imagelunbo/0ec53a5ecb43a45c894b0af79b1ed711_1483601992641.jpg" />
+            </div>
+          </div> <a class="left carousel-control" href="#carousel-673337" data-slide="prev"><span
+              class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control"
+            href="#carousel-673337" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+        </div>
+      </div>
+    </div>
+    <!-- 轮播图 -->
+    </div>
+    <div class="container beijing">
+    <!-- 表单部分 -->
+    <div class="row clearfix biaodan">
+      <div class="input-group">
+        <span class="input-group-addon" id="basic-addon3">网址</span>
+        <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3"
+          value="https://www.bilibili.com/">
+      </div>
+      <div class="col-md-12 column formm">
+        <button onclick="loadpage()" class="butt">Go!</button>
+      </div>
+      <div class="row clearfix">
+          <iframe src="https://www.baidu.com/?tn=62095104_23_oem_dg" frameborder="0"
+            style="height: 600px;border-radius: 14px;" id="iff"
+            class="col-md-12">
+          </iframe>
+      </div>
+    </div>
+    <!-- 表单部分 -->
+    <!-- 热搜 -->
+    <div class="row clearfix">
+      <div class="col-md-12 column">
+        <button type="button" class="btn btn-default" onclick="abab()" style="outline: none;">微博热搜</button>
+      </div>
+    </div>
+    <div class="row clearfix">
+      <div class="col-md-12 column" id="top">
+        <div class="jumbotron">
+          <h1>
+            让风告诉你
+          </h1>
+          <p>
+            当你的天空突然下起了大雨<br/>
+            那是我在为你炸乌云
+          </p>
+          <p>
+            <a class="btn btn-primary btn-large" href="https://blog.csdn.net/qq_52237123?spm=1000.2115.3001.5343">(σ≧︎▽︎≦︎)σ</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"
+    integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous">
+  </script>
+  <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+    integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous">
+  </script>
+  <script>
+    function loadpage() {
+      var targetURL = document.getElementById('basic-url').value;
+      console.log(targetURL);
+      document.getElementById('iff').src = targetURL;
+    }
+    // 123
+    function abab(){
+					$.ajax({
+						url: "https://v1.alapi.cn/api/new/wbtop?num=10",
+						type: 'get',
+						dataType: 'json',
+						contentType: "application/json",
+						success: function (res, status) {
+							var data = res.data;
+							var html = "";
+							for(var i = 0; i < data.length; i++){
+								html += '<div class="jumbotron">'  + 
+									'<h1>' + 
+										data[i].hot_word + 
+									'</h1>' + 
+									' <p>' +
+										data[i].hot_word_num + 
+									'</p>' + 
+									'<p>' +
+										' <a class="btn btn-primary btn-large" href="#">Learn more</a>' + 
+									'</p>' + 
+								'</div>';
+							}
+							$('#top').html(html);
+							$('#top').html(html);
+						},
+						error:function(data){
+							alert(data);
+						}
+					})
+				}
+  </script>
+</body>
+
+</html>
