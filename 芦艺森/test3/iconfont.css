@@ -41,10 +41,7 @@
   color: #000;
   font-size: 18px;
 }
-.you2:hover .icon-huanyihuan {
-  transform: rotate(360deg);
-  transition: all .5s;
-}
+
 
 .icon-shouji:before {
   content: "\e6e7";
