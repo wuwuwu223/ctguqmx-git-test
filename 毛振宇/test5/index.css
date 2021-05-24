@@ -1,0 +1,8 @@
+.body{
+    background-color: rgb(92,83,157);
+    text-align: center;
+}
+.carousel-inner .item img{
+    width: 1920px;
+    height: 750px;
+}
