@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>三峡大学计算机与信息学院</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <header>
+        <img src="./img/[it.ctgu.edu.cn][145]logo.jpg" alt="logo" class="tp1">
+        <img src="./img/[it.ctgu.edu.cn][407]header_bg_right.png" alt="logo" class="tp2">
+        <form action="http://it.ctgu.edu.cn/searchResult" name="keywords">
+            <input type="text" name="keywords" value="请输入关键字">
+            <button>搜索</button>
+        </form>
+    </header>
+    <section class="clearfix">
+        <nav class="clearfix">
+            <ul>
+                <li><a href="http://it.ctgu.edu.cn/">首页</a></li>
+                <li><a href="http://it.ctgu.edu.cn/in/49">学院概况</a></li>
+                <li><a href="http://it.ctgu.edu.cn/in/54">学院动态</a></li>
+                <li><a href="http://it.ctgu.edu.cn/in/58">师资队伍</a></li>
+                <li><a href="http://it.ctgu.edu.cn/in/60">本科生留学生培养</a></li>
+                <li><a href="http://it.ctgu.edu.cn/in/71">研究生培养</a></li>
+                <li><a href="http://it.ctgu.edu.cn/in/116">学科建设</a></li>
+                <li><a href="http://it.ctgu.edu.cn/in/83">科学研究</a></li>
+                <li><a href="http://it.ctgu.edu.cn/in/89">党建工作</a></li>
+                <li><a href="http://it.ctgu.edu.cn/in/99">学生工作</a></li>
+                <li><a href="http://it.ctgu.edu.cn/in/129">教工之家</a></li>
+                <li><a href="http://sec.ctgu.edu.cn/">软件中心</a></li>
+            </ul>
+        </nav>
+        <article class="lunbotp clearfix">
+            <img src="./img/1.png" alt="" id="tptptp">
+        </article>
+        <article class="dongtai clearfix">
+            <div class="left">
+                <div class="s">
+                    <p>学院动态</p>
+                    <a href="http://it.ctgu.edu.cn/">NEWS</a>
+                </div>
+                <div class="x">
+                    <a href="http://it.ctgu.edu.cn/detail/10543">
+                        <img src="./img/[it.ctgu.edu.cn][688]2019091603320088.jpg" alt="" width="415px">
+                        <p>
+                            <span>[图]</span>
+                            学院召开三届一次"两代会"
+                        </p>
+                    </a>
+                </div>
+            </div>
+            <div class="middle clearfix">
+                <a href="http://it.ctgu.edu.cn/in/54" class="dian">...</a>
+                <div class="xia clearfix">
+                    <a href="http://it.ctgu.edu.cn/detail/14816" target="_blank">
+                        <p>专访我院学霸寝室——欣苑3栋414</p>
+                        <span>05-13</span>
+                    </a>
+                    <a href="http://it.ctgu.edu.cn/detail/14808" target="_blank">
+                        <p>学院赴武汉地区走访用人单位开拓学生就业市场</p>
+                        <span>05-12</span>
+                    </a>
+                    <a href="http://it.ctgu.edu.cn/detail/14809" target="_blank">
+                        <p>“忆峥嵘百载，舞活力青春” ——我院承办大学生文化艺术...</p>
+                        <span>05-12</span>
+                    </a>
+                    <a href="http://it.ctgu.edu.cn/detail/14801" target="_blank">
+                        <p>我院举行少数民族学生专题座谈会</p>
+                        <span>05-06</span>
+                    </a>
+                    <a href="http://it.ctgu.edu.cn/detail/14799" target="_blank">
+                        <p>【党史学习教育】我院学生走进社区聆听老党员讲述红色...</p>
+                        <span>05-06</span>
+                    </a>
+                    <a href="http://it.ctgu.edu.cn/detail/14783" target="_blank">
+                        <p>学院顺利召开2021年春季学期“三全育人”班主任工作会</p>
+                        <span>04-15</span>
+                    </a>
+                    <a href="http://it.ctgu.edu.cn/detail/14780" target="_blank">
+                        <p>计算机与信息学院组织学习首期荆楚科学家精神大讲堂</p>
+                        <span>04-25</span>
+                    </a>
+                </div>
+            </div>
+            <div class="right">
+                <a href="" target="_blank">
+                    <img src="./img/xueyuan.png" alt="">
+                </a>
+                <a href="" target="_blank">
+                    <img src="./img/yuanzhang.png" alt="">
+                </a>
+                <a href="" target="_blank">
+                    <img src="./img/keyan.png" alt="">
+                </a>
+                <a href="" target="_blank">
+                    <img src="./img/xiazai.png" alt="">
+                </a>
+            </div>
+        </article>
+    </section>
+    <script>
+        var shuzi = 1;
+        function lunbo() {
+            shuzi++;
+            if (shuzi > 3) {
+                shuzi = 1;
+            }
+            var img = document.getElementById("tptptp");
+            img.src = './img/' + shuzi + '.png';
+            console.log(img.src)
+        }
+        setInterval(lunbo, 1500);
+    </script>
+</body>
+
+</html>

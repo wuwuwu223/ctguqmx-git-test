@@ -179,14 +179,14 @@ footer {
     background-color: #f4f4f4;
 }
 
-.you2:hover span {
+.you2:hover span::before {
     transform: rotate(360deg);
 }
 
-.you2 span {
+.you2 span::before {
     display: inline-block;
     margin-left: 3.5px;
-    transition: all 1s;
+    transition: all .5s;
 }
 
 .you2 p {
@@ -518,6 +518,7 @@ nav {
 .al img {
     border-radius: 2px;
 }
+
 .lunbo_yuan {
     position: absolute;
     text-align: center;
@@ -526,6 +527,7 @@ nav {
     top: 185px;
     right: 3px;
 }
+
 .lunbo_yuan span {
     width: 10px;
     height: 10px;
@@ -534,6 +536,7 @@ nav {
     float: left;
     margin-right: 8px;
 }
+
 .lunbo_yuan span:hover {
     cursor: pointer;
     background-color: rgba(0, 161, 214);
