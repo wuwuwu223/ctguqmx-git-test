@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#menu{
+    height: 100vh;
+    display: flex;
+}
+#menu .left {
+    flex: 1;
+    display: inline-block;
+}
+#menu .right{
+    display: inline-block;
+    height: 100%;
+    flex: 6;
+}
+#menu-head{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+    flex-wrap: wrap;
+}

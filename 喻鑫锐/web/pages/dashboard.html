@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            overflow-x: hidden;
+        }
+    </style>
+</head>
+<body>
+<div id="gif-container" style="width: 800px;display: inline-block;">
+    <img src="../moveGif.gif" alt="" style="width: 100%">
+</div>
+<div id="main" style="width: 300px;height:300px;display: inline-block;"></div>
+<div id="comment" style="width: 500px;height:300px;display: inline-block;"></div>
+<div id="text-container" style="width: 450px;display: inline-block;text-align: center;">
+    <img src="../1.png" alt="" style="width: 100%;">
+</div>
+</body>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/echarts.min.js"></script>
+<script type="text/javascript">
+    // 基于准备好的dom，初始化echarts实例
+    var sexChart = echarts.init(document.getElementById('main'));
+    let manSum = 0;
+    let womanSum = 0;
+    $.ajax({
+        type: "GET",
+        url: "http://1.117.163.52:8081/user/sex",
+        success: function (response) {
+            console.log(response);
+            manSum = response.data.man;
+            womanSum = response.data.woman;
+            console.log(manSum);
+            console.log(womanSum);
+            sexChart.setOption({
+                title: {
+                    text: '用户性别分析',
+                    left: 'center'
+                },
+                tooltip: {
+                    trigger: 'item'
+                },
+                legend: {
+                    orient: 'vertical',
+                    left: 'left',
+                },
+                series: [
+                    {
+                        name: '性别',
+                        type: 'pie',
+                        radius: '50%',
+                        data: [
+                            {value: manSum, name: '男'},
+                            {value: womanSum, name: '女'},
+                        ],
+                        emphasis: {
+                            itemStyle: {
+                                shadowBlur: 10,
+                                shadowOffsetX: 0,
+                                shadowColor: 'rgba(0, 0, 0, 0.5)'
+                            }
+                        }
+                    }
+                ]
+            })
+        }
+    });
+    // 使用刚指定的配置项和数据显示图表。
+</script>
+<script>
+    var chartDom = document.getElementById('comment');
+    var myChart = echarts.init(chartDom);
+    var option;
+    $.ajax({
+        type: "GET",
+        url: "http://1.117.163.52:8081/user/sex/class",
+        success: res => {
+            console.log(res);
+            option = {
+                title: {
+                    text: '成员分析',
+                    subtext: '绝对真实'
+                },
+                tooltip: {
+                    trigger: 'axis',
+                    axisPointer: {
+                        type: 'shadow'
+                    }
+                },
+                legend: {
+                    data: ['男', '女']
+                },
+                grid: {
+                    left: '3%',
+                    right: '4%',
+                    bottom: '3%',
+                    containLabel: true
+                },
+                xAxis: {
+                    type: 'value',
+                    boundaryGap: [0, 0.01]
+                },
+                yAxis: {
+                    type: 'category',
+                    data: ['开发组', '智能组']
+                },
+                series: [
+                    {
+                        name: '男',
+                        type: 'bar',
+                        data: [res.data.kai_fa_man, res.data.zhi_neng_man],
+                        itemStyle: {
+                            normal: {
+                                label: {
+                                    show: true,		//开启显示
+                                    position: 'right',	//在上方显示
+                                    textStyle: {	    //数值样式
+                                        color: 'black',
+                                        fontSize: 16
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    {
+                        name: '女',
+                        type: 'bar',
+                        data: [res.data.kai_fa_woman, res.data.zhi_neng_woman],
+                        itemStyle: {
+                            normal: {
+                                label: {
+                                    show: true,		//开启显示
+                                    position: 'right',	//在上方显示
+                                    textStyle: {	    //数值样式
+                                        color: 'black',
+                                        fontSize: 16
+                                    }
+                                }
+                            }
+                        }
+                    },
+
+                ]
+            };
+            option && myChart.setOption(option);
+
+        }
+    });
+
+</script>
+
+</html>
