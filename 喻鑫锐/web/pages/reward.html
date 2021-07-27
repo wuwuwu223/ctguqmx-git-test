@@ -26,7 +26,7 @@
     let masonry = $("#masonry")
     $.ajax({
       type: "GET",
-      url: "http://1.117.163.52:8081/award/all",
+      url: "https://www.iloveyxr.top:8081/award/all",
       success: res => {
         console.log(res);
         let arr = res.data;
@@ -45,7 +45,7 @@
     var table = layui.table;
     var tableIns = table.render({
       elem: '#test'
-      ,url:'http://1.117.163.52:8081/award/all'
+      ,url:'https://www.iloveyxr.top:8081/award/all'
       ,cellMinWidth: 80 //全局定义常规单元格的最小宽度，layui 2.2.1 新增
       ,toolbar: "#toolbarDemo"
       ,defaultToolbar: ['filter', 'exports', 'print', { //自定义头部工具栏右侧图标。如无需自定义，去除该参数即可
