@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../layui-v2.5.7/layui-v2.5.7/layui/css/layui.css">
+    <style>
+        body{
+            background: whitesmoke;
+        }
+    </style>
+</head>
+<body>
+<div class="container" style="display: flex;align-items: center;justify-content: center;margin: 20px;">
+    <div class="container-line" style="margin-top: 20px;flex: 1;padding: 5px;" >
+        <ul class="layui-timeline" id="timeLine"></ul>
+    </div>
+    <div class="container-table" style="flex: 1;padding: 5px;" >
+        <table class="layui-hide" id="test"></table>
+    </div>
+</div>
+</body>
+<script src="../js/jquery.min.js"></script>
+<script src="../layui-v2.5.7/layui-v2.5.7/layui/layui.js"></script>
+<script type="text/javascript">
+    window.onload = () =>{
+        let timeLine = $("#timeLine")
+        $.ajax({
+            type: "GET",
+            url: "http://1.117.163.52:8081/process/all",
+
+            success: res => {
+                console.log(res);
+                let arr = res.data;
+                let html = "";
+                for(var index = 0;index < arr.length;index++){
+                    html += '<li class="layui-timeline-item">';
+                    if(arr[index].focus === "on"){
+                        html += '<i class="layui-icon layui-timeline-axis">&#xe617;</i>'
+                    } else{
+                        html += '<i class="layui-icon layui-timeline-axis">&#xe63f;</i>'
+                    }
+
+                    html += '<div class="layui-timeline-content layui-text">'
+                    html += ('<h3 class="layui-timeline-title">' + arr[index].num + " " + arr[index].title + "</h3>");
+                    html += ('<p>' + arr[index].content + '</p>');
+                    html += '</div>';
+                    html += '</li>';
+                }
+                timeLine.html(html);
+            }
+        });
+    }
+</script>
+<script>
+
+
+layui.use('table', function(){
+    var table = layui.table;
+    var tableIns = table.render({
+        elem: '#test'
+        ,url:'http://1.117.163.52:8081/process/all'
+        ,cellMinWidth: 80 //全局定义常规单元格的最小宽度，layui 2.2.1 新增
+        ,toolbar: "#toolbarDemo"
+        ,defaultToolbar: ['filter', 'exports', 'print', { //自定义头部工具栏右侧图标。如无需自定义，去除该参数即可
+            title: '提示'
+            ,layEvent: 'LAYTABLE_TIPS'
+            ,icon: 'layui-icon-tips'
+        }]
+        ,parseData: function (res){
+            var result;
+            if (this.page.curr) {
+                result = res.data.slice(this.limit * (this.page.curr - 1), this.limit * this.page.curr);
+            }
+            else {
+                result = res.data.slice(0, this.limit);
+            }
+            return{
+                "code": 0,
+                "msg": "ok",
+                "count": res.length,
+                "data": result,
+            }
+        }
+        ,cols: [[
+            {type:"checkbox"}
+            ,{field:'num', width:80, title: 'ID', sort: true}
+            ,{field:'title', width:150, title: '标题'}
+            ,{field:'content', width:500, title: '内容'}
+        ]]
+        ,loading: true
+        ,page: true
+        ,limits: [6,10,15]
+        ,limit: 6
+        ,id: "testReload"
+    });
+    table.on('toolbar(test)', function(obj){
+        var checkStatus = table.checkStatus(obj.config.id);
+        switch(obj.event){
+            case 'getCheckData':
+                var data = checkStatus.data;
+                console.log(data);
+                layer.alert(JSON.stringify(data));
+                break;
+            case 'getCheckLength':
+                var data = checkStatus.data;
+                layer.msg('选中了：'+ data.length + ' 个');
+                break;
+            case 'isAll':
+                layer.msg(checkStatus.isAll ? '全选': '未全选');
+                break;
+
+            //自定义头工具栏右侧图标 - 提示
+            case 'LAYTABLE_TIPS':
+                layer.alert('这是工具栏右侧自定义的一个图标按钮');
+                break;
+        }
+    });
+});
+</script>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="../layui-v2.5.7/layui-v2.5.7/layui/css/layui.css">
+  <style>
+    #main{
+      width: 300px;
+      height: 300px;
+      position: fixed!important;
+      top: 20px;
+      right: 100px;
+    }
+  </style>
+</head>
+<body>
+<div id="main" style="width: 300px;height:300px;display: inline-block;"></div>
+<table class="layui-table" style="width: 700px;display: inline-block;">
+  <colgroup>
+    <col width="10">
+    <col width="200">
+    <col width="300">
+    <col width="100">
+  </colgroup>
+  <thead>
+  <tr>
+    <th>id</th>
+    <th>内容</th>
+    <th>图片</th>
+    <th>组别</th>
+  </tr>
+  </thead>
+  <tbody id="table">
+  </tbody>
+</table>
+
+</body>
+<script src="../js/jquery.min.js"></script>
+<script src="../layui-v2.5.7/layui-v2.5.7/layui/layui.js"></script>
+<script>
+  let table = $("#table");
+  let html = '';
+  window.onload = function(){
+    $.ajax({
+      type: "GET",
+      url: "http://1.117.163.52:8081/show/all",
+      success: res =>  {
+        console.log(res);
+        let arr = res.data;
+        for(let i = 0; i < arr.length; i++){
+          html += "<tr>"
+          html += '<td >' + arr[i].id + "</td>"
+          html += '<td >' + arr[i].content + "</td>"
+          html += '<td style="display: flex;align-items: center;justify-content: center;"><img src="' + arr[i].img + '"'  + '</td>';
+          if(arr[i].type === 'yj'){
+            html += '<td >硬件</td>'
+          }else if(arr[i].type === 'yx'){
+            html += '<td >游戏</td>'
+          }else if(arr[i].type === 'web'){
+            html += '<td >网页</td>'
+          }
+        }
+        table.html(html);
+      }
+    });
+  }
+</script>
+<script src="../js/echarts.min.js"></script>
+<script>
+  var chartDom = document.getElementById('main');
+  var myChart = echarts.init(chartDom);
+  var option;
+  $.ajax({
+    type: "GET",
+    url: "http://1.117.163.52:8081/show/class",
+    success: res => {
+      myChart.setOption({
+        title: {
+          text: '展示数据组成',
+          subtext: '绝对真实',
+          left: 'center'
+        },
+        tooltip: {
+          trigger: 'item'
+        },
+        // legend: {
+        //   orient: 'vertical',
+        //   left: 'left',
+        // },
+        series: [
+          {
+            name: '访问来源',
+            type: 'pie',
+            radius: '50%',
+            data: [
+              {value: res.data.yj, name: '硬件',},
+              {value: res.data.yx, name: '游戏'},
+              {value: res.data.web, name: '网页'},
+            ],
+            emphasis: {
+              itemStyle: {
+                shadowBlur: 10,
+                shadowOffsetX: 0,
+                shadowColor: 'rgba(0, 0, 0, 0.5)'
+              }
+            }
+          }
+        ]
+      })
+    }
+  });
+</script>
+</html>
