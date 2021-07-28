@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../layui-v2.5.7/layui-v2.5.7/layui/css/layui.css">
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+    <div id="menu">
+        <ul class="layui-nav layui-nav-tree left" lay-filter="test">
+            <li class="layui-nav-item" id="menu-head" >
+                <img src="../moveGif.gif" alt="" style="width: 90%">
+                <div style="width: 100%;height:100%;display: flex;align-items: center;justify-content: center">
+                    <img src="../1.png" alt="" style="width: 90%;height: 100%">
+                </div>
+            </li>
+
+            <li class="layui-nav-item layui-nav-itemed">
+                <a href="javascript:;">
+                    <i class="layui-icon layui-icon-spread-left" style="font-size: 20px;padding-right: 10px;"></i>
+                    <span>默认展开</span>
+                </a>
+
+            </li>
+            <li class="layui-nav-item">
+                <a href="javascript:;">
+                    <i class="layui-icon layui-icon-set" style="font-size: 20px;padding-right: 10px;"></i>
+                    <span>信息部分</span>
+                </a>
+                    <dl class="layui-nav-child">
+                        <dd >
+                            <a href="javascript:;">
+                                <i class="layui-icon layui-icon-component" style="font-size: 20px;padding-right: 10px;"></i>
+                                <span>时间线</span>
+                            </a>
+                        </dd>
+                        <dd>
+                            <a href="javascript:;">
+                                <i class="layui-icon layui-icon-template-1" style="font-size: 20px;padding-right: 10px;"></i>
+                                <span>成果展示</span>
+                            </a>
+                        </dd>
+                        <dd>
+                            <a href="javascript:;">
+                                <i class="layui-icon layui-icon-group" style="font-size: 20px;padding-right: 10px;"></i>
+                                <span>获奖情况</span>
+                            </a>
+                        </dd>
+                    </dl>
+
+            </li>
+            <li class="layui-nav-item">
+                <a href="javascript:;">
+                    <i class="layui-icon layui-icon-app" style="font-size: 20px;padding-right: 10px;"></i>
+                    <span>学生列表</span>
+                </a>
+            </li>
+            <li class="layui-nav-item">
+                <a href="javascript:;">
+                    <i class="layui-icon layui-icon-list" style="font-size: 20px;padding-right: 10px;"></i>
+                    <span>评论</span>
+                </a>
+            </li>
+            <li class="layui-nav-item"><a href="">大数据</a></li>
+        </ul>
+        <iframe id="myiframe" class="right" src="./dashboard.html" frameborder="0"  style="display: inline-block;margin: 0; "></iframe>
+    </div>
+
+</body>
+<script src="../layui-v2.5.7/layui-v2.5.7/layui/layui.all.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/jquery.counterup.min.js"></script>
+<script src="../js/jquery.easing.min.js"></script>
+<script src="../js/jquery.waypoints.min.js"></script>
+<script src="../js/index.js"></script>
+</html>

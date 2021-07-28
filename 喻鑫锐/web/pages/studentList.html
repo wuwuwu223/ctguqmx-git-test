@@ -33,9 +33,9 @@
 <script src="../js/jquery.min.js"></script>
 <script src="../layui-v2.5.7/layui-v2.5.7/layui/layui.all.js" charset="utf-8"></script>
 <script>
-    layui.use('table', function(){
+    layui.use(['table','util'], function(){
         var table = layui.table;
-
+        var util = layui.util;
         var tableIns = table.render({
             elem: '#test'
             ,url:'https://www.iloveyxr.top:8081/user/all'
@@ -64,23 +64,49 @@
             ,cols: [[
                 {type:"checkbox"}
                 ,{field:'id', width:80, title: 'ID', sort: true}
-                ,{field:'name', width:100, title: '用户名'}
-                ,{field:'number', width:150, title: '学号', sort: true}
-                ,{field:'gender', width:80, title: '性别'}
-                ,{field:'class', title: '组别', width: 80,} //minWidth：局部定义当前单元格的最小宽度，layui 2.2.1 新增
-                ,{field:'college', title: '学院', width:150, minWidth:"100"}
-                ,{field:'major', title: '专业', width:150, minWidth:"100"}
-                ,{field:'phone', title: '电话',width: 150}
-                ,{field:'qq', width:137, title: 'qq', }
-                ,{field:'score', title: '分数'}
-                ,{field:'status', title: '状态'}
+                ,{field:'name', width:100, edit: 'name',title: '用户名'}
+                ,{field:'number', width:150, edit: 'number',title: '学号', sort: true}
+                ,{field:'gender', width:80, edit: 'gender',title: '性别'}
+                ,{field:'class', title: '组别', edit: 'class',width: 80,} //minWidth：局部定义当前单元格的最小宽度，layui 2.2.1 新增
+                ,{field:'college', title: '学院', edit: 'college',width:150, minWidth:"100"}
+                ,{field:'major', title: '专业', edit: 'major',width:150, minWidth:"100"}
+                ,{field:'phone', title: '电话',edit: 'phone',width: 150}
+                ,{field:'qq', width:137, edit: 'qq',title: 'qq', }
+                ,{field:'score', edit: 'score',title: '分数'}
+                ,{field:'status', edit: 'status',title: '状态'}
             ]]
             ,loading: true
             ,page: true
             ,limits: [10,15,20,120]
             ,limit: 10
             ,id: "testReload"
+            ,escape: true
         });
+        table.on('edit(test)',function(obj){
+            var value = obj.value
+            ,data = obj.data
+            ,field = obj.field;
+            console.log("value = ",value);
+            console.log(data);
+            console.log("field = ",field);
+            $.ajax({
+                type: "PUT",
+                url: "http://localhost:8081/user",
+                dataType: "json",
+                data: JSON.stringify(data),
+                headers:
+                    {
+                        'Authorization': localStorage.getItem("token"),
+                        'Content-Type':'application/json;charset=utf8'
+                    },
+                success: res => {
+                    console.log(res);
+                },
+                error: function(XMLHttpRequest){
+                    console.log(XMLHttpRequest.body);
+                }
+            });
+        })
         table.on('toolbar(test)', function(obj){
             var checkStatus = table.checkStatus(obj.config.id);
             switch(obj.event){

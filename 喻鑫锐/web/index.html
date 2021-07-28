@@ -4,74 +4,91 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="./layui-v2.5.7/layui-v2.5.7/layui/css/layui.css">
-    <link rel="stylesheet" href="./css/index.css">
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      body{
+          height: 100vh;
+          width: 100vw;
+          background-color: #2d3a4b;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+      }
+      .container{
+          width: 500px;
+          height: 400px;
+          display: flex;
+          align-items: center;
+          /*justify-content: center;*/
+          flex-direction: column;
+          color:#fff;
+      }
+      .container .btn{
+          background: #46a6ff;
+          color: #fff;
+          width: 448px;
+          text-align: center;
+          border: none;
+          outline: none;
+          margin-top: 20px;
+          height: 36px;
+          line-height: 36px;
+          font-size: 16px;
+          font-family: Helvetica,serif;
+          cursor: pointer;
+          font-weight: bold;
+      }
+    </style>
 </head>
 <body>
-    <div id="menu">
-        <ul class="layui-nav layui-nav-tree left" lay-filter="test">
-            <li class="layui-nav-item" id="menu-head" >
-                <img src="./moveGif.gif" alt="" style="width: 90%">
-                <div style="width: 100%;height:100%;display: flex;align-items: center;justify-content: center">
-                    <img src="./1.png" alt="" style="width: 90%;height: 100%">
+    <div class="container">
+        <h2 style="text-align: center;color:#eee;font-size: 26px;font-weight: bold;">Login Form</h2>
+        <form >
+            <div class="name-container" style="border: 1px solid rgba(255, 255, 255, 0.1);border-radius: 4px;height: 50px;width: 448px;display: flex;align-items: center;margin-top: 50px;">
+                <i class="layui-icon layui-icon-username" style="font-size: 24px;color: #eee;margin-left: 4px;"></i>
+                <div style="display: inline-block;background-color:#2d3a4b; ">
+                    <input id="name" name="username" placeholder="用户名" type="text" style="background-color: #2d3a4b;border: none;padding-left:10px;color: #fff;width: 400px;font-size:18px;height: 20px;line-height: 20px;">
                 </div>
-            </li>
-
-            <li class="layui-nav-item layui-nav-itemed">
-                <a href="javascript:;">
-                    <i class="layui-icon layui-icon-spread-left" style="font-size: 20px;padding-right: 10px;"></i>
-                    <span>默认展开</span>
-                </a>
-
-            </li>
-            <li class="layui-nav-item">
-                <a href="javascript:;">
-                    <i class="layui-icon layui-icon-set" style="font-size: 20px;padding-right: 10px;"></i>
-                    <span>信息部分</span>
-                </a>
-                    <dl class="layui-nav-child">
-                        <dd >
-                            <a href="javascript:;">
-                                <i class="layui-icon layui-icon-component" style="font-size: 20px;padding-right: 10px;"></i>
-                                <span>时间线</span>
-                            </a>
-                        </dd>
-                        <dd>
-                            <a href="javascript:;">
-                                <i class="layui-icon layui-icon-template-1" style="font-size: 20px;padding-right: 10px;"></i>
-                                <span>成果展示</span>
-                            </a>
-                        </dd>
-                        <dd>
-                            <a href="javascript:;">
-                                <i class="layui-icon layui-icon-group" style="font-size: 20px;padding-right: 10px;"></i>
-                                <span>获奖情况</span>
-                            </a>
-                        </dd>
-                    </dl>
-
-            </li>
-            <li class="layui-nav-item">
-                <a href="javascript:;">
-                    <i class="layui-icon layui-icon-app" style="font-size: 20px;padding-right: 10px;"></i>
-                    <span>学生列表</span>
-                </a>
-            </li>
-            <li class="layui-nav-item">
-                <a href="javascript:;">
-                    <i class="layui-icon layui-icon-list" style="font-size: 20px;padding-right: 10px;"></i>
-                    <span>评论</span>
-                </a>
-            </li>
-            <li class="layui-nav-item"><a href="">大数据</a></li>
-        </ul>
-        <iframe id="myiframe" class="right" src="./pages/dashboard.html" frameborder="0"  style="display: inline-block;margin: 0; "></iframe>
+            </div>
+            <div class="pwd-container" style="border: 1px solid rgba(255, 255, 255, 0.1);border-radius: 4px;height: 50px;width: 448px;display: flex;align-items: center;margin-top: 20px;">
+                <i class="layui-icon layui-icon-key" style="font-size: 24px;color: #eee;margin-left: 4px;"></i>
+                <div style="display: inline-block;background-color:#2d3a4b;">
+                    <input  id="pwd" name="password" placeholder="密码" type="password" style="background-color: #2d3a4b;border: none;padding-left:10px;color: #fff;width: 400px;font-size:18px;height: 20px;line-height: 20px;">
+                </div>
+            </div>
+            <button class="btn" id="myButton">
+                Login
+            </button>
+        </form>
     </div>
-
 </body>
-<script src="./layui-v2.5.7/layui-v2.5.7/layui/layui.all.js"></script>
-<script src="./js/jquery.min.js"></script>
-<script src="./js/jquery.counterup.min.js"></script>
-<script src="./js/jquery.easing.min.js"></script>
-<script src="./js/jquery.waypoints.min.js"></script>
-<script src="./js/index.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="layui-v2.5.7/layui-v2.5.7/layui/layui.all.js"></script>
+<script type="text/javascript">
+    document.getElementById("myButton").onclick = function (){
+        let username = $("#name").val();
+        let password = $("#pwd").val();
+        if (username === "admin" && password === "admin"){
+            let data = {
+                "number": "2020112617",
+                "username": "admin",
+                "id": 0,
+            }
+            $.ajax({
+                type: "POST",
+                url: "https://www.iloveyxr.top:8081/auth",
+                data: data,
+                dataType: "json",
+                success: res => {
+                    console.log(res.data.token);
+                    localStorage.setItem("token","Bearer " + res.data.token);
+                    window.location.replace("./pages/index.html");
+                }
+            });
+        }
+    }
+</script>
 </html>
