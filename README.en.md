@@ -1,9 +1,9 @@
 # ctguqmxGitTest
 
 #### Description
-第一周周任务
-1.创建自己的仓库，尝试访问
-2.上传文件至远程公共仓库
+First week task:
+1.Create your own warehouse and try to access.
+2.Upload files to remote public warehouse.
 
 #### Software Architecture
 Software architecture description
